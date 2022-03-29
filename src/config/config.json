@@ -1,0 +1,20 @@
+{
+    "nom": "MyDLG",
+    "description": "MyDLG est un planning plus lisible est simple pour faire des imports / exports grace.",
+    "version": 0.1,
+    "auteur": "LaM0uette",
+    "config": {
+        "theme": "columbia_blue",
+        "font": "Berlin Sans FB Demi",
+        "widht": 1200,
+        "height": 800,
+        "opacity": 0.98,
+        "cur": "MyDLG"
+    },
+    "var": {
+        "debug": true,
+        "resize": true,
+        "auto_close": true,
+        "toolbox_pin": true
+    }
+}
