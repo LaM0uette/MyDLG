@@ -149,19 +149,19 @@ class Ui_main(object):
         self.stk_main.addWidget(self.pg_menu)
         self.pg_dlg = QWidget()
         self.pg_dlg.setObjectName(u"pg_dlg")
-        self.widget = QWidget(self.pg_dlg)
-        self.widget.setObjectName(u"widget")
-        self.widget.setGeometry(QRect(20, 20, 1001, 28))
-        self.horizontalLayout_2 = QHBoxLayout(self.widget)
+        self.fr_dlg_top = QFrame(self.pg_dlg)
+        self.fr_dlg_top.setObjectName(u"fr_dlg_top")
+        self.fr_dlg_top.setGeometry(QRect(30, 20, 1011, 41))
+        self.horizontalLayout_2 = QHBoxLayout(self.fr_dlg_top)
         self.horizontalLayout_2.setSpacing(0)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.pb_retour_menu = QPushButton(self.widget)
+        self.horizontalLayout_2.setContentsMargins(5, 5, 5, 5)
+        self.pb_retour_menu = QPushButton(self.fr_dlg_top)
         self.pb_retour_menu.setObjectName(u"pb_retour_menu")
 
         self.horizontalLayout_2.addWidget(self.pb_retour_menu)
 
-        self.cb_marche = QComboBox(self.widget)
+        self.cb_marche = QComboBox(self.fr_dlg_top)
         self.cb_marche.setObjectName(u"cb_marche")
 
         self.horizontalLayout_2.addWidget(self.cb_marche)
@@ -173,17 +173,17 @@ class Ui_main(object):
         self.horizontalLayout = QHBoxLayout()
         self.horizontalLayout.setSpacing(0)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.pb_filtre_atraiter = QPushButton(self.widget)
+        self.pb_filtre_atraiter = QPushButton(self.fr_dlg_top)
         self.pb_filtre_atraiter.setObjectName(u"pb_filtre_atraiter")
 
         self.horizontalLayout.addWidget(self.pb_filtre_atraiter)
 
-        self.pb_filtre_tout = QPushButton(self.widget)
+        self.pb_filtre_tout = QPushButton(self.fr_dlg_top)
         self.pb_filtre_tout.setObjectName(u"pb_filtre_tout")
 
         self.horizontalLayout.addWidget(self.pb_filtre_tout)
 
-        self.pb_filtre_fait = QPushButton(self.widget)
+        self.pb_filtre_fait = QPushButton(self.fr_dlg_top)
         self.pb_filtre_fait.setObjectName(u"pb_filtre_fait")
 
         self.horizontalLayout.addWidget(self.pb_filtre_fait)

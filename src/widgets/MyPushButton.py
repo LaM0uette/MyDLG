@@ -193,9 +193,9 @@ class DlgFiltre:
             )
         )
 
-    def ATraiter(self): self._rtn(rd=(0, 3, 0, 3))
-    def Tout(self): self._rtn(rd=(0, 0, 0, 0))
-    def Fait(self): self._rtn(rd=(3, 0, 3, 0))
+    def ATraiter(self): self._rtn(rd=(3, 3, 3, 3))
+    def Tout(self): self._rtn(rd=(3, 3, 3, 3))
+    def Fait(self): self._rtn(rd=(3, 3, 3, 3))
 
 
 #################

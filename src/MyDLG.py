@@ -146,6 +146,9 @@ class main(Ui_main, QtWidgets.QWidget):
         MyFrame.Menu(self.fr_menu_top).top()
         MyFrame.Menu(self.fr_menu_bottom).bottom()
         MyFrame.Cadre(self.fr_main).th2_fin()
+
+        MyFrame.Base(self.fr_dlg_top).Base()
+        self.fr_dlg_top.setFixedHeight(PaDim.H9+10)
         ### /QFrame  ###
 
 
