@@ -90,6 +90,8 @@ class main(Ui_main, QtWidgets.QWidget):
         MyPushButton.DlgFiltre(self.pb_filtre_atraiter).ATraiter()
         MyPushButton.DlgFiltre(self.pb_filtre_tout).Tout()
         MyPushButton.DlgFiltre(self.pb_filtre_fait).Fait()
+
+        MyPushButton.Base(self.pb_search_dlg).SearchDlg()
             # tools
         MyPushButton.Base(self.pb_tools_add_dlg).DlgTools()
         ### /QPushButton  ###

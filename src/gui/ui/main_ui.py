@@ -184,6 +184,11 @@ class Ui_main(object):
 
         self.horizontalLayout_2.addWidget(self.le_search_dlg)
 
+        self.pb_search_dlg = QPushButton(self.fr_dlg_top)
+        self.pb_search_dlg.setObjectName(u"pb_search_dlg")
+
+        self.horizontalLayout_2.addWidget(self.pb_search_dlg)
+
         self.horizontalSpacer_6 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_2.addItem(self.horizontalSpacer_6)

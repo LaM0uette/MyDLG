@@ -58,6 +58,27 @@ class Base:
                 radius=(0, 3, 0, 3)
             )
         )
+    def SearchDlg(self):
+        Style(
+            widget=self.widget,
+            pb_type="ico_click",
+
+            dim=DcDim.Base(
+                fixed_width=PaDim.H9,
+                fixed_height=PaDim.H9,
+            ),
+
+            img=DcImg.Base(
+                base=PaImg.MENU,
+                base_hover=PaImg.MENU,
+                base_rgb="th1",
+                base_hover_rgb="bn1",
+            ),
+
+            border=DcBorder.Base(
+                radius=(0, 3, 0, 3)
+            )
+        )
 
     def DlgTools(self):
         Style(
