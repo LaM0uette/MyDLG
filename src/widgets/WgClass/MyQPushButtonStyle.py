@@ -139,3 +139,6 @@ class Style(MyQPushButton):
         elif pb_type == "zoom":
             widget.enterEvent = cls.ENT_ZOOM
             widget.leaveEvent = cls.LVE_ZOOM
+        elif pb_type == "ico_click":
+            widget.enterEvent = cls.ENT_ICO
+            widget.leaveEvent = cls.LVE_ICO
