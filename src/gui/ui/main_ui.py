@@ -103,7 +103,7 @@ class Ui_main(object):
         self.gridLayout = QGridLayout(self.pg_menu)
         self.gridLayout.setObjectName(u"gridLayout")
         self.gridLayout.setHorizontalSpacing(0)
-        self.gridLayout.setVerticalSpacing(5)
+        self.gridLayout.setVerticalSpacing(6)
         self.gridLayout.setContentsMargins(10, 10, 10, 10)
         self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 

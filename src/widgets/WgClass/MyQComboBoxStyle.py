@@ -19,6 +19,7 @@ class Style(MyQComboBox):
             max_visible_items=10,
             insert_policy=PaInsertPolicy.NO,
             set_frame=False,
+            align=DcAlign.Base(horizontal=PaAlign.CENTER_HORIZONTAL),
 
             background=v_wg.BACKGROUND,
             background_item=v_wg.BACKGROUND,
@@ -29,7 +30,7 @@ class Style(MyQComboBox):
             border=v_wg.BORDER,
             scroll=v_wg.SCROLL,
     ):
-        super().__init__(widget,size_policy,dim,font,cursor,focus_policy,layout_direction,editable,max_visible_items,insert_policy,set_frame)
+        super().__init__(widget,size_policy,dim,font,cursor,focus_policy,layout_direction,editable,max_visible_items,insert_policy,set_frame,align)
 
         style = f"""
         /* COMBOBOX */

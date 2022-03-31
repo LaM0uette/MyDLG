@@ -226,6 +226,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
         ### Menu - combobox marche ###
+        self.cb_menu_exportdlg.lineEdit().setReadOnly(True)
         self.cb_menu_exportdlg.addItems(["RIP24", "RIP40", "RIP47"])
     def IN_CONNECTIONS(self):
         ### Menu_top ###

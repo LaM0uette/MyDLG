@@ -41,7 +41,7 @@ class Base:
     def MenuPB(self):
         Style(
             widget=self.widget,
-            editable=False,
+            editable=True,
 
             dim=DcDim.Base(
                 fixed_width=PaDim.H4,
