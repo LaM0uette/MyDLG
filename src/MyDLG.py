@@ -32,14 +32,14 @@ class main(Ui_main, QtWidgets.QWidget):
 
         ### FONCTIONS AU LANCEMENT ###
         self.INIT(
-            [self.IN_BASE, "Config()uration des éléments principaux"],
+            [self.IN_BASE, "Configuration des éléments principaux"],
             [self.IN_SETUP_UI, "Setup de l'interface graphique"],
             [self.IN_CLASSE, "Initialisation des Widgets"],
-            [self.IN_WG, "Config()uration de base des Widgets"],
+            [self.IN_WG, "Configuration de base des Widgets"],
             [self.IN_CONNECTIONS, "Ajout des connexions"],
             [self.IN_ACT, "Fonctions de base"],
             [self.IN_WG_BASE, "Etat de base des Widgets"],
-            [self.IN_TRAY, "Finalisation de la Config()uration"]
+            [self.IN_TRAY, "Finalisation de la Configuration"]
         )
 
         splash_screen.close()
