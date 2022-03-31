@@ -26,12 +26,25 @@ class Base:
     def MenuPB(self):
         Style(
             widget=self.widget,
-            font=PaFont.HH2,
+            font=PaFont.HH1,
 
             dim=DcDim.Base(
                 fixed_width=PaDim.H4,
                 fixed_height=PaDim.H4,
             ),
+        )
+    def RetourMenu(self):
+        Style(
+            widget=self.widget,
+
+            dim=DcDim.Base(
+                fixed_width=PaDim.H9,
+                fixed_height=PaDim.H9,
+            ),
+
+            img=DcImg.Base(
+                base=PaImg.MENU,
+            )
         )
 
 

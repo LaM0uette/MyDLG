@@ -78,6 +78,7 @@ class main(Ui_main, QtWidgets.QWidget):
         MyPushButton.MenuTop(self.pb_mt_quitter).quitter()
 
         MyPushButton.Base(self.pb_menu_exportdlg).MenuPB()
+        MyPushButton.Base(self.pb_retour_menu).RetourMenu()
         ### /QPushButton  ###
 
 

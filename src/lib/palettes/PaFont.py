@@ -25,6 +25,7 @@ class PaFont:
     H5 = 8  # A SUPPRIMER
 
     TITRE = __gen_font(size=FontSize.H1)
+    HH1 = __gen_font(size=FontSize.H1)
     HH2 = __gen_font(size=FontSize.H2)
     HH3 = __gen_font(size=FontSize.H3)
     BASE = __gen_font(size=FontSize.H4)

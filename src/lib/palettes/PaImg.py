@@ -6,6 +6,7 @@ class PaImg:
 
     CALENDRIER = __svg("divers", "calendrier")
     MAIN = __svg("main", "main")
+    MENU = __svg("main", "menu")
     OPTION = __svg("ui", "option")
     REDUIRE = __svg("ui", "reduire")
     AGRANDIR = __svg("ui", "agrandir")

@@ -107,25 +107,75 @@ class Ui_main(object):
         self.gridLayout.setContentsMargins(10, 10, 10, 10)
         self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.gridLayout.addItem(self.horizontalSpacer_3, 0, 1, 1, 1)
+        self.gridLayout.addItem(self.horizontalSpacer_3, 1, 2, 1, 1)
+
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.gridLayout.addItem(self.horizontalSpacer, 1, 0, 1, 1)
 
         self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
-        self.gridLayout.addItem(self.verticalSpacer_2, 2, 0, 1, 1)
+        self.gridLayout.addItem(self.verticalSpacer_2, 3, 1, 1, 1)
 
         self.pb_menu_exportdlg = QPushButton(self.pg_menu)
         self.pb_menu_exportdlg.setObjectName(u"pb_menu_exportdlg")
 
-        self.gridLayout.addWidget(self.pb_menu_exportdlg, 0, 0, 1, 1)
+        self.gridLayout.addWidget(self.pb_menu_exportdlg, 1, 1, 1, 1)
 
         self.cb_menu_exportdlg = QComboBox(self.pg_menu)
         self.cb_menu_exportdlg.setObjectName(u"cb_menu_exportdlg")
 
-        self.gridLayout.addWidget(self.cb_menu_exportdlg, 1, 0, 1, 1)
+        self.gridLayout.addWidget(self.cb_menu_exportdlg, 2, 1, 1, 1)
+
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.gridLayout.addItem(self.verticalSpacer, 0, 1, 1, 1)
 
         self.stk_main.addWidget(self.pg_menu)
         self.page_2 = QWidget()
         self.page_2.setObjectName(u"page_2")
+        self.widget = QWidget(self.page_2)
+        self.widget.setObjectName(u"widget")
+        self.widget.setGeometry(QRect(20, 20, 1001, 28))
+        self.horizontalLayout_2 = QHBoxLayout(self.widget)
+        self.horizontalLayout_2.setSpacing(0)
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.pb_retour_menu = QPushButton(self.widget)
+        self.pb_retour_menu.setObjectName(u"pb_retour_menu")
+
+        self.horizontalLayout_2.addWidget(self.pb_retour_menu)
+
+        self.cb_marche = QComboBox(self.widget)
+        self.cb_marche.setObjectName(u"cb_marche")
+
+        self.horizontalLayout_2.addWidget(self.cb_marche)
+
+        self.horizontalSpacer_5 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_2.addItem(self.horizontalSpacer_5)
+
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setSpacing(0)
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.pb_filtre_atraiter = QPushButton(self.widget)
+        self.pb_filtre_atraiter.setObjectName(u"pb_filtre_atraiter")
+
+        self.horizontalLayout.addWidget(self.pb_filtre_atraiter)
+
+        self.pb_filtre_tout = QPushButton(self.widget)
+        self.pb_filtre_tout.setObjectName(u"pb_filtre_tout")
+
+        self.horizontalLayout.addWidget(self.pb_filtre_tout)
+
+        self.pb_filtre_fait = QPushButton(self.widget)
+        self.pb_filtre_fait.setObjectName(u"pb_filtre_fait")
+
+        self.horizontalLayout.addWidget(self.pb_filtre_fait)
+
+
+        self.horizontalLayout_2.addLayout(self.horizontalLayout)
+
         self.stk_main.addWidget(self.page_2)
 
         self.hlay_body.addWidget(self.stk_main)
@@ -157,11 +207,18 @@ class Ui_main(object):
 
         self.retranslateUi(main)
 
+        self.stk_main.setCurrentIndex(1)
+
+
         QMetaObject.connectSlotsByName(main)
     # setupUi
 
     def retranslateUi(self, main):
-        self.pb_menu_exportdlg.setText(QCoreApplication.translate("main", u"Export DLG", None))
+        self.pb_menu_exportdlg.setText(QCoreApplication.translate("main", u"EXPORTS\n"
+"DLG", None))
+        self.pb_filtre_atraiter.setText(QCoreApplication.translate("main", u"A TRAITER", None))
+        self.pb_filtre_tout.setText(QCoreApplication.translate("main", u"TOUT", None))
+        self.pb_filtre_fait.setText(QCoreApplication.translate("main", u"FAIT", None))
         pass
     # retranslateUi
 
