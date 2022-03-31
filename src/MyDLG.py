@@ -150,6 +150,7 @@ class main(Ui_main, QtWidgets.QWidget):
         MyFrame.Base(self.fr_dlg_top).Base()
         self.fr_dlg_top.setFixedHeight(PaDim.H9+10)
         MyFrame.Cadre(self.fr_dlg_body).th3()
+        MyFrame.Base(self.fr_dlg_tools).Tools()
         ### /QFrame  ###
 
 
