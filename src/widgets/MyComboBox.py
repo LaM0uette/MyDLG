@@ -37,3 +37,17 @@ class Base:
             widget=self.widget,
             font=font
         )
+
+    def MenuPB(self):
+        Style(
+            widget=self.widget,
+
+            dim=DcDim.Base(
+                fixed_width=PaDim.H4,
+                fixed_height=PaDim.H9,
+            ),
+
+            border=DcBorder.Base(
+                radius=(0, 0, 3, 3)
+            )
+        )

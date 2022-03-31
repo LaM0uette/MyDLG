@@ -138,6 +138,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
         ### QComboBox ###
+        MyComboBox.Base(self.cb_menu_exportdlg).MenuPB()
         ### /QComboBox ###
 
 
