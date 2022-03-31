@@ -79,7 +79,10 @@ class main(Ui_main, QtWidgets.QWidget):
 
         # Menu
         MyPushButton.Base(self.pb_menu_exportdlg).MenuPB()
-        for wg in [self.pb_menu_rip24, self.pb_menu_rip40, self.pb_menu_rip47]: MyPushButton.Base(wg).MenuMarche()
+
+        MyPushButton.MenuMarche(self.pb_menu_rip24).Rip24()
+        MyPushButton.MenuMarche(self.pb_menu_rip40).Rip40()
+        MyPushButton.MenuMarche(self.pb_menu_rip47).Rip47()
 
         # Dlg
         MyPushButton.Base(self.pb_retour_menu).RetourMenu()

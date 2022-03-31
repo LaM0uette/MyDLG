@@ -37,22 +37,6 @@ class Base:
                 radius=(3, 3, 0, 0)
             )
         )
-    def MenuMarche(self):
-        Style(
-            widget=self.widget,
-            auto_actions=DcAutoActions.Base(
-                auto_exclusive=True
-            ),
-            checkable=True,
-
-            dim=DcDim.Base(
-                fixed_height=PaDim.H9,
-            ),
-
-            border=DcBorder.Base(
-                radius=(0, 0, 3, 3)
-            )
-        )
     def RetourMenu(self):
         Style(
             widget=self.widget,
@@ -123,6 +107,35 @@ class MenuTop:
             img=PaImg.QUITTER,
             img_rgb="bn2"
         )
+
+
+##################
+##     MENU     ##
+##################
+class MenuMarche:
+    def __init__(self, widget):
+        self.widget = widget
+
+    def _rtn(self, rd):
+        Style(
+            widget=self.widget,
+            auto_actions=DcAutoActions.Base(
+                auto_exclusive=True
+            ),
+            checkable=True,
+
+            dim=DcDim.Base(
+                fixed_height=PaDim.H9,
+            ),
+
+            border=DcBorder.Base(
+                radius=rd
+            )
+        )
+
+    def Rip24(self): self._rtn(rd=(0, 0, 0, 3))
+    def Rip40(self): self._rtn(rd=(0, 0, 0, 0))
+    def Rip47(self): self._rtn(rd=(0, 0, 3, 0))
 
 
 #################
