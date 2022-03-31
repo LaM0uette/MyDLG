@@ -46,9 +46,5 @@ class Base:
             dim=DcDim.Base(
                 fixed_width=PaDim.H4,
                 fixed_height=PaDim.H9,
-            ),
-
-            border=DcBorder.Base(
-                radius=(0, 0, 3, 3)
             )
         )

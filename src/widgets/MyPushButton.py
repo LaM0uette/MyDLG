@@ -31,10 +31,6 @@ class Base:
                 fixed_width=PaDim.H4,
                 fixed_height=PaDim.H4,
             ),
-
-            border=DcBorder.Base(
-                radius=(3, 3, 0, 0)
-            )
         )
 
 
