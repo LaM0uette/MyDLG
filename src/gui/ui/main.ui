@@ -255,6 +255,22 @@ DLG</string>
             </layout>
            </widget>
            <widget class="QWidget" name="pg_dlg">
+            <widget class="QFrame" name="fr_dlg_body">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>70</y>
+               <width>1011</width>
+               <height>641</height>
+              </rect>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+            </widget>
             <widget class="QFrame" name="fr_dlg_top">
              <property name="geometry">
               <rect>
