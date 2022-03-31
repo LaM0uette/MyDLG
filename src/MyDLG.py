@@ -166,6 +166,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
         ### QLineEdit ###
+        MyLineEdit.Base(self.le_search_dlg).SearchDLG()
         ### /QLineEdit ###
 
 
@@ -246,6 +247,10 @@ class main(Ui_main, QtWidgets.QWidget):
 
         ### Menu - combobox marche ###
         self.cb_marche.addItems(["RIP24", "RIP40", "RIP47"])
+
+
+        ### Dlg ###
+        self.le_search_dlg.setPlaceholderText("Filtre...")
     def IN_CONNECTIONS(self):
         ### Menu_top ###
         self.pb_mt_option.clicked.connect(lambda: OptionBox.MAIN(fen_main=fen))

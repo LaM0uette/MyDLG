@@ -42,3 +42,19 @@ class Base:
                 selection=PaRgb.TH1,
             ),
         )
+
+
+    def SearchDLG(self):
+        Style(
+            widget=self.widget,
+
+            dim=DcDim.Base(fixed_width=PaDim.H3),
+
+            align=DcAlign.Base(horizontal=PaAlign.LEFT),
+
+            border=DcBorder.Base(
+                gen=(0, 2, 0, 0),
+                gen_rgb=PaRgb.TH2,
+                radius=(0, )*4
+            )
+        )
