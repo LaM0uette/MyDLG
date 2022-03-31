@@ -76,7 +76,9 @@ class Base:
             ),
 
             border=DcBorder.Base(
-                radius=(0, 3, 0, 3)
+                gen=(0, 2, 0, 0),
+                gen_rgb=PaRgb.TH2,
+                radius=(0, )*4
             )
         )
 
