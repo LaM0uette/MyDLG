@@ -140,6 +140,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
         ### QComboBox ###
         MyComboBox.Base(self.cb_menu_exportdlg).MenuPB()
+        MyComboBox.Base(self.cb_marche).Marche()
         ### /QComboBox ###
 
 
@@ -229,6 +230,7 @@ class main(Ui_main, QtWidgets.QWidget):
         ### Menu - combobox marche ###
         self.cb_menu_exportdlg.lineEdit().setReadOnly(True)
         self.cb_menu_exportdlg.addItems(["RIP24", "RIP40", "RIP47"])
+        self.cb_marche.addItems(["RIP24", "RIP40", "RIP47"])
     def IN_CONNECTIONS(self):
         ### Menu_top ###
         self.pb_mt_option.clicked.connect(lambda: OptionBox.MAIN(fen_main=fen))
