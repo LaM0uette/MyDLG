@@ -76,6 +76,8 @@ class main(Ui_main, QtWidgets.QWidget):
         MyPushButton.MenuTop(self.pb_mt_reduire).reduire()
         MyPushButton.MenuTop(self.pb_mt_agrandir).agrandir()
         MyPushButton.MenuTop(self.pb_mt_quitter).quitter()
+
+        MyPushButton.Base(self.pb_menu_exportdlg).MenuPB()
         ### /QPushButton  ###
 
 

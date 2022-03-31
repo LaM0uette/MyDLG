@@ -23,6 +23,16 @@ class Base:
             ),
         )
 
+    def MenuPB(self):
+        Style(
+            widget=self.widget,
+
+            dim=DcDim.Base(
+                fixed_width=PaDim.H5,
+                fixed_height=PaDim.H5,
+            )
+        )
+
 
 ######################
 ##     MENU TOP     ##
