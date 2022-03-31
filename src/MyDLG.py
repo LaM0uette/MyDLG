@@ -150,7 +150,6 @@ class main(Ui_main, QtWidgets.QWidget):
         MyFrame.Cadre(self.fr_main).th2_fin()
 
         MyFrame.Base(self.fr_dlg_top).Base()
-        self.fr_dlg_top.setFixedHeight(PaDim.H9+10)
         MyFrame.Cadre(self.fr_dlg_body).th3()
         MyFrame.Base(self.fr_dlg_tools).Tools()
         ### /QFrame  ###
@@ -250,6 +249,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
         ### Dlg ###
+        self.fr_dlg_top.setFixedHeight(PaDim.H9+10)
         self.le_search_dlg.setPlaceholderText("Filtre...")
     def IN_CONNECTIONS(self):
         ### Menu_top ###
