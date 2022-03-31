@@ -101,9 +101,8 @@ class Ui_main(object):
         self.pg_menu = QWidget()
         self.pg_menu.setObjectName(u"pg_menu")
         self.gridLayout = QGridLayout(self.pg_menu)
+        self.gridLayout.setSpacing(0)
         self.gridLayout.setObjectName(u"gridLayout")
-        self.gridLayout.setHorizontalSpacing(0)
-        self.gridLayout.setVerticalSpacing(6)
         self.gridLayout.setContentsMargins(10, 10, 10, 10)
         self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
@@ -122,14 +121,30 @@ class Ui_main(object):
 
         self.gridLayout.addWidget(self.pb_menu_exportdlg, 1, 1, 1, 1)
 
-        self.cb_menu_exportdlg = QComboBox(self.pg_menu)
-        self.cb_menu_exportdlg.setObjectName(u"cb_menu_exportdlg")
-
-        self.gridLayout.addWidget(self.cb_menu_exportdlg, 2, 1, 1, 1)
-
         self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.gridLayout.addItem(self.verticalSpacer, 0, 1, 1, 1)
+
+        self.horizontalLayout_3 = QHBoxLayout()
+        self.horizontalLayout_3.setSpacing(0)
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.pb_menu_rip24 = QPushButton(self.pg_menu)
+        self.pb_menu_rip24.setObjectName(u"pb_menu_rip24")
+
+        self.horizontalLayout_3.addWidget(self.pb_menu_rip24)
+
+        self.pb_menu_rip40 = QPushButton(self.pg_menu)
+        self.pb_menu_rip40.setObjectName(u"pb_menu_rip40")
+
+        self.horizontalLayout_3.addWidget(self.pb_menu_rip40)
+
+        self.pb_menu_rip47 = QPushButton(self.pg_menu)
+        self.pb_menu_rip47.setObjectName(u"pb_menu_rip47")
+
+        self.horizontalLayout_3.addWidget(self.pb_menu_rip47)
+
+
+        self.gridLayout.addLayout(self.horizontalLayout_3, 2, 1, 1, 1)
 
         self.stk_main.addWidget(self.pg_menu)
         self.pg_dlg = QWidget()
@@ -207,7 +222,7 @@ class Ui_main(object):
 
         self.retranslateUi(main)
 
-        self.stk_main.setCurrentIndex(1)
+        self.stk_main.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(main)
@@ -216,6 +231,9 @@ class Ui_main(object):
     def retranslateUi(self, main):
         self.pb_menu_exportdlg.setText(QCoreApplication.translate("main", u"EXPORTS\n"
 "DLG", None))
+        self.pb_menu_rip24.setText(QCoreApplication.translate("main", u"RIP24", None))
+        self.pb_menu_rip40.setText(QCoreApplication.translate("main", u"RIP40", None))
+        self.pb_menu_rip47.setText(QCoreApplication.translate("main", u"RIP47", None))
         self.pb_filtre_atraiter.setText(QCoreApplication.translate("main", u"A TRAITER", None))
         self.pb_filtre_tout.setText(QCoreApplication.translate("main", u"TOUT", None))
         self.pb_filtre_fait.setText(QCoreApplication.translate("main", u"FAIT", None))

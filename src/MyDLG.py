@@ -77,7 +77,11 @@ class main(Ui_main, QtWidgets.QWidget):
         MyPushButton.MenuTop(self.pb_mt_agrandir).agrandir()
         MyPushButton.MenuTop(self.pb_mt_quitter).quitter()
 
+        # Menu
         MyPushButton.Base(self.pb_menu_exportdlg).MenuPB()
+        for wg in [self.pb_menu_rip24, self.pb_menu_rip47, self.pb_menu_rip47]: MyPushButton.Base(wg).MenuMarche()
+
+        # Dlg
         MyPushButton.Base(self.pb_retour_menu).RetourMenu()
         ### /QPushButton  ###
 
@@ -139,7 +143,6 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
         ### QComboBox ###
-        MyComboBox.Base(self.cb_menu_exportdlg).MenuPB()
         MyComboBox.Base(self.cb_marche).Marche()
         ### /QComboBox ###
 
@@ -228,8 +231,6 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
         ### Menu - combobox marche ###
-        self.cb_menu_exportdlg.lineEdit().setReadOnly(True)
-        self.cb_menu_exportdlg.addItems(["RIP24", "RIP40", "RIP47"])
         self.cb_marche.addItems(["RIP24", "RIP40", "RIP47"])
     def IN_CONNECTIONS(self):
         ### Menu_top ###

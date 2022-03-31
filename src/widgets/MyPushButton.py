@@ -33,6 +33,17 @@ class Base:
                 fixed_height=PaDim.H4,
             ),
         )
+    def MenuMarche(self):
+        Style(
+            widget=self.widget,
+            auto_actions=DcAutoActions.Base(
+                auto_exclusive=True
+            ),
+
+            dim=DcDim.Base(
+                fixed_height=PaDim.H9,
+            ),
+        )
     def RetourMenu(self):
         Style(
             widget=self.widget,
