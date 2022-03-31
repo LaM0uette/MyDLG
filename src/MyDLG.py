@@ -255,7 +255,6 @@ class main(Ui_main, QtWidgets.QWidget):
         self.fr_dlg_top.setFixedHeight(PaDim.H9+10)
             # search
         self.le_search_dlg.setPlaceholderText("Filtre...")
-        self.cb_marche.addItems(["RIP24", "RIP40", "RIP47"])
         self.cb_filtre_search.addItems(["like", "=", "in", ".*"])  # ajoputer le nom du dlg dans les vues + nom dlg=export
     def IN_CONNECTIONS(self):
         ### Menu_top ###
