@@ -155,6 +155,51 @@ class MenuMarche:
 
 
 #################
+##     DLG     ##
+#################
+class DlgFiltre:
+    def __init__(self, widget):
+        self.widget = widget
+
+    def _rtn(self, rd):
+        Style(
+            widget=self.widget,
+            auto_actions=DcAutoActions.Base(
+                auto_exclusive=True
+            ),
+            checkable=True,
+
+            dim=DcDim.Base(
+                fixed_height=PaDim.H9,
+            ),
+
+            background=DcRgbBg.Base(
+                gen=PaRgb.TH3
+            ),
+
+            foreground=DcRgbBg.Base(
+                base=PaRgb.TH1,
+                hover=PaRgb.TH1,
+                checked=PaRgb.BN1,
+                checked_hover=PaRgb.BN1,
+            ),
+
+            border=DcBorder.Base(
+                gen=(3, 0, 0, 0),
+                base_rgb=PaRgb.TH3,
+                hover_rgb=PaRgb.TH3,
+                checked_rgb=PaRgb.BN1,
+                checked_hover_rgb=PaRgb.BN1,
+                radius=rd
+            )
+        )
+
+    def ATraiter(self): self._rtn(rd=(0, 0, 0, 3))
+    def Tout(self): self._rtn(rd=(0, 0, 0, 0))
+    def Fait(self): self._rtn(rd=(0, 0, 3, 0))
+
+
+#################
 ##     TXT     ##
 #################
 class Txt:
