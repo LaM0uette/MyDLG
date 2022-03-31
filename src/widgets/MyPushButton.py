@@ -170,6 +170,7 @@ class DlgFiltre:
             checkable=True,
 
             dim=DcDim.Base(
+                fixed_width=PaDim.H6,
                 fixed_height=PaDim.H9,
             ),
 
