@@ -32,6 +32,10 @@ class Base:
                 fixed_width=PaDim.H4,
                 fixed_height=PaDim.H4,
             ),
+
+            border=DcBorder.Base(
+                radius=(3, 3, 0, 0)
+            )
         )
     def MenuMarche(self):
         Style(
@@ -39,10 +43,15 @@ class Base:
             auto_actions=DcAutoActions.Base(
                 auto_exclusive=True
             ),
+            checkable=True,
 
             dim=DcDim.Base(
                 fixed_height=PaDim.H9,
             ),
+
+            border=DcBorder.Base(
+                radius=(0, 0, 3, 3)
+            )
         )
     def RetourMenu(self):
         Style(

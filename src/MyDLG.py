@@ -247,6 +247,7 @@ class main(Ui_main, QtWidgets.QWidget):
         pass
     def IN_WG_BASE(self):
         self.stk_main.setCurrentWidget(self.pg_menu)
+        self.pb_menu_rip24.setChecked(True)
     def IN_TRAY(self):
         ### Actions ###
         Functions.ADD_QACTION(
