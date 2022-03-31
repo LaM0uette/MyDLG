@@ -309,6 +309,9 @@ DLG</string>
                  </spacer>
                 </item>
                 <item>
+                 <widget class="QComboBox" name="cb_filtre_search"/>
+                </item>
+                <item>
                  <widget class="QLineEdit" name="le_search_dlg"/>
                 </item>
                 <item>

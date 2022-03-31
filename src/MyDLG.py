@@ -157,6 +157,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
         ### QComboBox ###
         MyComboBox.Base(self.cb_marche).Marche()
+        MyComboBox.Base(self.cb_filtre_search).Marche()
         ### /QComboBox ###
 
 
@@ -250,7 +251,9 @@ class main(Ui_main, QtWidgets.QWidget):
 
         ### Dlg ###
         self.fr_dlg_top.setFixedHeight(PaDim.H9+10)
+            # search
         self.le_search_dlg.setPlaceholderText("Filtre...")
+        self.cb_marche.addItems(["=", "like", "in"])
     def IN_CONNECTIONS(self):
         ### Menu_top ###
         self.pb_mt_option.clicked.connect(lambda: OptionBox.MAIN(fen_main=fen))

@@ -174,6 +174,11 @@ class Ui_main(object):
 
         self.horizontalLayout_2.addItem(self.horizontalSpacer_5)
 
+        self.cb_filtre_search = QComboBox(self.fr_dlg_top)
+        self.cb_filtre_search.setObjectName(u"cb_filtre_search")
+
+        self.horizontalLayout_2.addWidget(self.cb_filtre_search)
+
         self.le_search_dlg = QLineEdit(self.fr_dlg_top)
         self.le_search_dlg.setObjectName(u"le_search_dlg")
 
