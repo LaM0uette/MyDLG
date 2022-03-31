@@ -292,7 +292,12 @@ class main(Ui_main, QtWidgets.QWidget):
     ##     FONCTIONS     ##
     #######################
     def f_pbmenu_exportdlg(self):
-        self.cb_marche.setCurrentText(self.cb_menu_exportdlg.currentText())
+        if self.pb_menu_rip24.isChecked(): idx = 0
+        elif self.pb_menu_rip40.isChecked(): idx = 1
+        elif self.pb_menu_rip47.isChecked(): idx = 2
+        else: return
+
+        self.cb_marche.setCurrentIndex(idx)
         self.stk_main.setCurrentWidget(self.pg_dlg)
     #######################
     ##    /FONCTIONS     ##
