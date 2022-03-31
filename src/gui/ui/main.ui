@@ -145,7 +145,7 @@
          <item>
           <widget class="QStackedWidget" name="stk_main">
            <property name="currentIndex">
-            <number>0</number>
+            <number>1</number>
            </property>
            <widget class="QWidget" name="pg_menu">
             <layout class="QGridLayout" name="gridLayout">
@@ -255,18 +255,30 @@ DLG</string>
             </layout>
            </widget>
            <widget class="QWidget" name="pg_dlg">
-            <widget class="QWidget" name="">
+            <widget class="QFrame" name="fr_dlg_top">
              <property name="geometry">
               <rect>
-               <x>20</x>
+               <x>30</x>
                <y>20</y>
-               <width>1001</width>
-               <height>28</height>
+               <width>1011</width>
+               <height>31</height>
               </rect>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_2">
               <property name="spacing">
                <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>5</number>
+              </property>
+              <property name="topMargin">
+               <number>5</number>
+              </property>
+              <property name="rightMargin">
+               <number>5</number>
+              </property>
+              <property name="bottomMargin">
+               <number>5</number>
               </property>
               <item>
                <widget class="QPushButton" name="pb_retour_menu"/>

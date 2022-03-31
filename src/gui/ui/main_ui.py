@@ -222,7 +222,7 @@ class Ui_main(object):
 
         self.retranslateUi(main)
 
-        self.stk_main.setCurrentIndex(0)
+        self.stk_main.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(main)
