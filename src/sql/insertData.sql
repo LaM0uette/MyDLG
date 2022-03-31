@@ -55,6 +55,17 @@ DELETE FROM t_exports;
 UPDATE sqlite_sequence SET seq = 0 WHERE name = 't_exports';
 
 
+-- Trigger insert t_dlg
+CREATE TRIGGER IF NOT EXISTS tr_insert_t_dlg
+   AFTER INSERT
+   ON t_dlg
+BEGIN
+    INSERT INTO t_exports (ex_dl_id,ex_no_export,ex_date,ex_et_id)
+    VALUES ((SELECT MAX(dl_id) FROM t_dlg), 1, '29/03/2022', 1);
+END;
+
+
+
 
 
 
@@ -72,5 +83,4 @@ UPDATE sqlite_sequence SET seq = 0 WHERE name = 't_exports';
 -- INSERT INTO t_etats (et_code,et_nom) VALUES ('LCL', 'LIVRAISON CLIENT');
 -- INSERT INTO t_etats (et_code,et_nom) VALUES ('PAU', 'PAUSE');
 -- INSERT INTO t_etats (et_code,et_nom) VALUES ('ANN', 'ANNULE');
-
 
