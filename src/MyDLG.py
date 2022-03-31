@@ -245,7 +245,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
         ### Menu ###
         self.pb_menu_exportdlg.clicked.connect(self.f_pbmenu_exportdlg)
-        self.pb_retour_menu.clicked.connect(lambda: self.stk_main.setCurrentWidget(self.pg_menu))
+        self.pb_retour_menu.clicked.connect(self.f_pbdlg_menu)
     def IN_ACT(self):
         pass
     def IN_WG_BASE(self):
@@ -303,6 +303,16 @@ class main(Ui_main, QtWidgets.QWidget):
 
         self.cb_marche.setCurrentIndex(idx)
         self.stk_main.setCurrentWidget(self.pg_dlg)
+
+    def f_pbdlg_menu(self):
+        idx = self.cb_marche.currentIndex()
+
+        match idx:
+            case 0: self.pb_menu_rip24.setChecked(True)
+            case 1: self.pb_menu_rip40.setChecked(True)
+            case 2: self.pb_menu_rip47.setChecked(True)
+
+        self.stk_main.setCurrentWidget(self.pg_menu)
     #######################
     ##    /FONCTIONS     ##
     #######################
