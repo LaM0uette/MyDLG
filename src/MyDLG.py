@@ -254,7 +254,7 @@ class main(Ui_main, QtWidgets.QWidget):
             # search
         self.le_search_dlg.setPlaceholderText("Filtre...")
         self.cb_marche.addItems(["RIP24", "RIP40", "RIP47"])
-        self.cb_filtre_search.addItems(["like", "=", "in", ".*"])
+        self.cb_filtre_search.addItems(["like", "=", "in", ".*"])  # ajoputer le nom du dlg dans les vues + nom dlg=export
     def IN_CONNECTIONS(self):
         ### Menu_top ###
         self.pb_mt_option.clicked.connect(lambda: OptionBox.MAIN(fen_main=fen))
