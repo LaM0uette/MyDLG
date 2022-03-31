@@ -220,6 +220,10 @@ class main(Ui_main, QtWidgets.QWidget):
                 """
             )
             self.hlay_menu_bottom.addWidget(self.size_grip)
+
+
+        ### Menu - combobox marche ###
+        self.cb_menu_exportdlg.addItems("RIP24", "RIP40", "RIP47")
     def IN_CONNECTIONS(self):
         ### Menu_top ###
         self.pb_mt_option.clicked.connect(lambda: OptionBox.MAIN(fen_main=fen))
@@ -229,7 +233,7 @@ class main(Ui_main, QtWidgets.QWidget):
     def IN_ACT(self):
         pass
     def IN_WG_BASE(self):
-        pass
+        self.stk_main.setCurrentWidget(self.pg_menu)
     def IN_TRAY(self):
         ### Actions ###
         Functions.ADD_QACTION(
