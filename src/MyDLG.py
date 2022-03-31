@@ -239,6 +239,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
         ### Menu ###
         self.pb_menu_exportdlg.clicked.connect(lambda: self.stk_main.setCurrentWidget(self.pg_dlg))
+        self.pb_retour_menu.clicked.connect(lambda: self.stk_main.setCurrentWidget(self.pg_menu))
     def IN_ACT(self):
         pass
     def IN_WG_BASE(self):
