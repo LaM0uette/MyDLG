@@ -51,7 +51,7 @@ class Base:
             ),
 
             border=DcBorder.Base(
-                radius=(3, 0, 3, 0)
+                radius=(0, 3, 0, 3)
             )
         )
 
