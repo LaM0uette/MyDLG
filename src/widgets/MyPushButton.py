@@ -44,6 +44,9 @@ class Base:
 
             img=DcImg.Base(
                 base=PaImg.MENU,
+                base_hover=PaImg.MENU,
+                base_rgb="th1",
+                base_hover_rgb="bn1",
             )
         )
 
