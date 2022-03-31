@@ -47,6 +47,7 @@ class Base:
     def SearchDLG(self):
         Style(
             widget=self.widget,
+            clear_button=True,
 
             dim=DcDim.Base(fixed_width=PaDim.H3),
 
