@@ -46,5 +46,15 @@ class Base:
             dim=DcDim.Base(
                 fixed_width=PaDim.H4,
                 fixed_height=PaDim.H9,
+            ),
+
+            background=DcRgbBg.Base(
+                gen=PaRgb.TH3,
+                selection=PaRgb.TH3
+            ),
+
+            foreground=DcRgbFg.Base(
+                gen=PaRgb.TH1,
+                selection=PaRgb.TH1
             )
         )
