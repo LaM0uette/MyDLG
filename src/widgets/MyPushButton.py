@@ -28,8 +28,12 @@ class Base:
             widget=self.widget,
 
             dim=DcDim.Base(
-                fixed_width=PaDim.H5,
-                fixed_height=PaDim.H5,
+                fixed_width=PaDim.H4,
+                fixed_height=PaDim.H4,
+            ),
+
+            border=DcBorder.Base(
+                radius=(3, 3, 0, 0)
             )
         )
 

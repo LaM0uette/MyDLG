@@ -96,10 +96,6 @@ class Ui_main(object):
         self.hlay_body.setSpacing(0)
         self.hlay_body.setObjectName(u"hlay_body")
         self.hlay_body.setContentsMargins(0, 0, 0, 0)
-        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.hlay_body.addItem(self.verticalSpacer)
-
         self.stk_main = QStackedWidget(self.fr_body)
         self.stk_main.setObjectName(u"stk_main")
         self.pg_menu = QWidget()
@@ -107,28 +103,24 @@ class Ui_main(object):
         self.gridLayout = QGridLayout(self.pg_menu)
         self.gridLayout.setSpacing(0)
         self.gridLayout.setObjectName(u"gridLayout")
-        self.gridLayout.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout.setContentsMargins(10, 10, 10, 10)
         self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.gridLayout.addItem(self.horizontalSpacer_3, 0, 2, 1, 1)
+        self.gridLayout.addItem(self.horizontalSpacer_3, 0, 1, 1, 1)
+
+        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.gridLayout.addItem(self.verticalSpacer_2, 2, 0, 1, 1)
 
         self.pb_menu_exportdlg = QPushButton(self.pg_menu)
         self.pb_menu_exportdlg.setObjectName(u"pb_menu_exportdlg")
 
-        self.gridLayout.addWidget(self.pb_menu_exportdlg, 0, 1, 1, 1)
-
-        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.gridLayout.addItem(self.horizontalSpacer, 0, 0, 1, 1)
+        self.gridLayout.addWidget(self.pb_menu_exportdlg, 0, 0, 1, 1)
 
         self.cb_menu_exportdlg = QComboBox(self.pg_menu)
         self.cb_menu_exportdlg.setObjectName(u"cb_menu_exportdlg")
 
-        self.gridLayout.addWidget(self.cb_menu_exportdlg, 1, 1, 1, 1)
-
-        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.gridLayout.addItem(self.verticalSpacer_2, 2, 1, 1, 1)
+        self.gridLayout.addWidget(self.cb_menu_exportdlg, 1, 0, 1, 1)
 
         self.stk_main.addWidget(self.pg_menu)
         self.page_2 = QWidget()
