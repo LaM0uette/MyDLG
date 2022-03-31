@@ -13,6 +13,7 @@ class PaImg:
     QUITTER = __svg("ui", "quitter")
     RESIZE = __svg("ui", "resize")
     COPIER = __svg("ui", "copier")
+    LOUPE = __svg("ui", "loupe")
     CHECK0 = __svg("ui", "check0")
     CHECK1 = __svg("ui", "check1")
     CHECK2 = __svg("ui", "check2")

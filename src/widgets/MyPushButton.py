@@ -69,8 +69,8 @@ class Base:
             ),
 
             img=DcImg.Base(
-                base=PaImg.MENU,
-                base_hover=PaImg.MENU,
+                base=PaImg.LOUPE,
+                base_hover=PaImg.LOUPE,
                 base_rgb="th1",
                 base_hover_rgb="bn1",
             ),
