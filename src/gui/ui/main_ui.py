@@ -132,9 +132,9 @@ class Ui_main(object):
         self.gridLayout.addItem(self.verticalSpacer, 0, 1, 1, 1)
 
         self.stk_main.addWidget(self.pg_menu)
-        self.page_2 = QWidget()
-        self.page_2.setObjectName(u"page_2")
-        self.widget = QWidget(self.page_2)
+        self.pg_dlg = QWidget()
+        self.pg_dlg.setObjectName(u"pg_dlg")
+        self.widget = QWidget(self.pg_dlg)
         self.widget.setObjectName(u"widget")
         self.widget.setGeometry(QRect(20, 20, 1001, 28))
         self.horizontalLayout_2 = QHBoxLayout(self.widget)
@@ -176,7 +176,7 @@ class Ui_main(object):
 
         self.horizontalLayout_2.addLayout(self.horizontalLayout)
 
-        self.stk_main.addWidget(self.page_2)
+        self.stk_main.addWidget(self.pg_dlg)
 
         self.hlay_body.addWidget(self.stk_main)
 

@@ -232,7 +232,7 @@ DLG</string>
              </item>
             </layout>
            </widget>
-           <widget class="QWidget" name="page_2">
+           <widget class="QWidget" name="pg_dlg">
             <widget class="QWidget" name="">
              <property name="geometry">
               <rect>

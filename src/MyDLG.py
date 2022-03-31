@@ -235,6 +235,10 @@ class main(Ui_main, QtWidgets.QWidget):
         self.pb_mt_reduire.clicked.connect(lambda: self.evt.e_reduire())
         self.pb_mt_agrandir.clicked.connect(lambda: self.evt.e_agrandir())
         self.pb_mt_quitter.clicked.connect(lambda: self.evt.e_cacher())
+
+
+        ### Menu ###
+        self.pb_menu_exportdlg.clicked.connect(lambda: self.stk_main.setCurrentWidget(self.pg_dlg))
     def IN_ACT(self):
         pass
     def IN_WG_BASE(self):
