@@ -175,7 +175,10 @@ class DlgFiltre:
             ),
 
             background=DcRgbBg.Base(
-                gen=PaRgb.TH3
+                base=PaRgb.TH3,
+                hover=PaRgb.TH3,
+                checked=PaRgb.TH2,
+                checked_hover=PaRgb.TH2,
             ),
 
             foreground=DcRgbBg.Base(
@@ -186,11 +189,6 @@ class DlgFiltre:
             ),
 
             border=DcBorder.Base(
-                gen=(3, 0, 0, 0),
-                base_rgb=PaRgb.TH3,
-                hover_rgb=PaRgb.TH3,
-                checked_rgb=PaRgb.BN1,
-                checked_hover_rgb=PaRgb.BN1,
                 radius=rd
             )
         )
