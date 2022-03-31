@@ -240,7 +240,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
         ### Menu ###
-        self.pb_menu_exportdlg.clicked.connect(lambda: self.stk_main.setCurrentWidget(self.pg_dlg))
+        self.pb_menu_exportdlg.clicked.connect(self.f_pbmenu_exportdlg)
         self.pb_retour_menu.clicked.connect(lambda: self.stk_main.setCurrentWidget(self.pg_menu))
     def IN_ACT(self):
         pass
@@ -290,6 +290,9 @@ class main(Ui_main, QtWidgets.QWidget):
     #######################
     ##     FONCTIONS     ##
     #######################
+    def f_pbmenu_exportdlg(self):
+        self.cb_marche.setCurrentText(self.cb_menu_exportdlg.currentText())
+        self.stk_main.setCurrentWidget(self.pg_dlg)
     #######################
     ##    /FONCTIONS     ##
     #######################
