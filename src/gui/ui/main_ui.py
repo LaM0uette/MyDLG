@@ -149,19 +149,12 @@ class Ui_main(object):
         self.stk_main.addWidget(self.pg_menu)
         self.pg_dlg = QWidget()
         self.pg_dlg.setObjectName(u"pg_dlg")
-        self.fr_dlg_body = QFrame(self.pg_dlg)
-        self.fr_dlg_body.setObjectName(u"fr_dlg_body")
-        self.fr_dlg_body.setGeometry(QRect(30, 70, 921, 641))
-        self.fr_dlg_body.setFrameShape(QFrame.StyledPanel)
-        self.fr_dlg_body.setFrameShadow(QFrame.Raised)
-        self.fr_dlg_tools = QFrame(self.pg_dlg)
-        self.fr_dlg_tools.setObjectName(u"fr_dlg_tools")
-        self.fr_dlg_tools.setGeometry(QRect(970, 70, 61, 641))
-        self.fr_dlg_tools.setFrameShape(QFrame.StyledPanel)
-        self.fr_dlg_tools.setFrameShadow(QFrame.Raised)
+        self.gridLayout_2 = QGridLayout(self.pg_dlg)
+        self.gridLayout_2.setSpacing(10)
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.gridLayout_2.setContentsMargins(10, 10, 10, 10)
         self.fr_dlg_top = QFrame(self.pg_dlg)
         self.fr_dlg_top.setObjectName(u"fr_dlg_top")
-        self.fr_dlg_top.setGeometry(QRect(30, 20, 1011, 41))
         self.horizontalLayout_2 = QHBoxLayout(self.fr_dlg_top)
         self.horizontalLayout_2.setSpacing(0)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
@@ -200,6 +193,23 @@ class Ui_main(object):
 
 
         self.horizontalLayout_2.addLayout(self.horizontalLayout)
+
+
+        self.gridLayout_2.addWidget(self.fr_dlg_top, 0, 0, 1, 2)
+
+        self.fr_dlg_body = QFrame(self.pg_dlg)
+        self.fr_dlg_body.setObjectName(u"fr_dlg_body")
+        self.fr_dlg_body.setFrameShape(QFrame.StyledPanel)
+        self.fr_dlg_body.setFrameShadow(QFrame.Raised)
+
+        self.gridLayout_2.addWidget(self.fr_dlg_body, 1, 0, 1, 1)
+
+        self.fr_dlg_tools = QFrame(self.pg_dlg)
+        self.fr_dlg_tools.setObjectName(u"fr_dlg_tools")
+        self.fr_dlg_tools.setFrameShape(QFrame.StyledPanel)
+        self.fr_dlg_tools.setFrameShadow(QFrame.Raised)
+
+        self.gridLayout_2.addWidget(self.fr_dlg_tools, 1, 1, 1, 1)
 
         self.stk_main.addWidget(self.pg_dlg)
 
