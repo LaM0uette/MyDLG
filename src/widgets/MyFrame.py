@@ -18,7 +18,7 @@ class Base:
         Style(
             widget=self.widget,
             background=DcRgbBg.Base(gen=rgb),
-            dim=DcDim.Base(fixed_width=PaDim.H7)
+            dim=DcDim.Base(fixed_width=PaDim.H7+10)
         )
     def Base_no_radius(self, rgb=PaRgb.TH3):
         Style(

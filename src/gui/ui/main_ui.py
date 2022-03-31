@@ -208,6 +208,19 @@ class Ui_main(object):
         self.fr_dlg_tools.setObjectName(u"fr_dlg_tools")
         self.fr_dlg_tools.setFrameShape(QFrame.StyledPanel)
         self.fr_dlg_tools.setFrameShadow(QFrame.Raised)
+        self.verticalLayout = QVBoxLayout(self.fr_dlg_tools)
+        self.verticalLayout.setSpacing(5)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.verticalLayout.setContentsMargins(5, 5, 5, 0)
+        self.pb_tools_add_dlg = QPushButton(self.fr_dlg_tools)
+        self.pb_tools_add_dlg.setObjectName(u"pb_tools_add_dlg")
+
+        self.verticalLayout.addWidget(self.pb_tools_add_dlg)
+
+        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout.addItem(self.verticalSpacer_3)
+
 
         self.gridLayout_2.addWidget(self.fr_dlg_tools, 1, 1, 1, 1)
 

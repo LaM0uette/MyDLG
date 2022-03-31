@@ -59,6 +59,25 @@ class Base:
             )
         )
 
+    def DlgTools(self):
+        Style(
+            widget=self.widget,
+            pb_type="ico_click",
+            dim=DcDim.Base(
+                fixed_width=PaDim.H7,
+                fixed_height=PaDim.H7,
+            ),
+            img=DcImg.Base(
+                base=PaImg.PLUS,
+                base_hover=PaImg.PLUS,
+                base_rgb="th1",
+                base_hover_rgb="bn1",
+            ),
+            border=DcBorder.Base(
+                radius=(0, )*4
+            )
+        )
+
 
 ######################
 ##     MENU TOP     ##
