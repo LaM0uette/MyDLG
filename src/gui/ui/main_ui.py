@@ -15,15 +15,15 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
-    QPushButton, QSizePolicy, QSpacerItem, QVBoxLayout,
-    QWidget)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
+    QHBoxLayout, QLabel, QPushButton, QSizePolicy,
+    QSpacerItem, QStackedWidget, QVBoxLayout, QWidget)
 
 class Ui_main(object):
     def setupUi(self, main):
         if not main.objectName():
             main.setObjectName(u"main")
-        main.resize(896, 699)
+        main.resize(1057, 775)
         self.vlay_main = QVBoxLayout(main)
         self.vlay_main.setSpacing(0)
         self.vlay_main.setObjectName(u"vlay_main")
@@ -100,6 +100,43 @@ class Ui_main(object):
 
         self.hlay_body.addItem(self.verticalSpacer)
 
+        self.stk_main = QStackedWidget(self.fr_body)
+        self.stk_main.setObjectName(u"stk_main")
+        self.pg_menu = QWidget()
+        self.pg_menu.setObjectName(u"pg_menu")
+        self.gridLayout = QGridLayout(self.pg_menu)
+        self.gridLayout.setSpacing(0)
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.gridLayout.setContentsMargins(0, 0, 0, 0)
+        self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.gridLayout.addItem(self.horizontalSpacer_3, 0, 2, 1, 1)
+
+        self.pb_menu_exportdlg = QPushButton(self.pg_menu)
+        self.pb_menu_exportdlg.setObjectName(u"pb_menu_exportdlg")
+
+        self.gridLayout.addWidget(self.pb_menu_exportdlg, 0, 1, 1, 1)
+
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.gridLayout.addItem(self.horizontalSpacer, 0, 0, 1, 1)
+
+        self.cb_menu_exportdlg = QComboBox(self.pg_menu)
+        self.cb_menu_exportdlg.setObjectName(u"cb_menu_exportdlg")
+
+        self.gridLayout.addWidget(self.cb_menu_exportdlg, 1, 1, 1, 1)
+
+        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.gridLayout.addItem(self.verticalSpacer_2, 2, 1, 1, 1)
+
+        self.stk_main.addWidget(self.pg_menu)
+        self.page_2 = QWidget()
+        self.page_2.setObjectName(u"page_2")
+        self.stk_main.addWidget(self.page_2)
+
+        self.hlay_body.addWidget(self.stk_main)
+
 
         self.vlay_fr_main.addWidget(self.fr_body)
 
@@ -131,6 +168,7 @@ class Ui_main(object):
     # setupUi
 
     def retranslateUi(self, main):
+        self.pb_menu_exportdlg.setText(QCoreApplication.translate("main", u"Export DLG", None))
         pass
     # retranslateUi
 
