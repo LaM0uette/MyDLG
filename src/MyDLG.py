@@ -87,9 +87,9 @@ class main(Ui_main, QtWidgets.QWidget):
         # Dlg
         MyPushButton.Base(self.pb_retour_menu).RetourMenu()
 
-        MyPushButton.DlgFiltre(self.pb_menu_rip24).ATraiter()
-        MyPushButton.DlgFiltre(self.pb_menu_rip40).Tout()
-        MyPushButton.DlgFiltre(self.pb_menu_rip47).Fait()
+        MyPushButton.DlgFiltre(self.pb_filtre_atraiter).ATraiter()
+        MyPushButton.DlgFiltre(self.pb_filtre_tout).Tout()
+        MyPushButton.DlgFiltre(self.pb_filtre_fait).Fait()
         ### /QPushButton  ###
 
 
