@@ -24,7 +24,7 @@ class CoSql:
     def TEST_CO(self):
         try:
             self.cd.execute("SELECT * FROM t_dlg")
-            return True
+            return False
         except:
             return False
         finally:
