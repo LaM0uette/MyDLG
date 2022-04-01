@@ -307,13 +307,13 @@ class main(Ui_main, QtWidgets.QWidget):
         type_td = "T"
         no_livraison = 1
         no_version = 1
-        zo_id = 1
+        dl_id = 1
         no_export = 2
         no_etat = 2
 
         CoSql().ADD_ZONE_DLG(marche, nro, pm, refcode3)
         CoSql().ADD_DLG(refcode3, date, phase, type_td, no_livraison, no_version)
-        CoSql().ADD_EXPORT(zo_id, phase, type_td, no_livraison, no_version, no_export, no_etat)
+        CoSql().ADD_EXPORT(dl_id, no_export, no_etat)
     def INIT(self, *args):
         for fct in args:
             splash_screen.lb_chargement.setText(fct[1])

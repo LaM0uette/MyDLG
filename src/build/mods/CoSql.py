@@ -42,16 +42,10 @@ class CoSql:
 
         self.close()
 
-    def ADD_EXPORT(self, zo_id, phase, type_td, no_livraison, no_version, no_export, no_etat):
+    def ADD_EXPORT(self, dl_id, no_export, no_etat):
         self.cd.execute(f"""
         INSERT INTO t_exports (ex_dl_id,ex_no_export,ex_date,ex_et_id)
-        SELECT (SELECT dl_id
-                FROM t_dlg
-                WHERE dl_zo_id = {zo_id}
-                AND dl_phase = '{phase}'
-                AND dl_td = '{type_td}'
-                AND dl_no_livraison = {no_livraison}
-                AND dl_no_version = {no_version}) AS dlg, {no_export}, '{datetime.now().strftime("%Y-%m-%d %H:%M:%S")}', {no_etat};
+        SELECT {dl_id}, {no_export}, '{datetime.now().strftime("%Y-%m-%d %H:%M:%S")}', {no_etat};
                 """)
         self.co.commit()
 
