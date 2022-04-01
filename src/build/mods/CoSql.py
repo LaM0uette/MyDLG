@@ -9,8 +9,20 @@ class CoSql:
         self.cd = self.co.cursor()
 
 
+    def ADD_ZONE_DLG(self, marche, nro, pm, refcode3):
+        self.cd.execute(f"""
+        INSERT INTO t_zone_dlg (zo_marche,zo_nro,zo_pm,zo_refcode3)
+        SELECT {marche}, {nro}, {pm}, '{refcode3}'
+        WHERE NOT EXISTS(
+            SELECT zo_refcode3
+            FROM t_zone_dlg
+            WHERE zo_refcode3 = '{refcode3}'
+            );
+        """)
+
+        self.close()
     def TEST_CO(self):
-        self.cd.execute("SELECT * FROM t_partenaires")
+        self.cd.execute("SELECT * FROM t_dlg")
         for i in self.cd.fetchall():
             print(i)
 

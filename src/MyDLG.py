@@ -39,7 +39,8 @@ class main(Ui_main, QtWidgets.QWidget):
             [self.IN_CONNECTIONS, "Ajout des connexions"],
             [self.IN_ACT, "Fonctions de base"],
             [self.IN_WG_BASE, "Etat de base des Widgets"],
-            [self.IN_TRAY, "Finalisation de la Configuration"]
+            [self.IN_TRAY, "Finalisation de la Configuration"],
+            [self.TEST_SQL, "Test de la connexion à la base de données"]
         )
 
         splash_screen.close()
@@ -292,6 +293,8 @@ class main(Ui_main, QtWidgets.QWidget):
 
         self.tray.setContextMenu(self.tray_menu)
         self.tray.show()
+    def TEST_SQL(self):
+        CoSql().TEST_CO()
     def INIT(self, *args):
         for fct in args:
             splash_screen.lb_chargement.setText(fct[1])

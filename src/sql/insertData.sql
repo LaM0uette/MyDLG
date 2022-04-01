@@ -83,4 +83,3 @@ END;
 -- INSERT INTO t_etats (et_code,et_nom) VALUES ('LCL', 'LIVRAISON CLIENT');
 -- INSERT INTO t_etats (et_code,et_nom) VALUES ('PAU', 'PAUSE');
 -- INSERT INTO t_etats (et_code,et_nom) VALUES ('ANN', 'ANNULE');
-
