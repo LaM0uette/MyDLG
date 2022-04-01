@@ -298,12 +298,12 @@ class main(Ui_main, QtWidgets.QWidget):
             MsgBox.ALERTE(title="Erreur SQL", msg="Une erreur est survenue lors de la connexion à la base de données.")
             quit()
 
-        marche = 20
-        nro = 10
-        pm = 5
-        refcode3 = "BITO"
-        date = "01/04/2022"
-        phase = "EXE"
+        marche = 21
+        nro = 11
+        pm = 6
+        refcode3 = "BIRO"
+        date = "02/04/2022"
+        phase = "DOE"
         type_td = "T"
         no_livraison = 1
         no_version = 1
