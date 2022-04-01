@@ -1,4 +1,5 @@
 import sqlite3
+from datetime import datetime
 
 from src.lib.private import v_sql
 
@@ -37,6 +38,21 @@ class CoSql:
             AND dl_no_version = {no_version}
             );
         """)
+        self.co.commit()
+
+        self.close()
+
+    def ADD_EXPORT(self, zo_id, phase, type_td, no_livraison, no_version, no_export, no_etat):
+        self.cd.execute(f"""
+        INSERT INTO t_exports (ex_dl_id,ex_no_export,ex_date,ex_et_id)
+        SELECT (SELECT dl_id
+                FROM t_dlg
+                WHERE dl_zo_id = {zo_id}
+                AND dl_phase = '{phase}'
+                AND dl_td = '{type_td}'
+                AND dl_no_livraison = {no_livraison}
+                AND dl_no_version = {no_version}) AS dlg, {no_export}, '{datetime.now()}', {no_etat};
+                """)
         self.co.commit()
 
         self.close()
