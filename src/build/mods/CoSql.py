@@ -22,6 +22,26 @@ class CoSql:
         self.co.commit()
 
         self.close()
+
+    def ADD_DLG(self, refcode3, date, phase, type_td, no_livraison, no_version):
+        self.cd.execute(f"""
+        INSERT INTO t_dlg (dl_zo_id,dl_init_date,dl_phase,dl_td,dl_no_livraison,dl_no_version)
+        SELECT (SELECT dlg.zo_id FROM t_zone_dlg dlg WHERE dlg.zo_refcode3 = '{refcode3}') AS zo, '{date}', '{phase}', '{type_td}', {no_livraison}, {no_version}
+        WHERE NOT EXISTS(
+            SELECT dl_phase,dl_td,dl_no_livraison,dl_no_version
+            FROM t_dlg
+            WHERE dl_zo_id = zo
+            AND dl_phase = '{phase}'
+            AND dl_td = '{type_td}'
+            AND dl_no_livraison = {no_livraison}
+            AND dl_no_version = {no_version}
+            );
+        """)
+        self.co.commit()
+
+        self.close()
+
+
     def TEST_CO(self):
         try:
             self.cd.execute("SELECT * FROM t_dlg")
@@ -30,6 +50,7 @@ class CoSql:
             return False
         finally:
             self.close()
+
     def close(self):
         self.cd.close()
         self.co.close()

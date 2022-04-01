@@ -302,8 +302,14 @@ class main(Ui_main, QtWidgets.QWidget):
         nro = 10
         pm = 5
         refcode3 = "BITO"
+        date = "29/03/2022"
+        phase = "EXE"
+        type_td = "TD"
+        no_livraison = 1
+        no_version = 1
 
-        CoSql().ADD_ZONE_DLG(marche=marche, nro=nro, pm=pm, refcode3=refcode3)
+        CoSql().ADD_ZONE_DLG(marche, nro, pm, refcode3)
+        CoSql().ADD_DLG(refcode3, date, phase, type_td, no_livraison, no_version)
     def INIT(self, *args):
         for fct in args:
             splash_screen.lb_chargement.setText(fct[1])
