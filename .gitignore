@@ -4,4 +4,4 @@ __pycache__/
 /src/logs
 /src/assets/img/*/rgb
 /src/config/versionfile.txt
-/src/lib/private/v_sql.py
+/src/lib/private
