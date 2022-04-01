@@ -294,7 +294,9 @@ class main(Ui_main, QtWidgets.QWidget):
         self.tray.setContextMenu(self.tray_menu)
         self.tray.show()
     def TEST_SQL(self):
-        CoSql().TEST_CO()
+        if not CoSql().TEST_CO():
+
+            MsgBox.ALERTE(title="Erreur SQL", msg="Une erreur est survenue lors de la connexion à la base de données.")
     def INIT(self, *args):
         for fct in args:
             splash_screen.lb_chargement.setText(fct[1])
