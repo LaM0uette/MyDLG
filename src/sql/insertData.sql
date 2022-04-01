@@ -9,7 +9,7 @@ WHERE NOT EXISTS(
 
 -- Insertion d'un nouveau dlg (100% nouveau)
 INSERT INTO t_dlg (dl_zo_id,dl_init_date,dl_phase,dl_td,dl_no_livraison,dl_no_version)
-SELECT (SELECT dlg.zo_id FROM t_zone_dlg dlg WHERE dlg.zo_refcode3 = 'BIMO') AS zo, '29/03/2022', 'EXE', 'TD', 1, 1
+SELECT (SELECT dlg.zo_id FROM t_zone_dlg dlg WHERE dlg.zo_refcode3 = 'BIMI') AS zo, '29-03-2022', 'EXE', 'TD', 1, 1
 WHERE NOT EXISTS(
     SELECT dl_phase,dl_td,dl_no_livraison,dl_no_version
     FROM t_dlg
@@ -78,3 +78,13 @@ END;
 -- INSERT INTO t_etats (et_code,et_nom) VALUES ('LCL', 'LIVRAISON CLIENT');
 -- INSERT INTO t_etats (et_code,et_nom) VALUES ('PAU', 'PAUSE');
 -- INSERT INTO t_etats (et_code,et_nom) VALUES ('ANN', 'ANNULE');
+
+
+
+select zo.zo_marche,zo.zo_nro,zo.zo_pm,zo.zo_refcode3,
+       zo.zo_marche || '_NRO' || zo.zo_nro || '_PM' || zo.zo_pm  || '_' || zo.zo_refcode3 AS zo_ext_id,
+       dl.dl_id,dl.dl_init_date,dl.dl_phase,dl.dl_td,dl.dl_no_livraison,dl.dl_no_version,
+       dl.dl_phase || '-DLG-' || zo.zo_marche || '-' || zo.zo_refcode3  || '-' || zo.zo_refcode3 || '-' || PRINTF('%02d', dl.dl_no_livraison) || '-V' || dl.dl_no_version AS dlg
+from t_zone_dlg zo
+INNER JOIN t_dlg dl
+ON dl.dl_zo_id = zo.zo_id;
