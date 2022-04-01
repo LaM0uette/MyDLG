@@ -22,9 +22,11 @@ class CoSql:
 
         self.close()
     def TEST_CO(self):
-        self.cd.execute("SELECT * FROM t_dlg")
-        for i in self.cd.fetchall():
-            print(i)
+
+        try:
+            self.cd.execute("SELECT * FROM t_dlg")
+        except:
+            pass
 
         self.close()
     def close(self):
