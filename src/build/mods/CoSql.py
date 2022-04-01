@@ -22,13 +22,13 @@ class CoSql:
 
         self.close()
     def TEST_CO(self):
-
         try:
             self.cd.execute("SELECT * FROM t_dlg")
+            return True
         except:
-            pass
-
-        self.close()
+            return False
+        finally:
+            self.close()
     def close(self):
         self.cd.close()
         self.co.close()
