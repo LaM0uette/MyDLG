@@ -302,9 +302,9 @@ class main(Ui_main, QtWidgets.QWidget):
         nro = 10
         pm = 5
         refcode3 = "BITO"
-        date = "29/03/2022"
+        date = "01/04/2022"
         phase = "EXE"
-        type_td = "TD"
+        type_td = "T"
         no_livraison = 1
         no_version = 1
 
