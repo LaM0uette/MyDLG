@@ -19,6 +19,7 @@ class CoSql:
             WHERE zo_refcode3 = '{refcode3}'
             );
         """)
+        self.co.commit()
 
         self.close()
     def TEST_CO(self):
