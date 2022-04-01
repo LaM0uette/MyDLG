@@ -22,7 +22,7 @@ WHERE NOT EXISTS(
 
 -- Insertion d'un nouvel export (100% nouveau)
 INSERT INTO t_exports (ex_dl_id,ex_no_export,ex_date,ex_et_id)
-SELECT 1, 1, datetime('now', 'localtime'), 1
+SELECT 1, 1, datetime('now', 'localtime'), 1;
 
 
 
@@ -35,6 +35,7 @@ SELECT * FROM t_etats;
 -- Select vues
 SELECT * FROM v_dlg;
 SELECT * FROM v_exports_en_cours;
+
 
 
 
