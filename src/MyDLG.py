@@ -298,7 +298,12 @@ class main(Ui_main, QtWidgets.QWidget):
             MsgBox.ALERTE(title="Erreur SQL", msg="Une erreur est survenue lors de la connexion à la base de données.")
             quit()
 
-        CoSql().ADD_ZONE_DLG(marche=20, nro=10, pm=5, refcode3="BITO")
+        marche = 20
+        nro = 10
+        pm = 5
+        refcode3 = "BITO"
+
+        CoSql().ADD_ZONE_DLG(marche=marche, nro=nro, pm=pm, refcode3=refcode3)
     def INIT(self, *args):
         for fct in args:
             splash_screen.lb_chargement.setText(fct[1])
