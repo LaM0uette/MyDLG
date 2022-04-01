@@ -9,7 +9,7 @@ WHERE NOT EXISTS(
 
 -- Insertion d'un nouveau dlg (100% nouveau)
 INSERT INTO t_dlg (dl_zo_id,dl_init_date,dl_phase,dl_td,dl_no_livraison,dl_no_version)
-SELECT (SELECT dlg.zo_id FROM t_zone_dlg dlg WHERE dlg.zo_refcode3 = 'BIMI') AS zo, '29/03/2022', 'EXE', 'TD', 1, 1
+SELECT (SELECT dlg.zo_id FROM t_zone_dlg dlg WHERE dlg.zo_refcode3 = 'BIMO') AS zo, '29/03/2022', 'EXE', 'TD', 1, 1
 WHERE NOT EXISTS(
     SELECT dl_phase,dl_td,dl_no_livraison,dl_no_version
     FROM t_dlg
@@ -22,13 +22,7 @@ WHERE NOT EXISTS(
 
 -- Insertion d'un nouvel export (100% nouveau)
 INSERT INTO t_exports (ex_dl_id,ex_no_export,ex_date,ex_et_id)
-SELECT (SELECT dl_id
-        FROM t_dlg
-        WHERE dl_zo_id = 1
-        AND dl_phase = 'EXE'
-        AND dl_td = 'TD'
-        AND dl_no_livraison = 1
-        AND dl_no_version = 1) AS dlg, 1, '29/03/2022', 1;
+SELECT 1, 1, datetime('now', 'localtime'), 1
 
 
 

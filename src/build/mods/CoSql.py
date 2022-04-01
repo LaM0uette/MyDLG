@@ -51,7 +51,7 @@ class CoSql:
                 AND dl_phase = '{phase}'
                 AND dl_td = '{type_td}'
                 AND dl_no_livraison = {no_livraison}
-                AND dl_no_version = {no_version}) AS dlg, {no_export}, '{datetime.now()}', {no_etat};
+                AND dl_no_version = {no_version}) AS dlg, {no_export}, '{datetime.now().strftime("%Y-%m-%d %H:%M:%S")}', {no_etat};
                 """)
         self.co.commit()
 
