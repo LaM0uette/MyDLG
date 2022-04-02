@@ -1,6 +1,6 @@
 -- Insertion d'une nouvelle zone (100% nouveau)
-INSERT INTO t_zone_dlg (zo_marche,zo_nro,zo_pm,zo_refcode3)
-SELECT 24, 22, 8, 'BIMI'
+INSERT INTO t_zone_dlg (zo_marche,zo_nro,zo_pm,zo_refcode2,zo_refcode3)
+SELECT 24, 22, 8, 'XAMA', 'BIMI'
 WHERE NOT EXISTS(
     SELECT zo_refcode3
     FROM t_zone_dlg
@@ -30,7 +30,6 @@ SELECT 1, 1, datetime('now', 'localtime'), 1;
 SELECT * FROM t_zone_dlg;
 SELECT * FROM t_dlg;
 SELECT * FROM t_exports;
-SELECT * FROM t_etats;
 
 -- Select vues
 SELECT * FROM v_dlg;
@@ -56,7 +55,7 @@ CREATE TRIGGER IF NOT EXISTS tr_insert_t_dlg
    ON t_dlg
 BEGIN
     INSERT INTO t_exports (ex_dl_id,ex_no_export,ex_date,ex_et_id)
-    VALUES ((SELECT MAX(dl_id) FROM t_dlg), 1, '29/03/2022', 1);
+    VALUES ((SELECT MAX(dl_id) FROM t_dlg), 1, datetime('now', 'localtime'), 1);
 END;
 
 
@@ -78,13 +77,3 @@ END;
 -- INSERT INTO t_etats (et_code,et_nom) VALUES ('LCL', 'LIVRAISON CLIENT');
 -- INSERT INTO t_etats (et_code,et_nom) VALUES ('PAU', 'PAUSE');
 -- INSERT INTO t_etats (et_code,et_nom) VALUES ('ANN', 'ANNULE');
-
-
-
-select zo.zo_marche,zo.zo_nro,zo.zo_pm,zo.zo_refcode3,
-       zo.zo_marche || '_NRO' || zo.zo_nro || '_PM' || zo.zo_pm  || '_' || zo.zo_refcode3 AS zo_ext_id,
-       dl.dl_id,dl.dl_init_date,dl.dl_phase,dl.dl_td,dl.dl_no_livraison,dl.dl_no_version,
-       dl.dl_phase || '-DLG-' || zo.zo_marche || '-' || zo.zo_refcode3  || '-' || zo.zo_refcode3 || '-' || PRINTF('%02d', dl.dl_no_livraison) || '-V' || dl.dl_no_version AS dlg
-from t_zone_dlg zo
-INNER JOIN t_dlg dl
-ON dl.dl_zo_id = zo.zo_id;
