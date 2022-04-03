@@ -76,8 +76,9 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
 
 
         ### QComboBox ###
-        MyComboBox.Base(self.cb_phase).Base()
-        MyComboBox.Base(self.cb_td).Base()
+        for wg in [
+            self.cb_phase, self.cb_td, self.cb_nro, self.cb_pm, self.cb_refcode3
+        ]: MyComboBox.Base(wg).Base()
         ### /QComboBox ###
 
 
