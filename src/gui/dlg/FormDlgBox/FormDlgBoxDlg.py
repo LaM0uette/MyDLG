@@ -118,7 +118,7 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
 
 
         # FORM DLG
-        for phase in CoSql().GET_PHASE():
+        for phase in CoSql().GET_ALL_PHASE():
             self.cb_phase.addItem(phase[1])
         self.cb_phase.setCurrentIndex(1)
 
@@ -128,11 +128,11 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
         self.cb_pm.addItem("")
         self.cb_refcode3.addItem("")
 
-        for nro in CoSql().GET_NRO(self.marche):
+        for nro in CoSql().GET_ALL_NRO(self.marche):
             self.cb_nro.addItem(str(nro[0]))
-        for pm in CoSql().GET_PM(self.marche):
+        for pm in CoSql().GET_ALL_PM(self.marche):
             self.cb_pm.addItem(str(pm[0]))
-        for refcode3 in CoSql().GET_REFCODE3(self.marche):
+        for refcode3 in CoSql().GET_ALL_REFCODE3(self.marche):
             self.cb_refcode3.addItem(str(refcode3[0]))
     def IN_CONNECTIONS(self):
         ## Menu_top
@@ -143,6 +143,8 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
 
         # Form dlg
         self.cb_phase.currentTextChanged.connect(self.a_phase_changed)
+        self.cb_nro.editTextChanged.connect(self.f_get_refcode3)
+        self.cb_pm.editTextChanged.connect(self.f_get_refcode3)
         self.cb_refcode3.editTextChanged.connect(self.f_get_nro_pm)
     def IN_ACT(self):
         pass
@@ -177,6 +179,13 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
     #######################
     ##     FONCTIONS     ##
     #######################
+    def f_get_refcode3(self):
+        req = CoSql().GET_NRO_PM(self.cb_refcode3.currentText())
+        nro = str(req[0])
+        pm = str(req[1])
+
+        self.cb_nro.setCurrentText(nro)
+        self.cb_pm.setCurrentText(pm)
     def f_get_nro_pm(self):
         req = CoSql().GET_NRO_PM(self.cb_refcode3.currentText())
         nro = str(req[0])

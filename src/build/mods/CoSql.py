@@ -73,7 +73,7 @@ class CoSql:
 
 
     # SELECT
-    def GET_PHASE(self):
+    def GET_ALL_PHASE(self):
         self.cd.execute("""
         SELECT * FROM t_phase
         """)
@@ -81,25 +81,36 @@ class CoSql:
 
         self.close()
         return rtn
-    def GET_NRO(self, marche):
+    def GET_ALL_NRO(self, marche):
         self.cd.execute(f"SELECT DISTINCT cz_nro FROM t_code_zone WHERE cz_marche = {marche} ORDER BY cz_nro")
         nro = self.cd.fetchall()
 
         self.close()
         return nro
-    def GET_PM(self, marche):
+    def GET_ALL_PM(self, marche):
         self.cd.execute(f"SELECT DISTINCT cz_pm FROM t_code_zone WHERE cz_marche = {marche} ORDER BY cz_pm")
         pm = self.cd.fetchall()
 
         self.close()
         return pm
-    def GET_REFCODE3(self, marche):
+    def GET_ALL_REFCODE3(self, marche):
         self.cd.execute(f"SELECT DISTINCT cz_refcode3 FROM t_code_zone WHERE cz_marche = {marche} ORDER BY cz_refcode3")
         refcode3 = self.cd.fetchall()
 
         self.close()
         return refcode3
 
+    def GET_REFCODE3(self, nro, pm):
+        self.cd.execute(f"""
+        SELECT cz_refcode3
+        FROM t_code_zone 
+        WHERE cz_nro = {nro}
+        AND cz_pm = {pm}
+        """)
+        rtn = self.cd.fetchone()
+
+        self.close()
+        return rtn
     def GET_NRO_PM(self, refcode3):
         self.cd.execute(f"""
         SELECT cz_nro, cz_pm 
