@@ -159,9 +159,12 @@ class Base:
         Style(
             widget=self.widget,
 
+            size_policy=DcSizePolicy.Base(
+                horizontal=PaSizePolicy.EXPANDING
+            ),
+
             dim=DcDim.Base(
-                maximum_width=PaDim.H3,
-                fixed_height=PaDim.H9,
+                fixed_height=PaDim.H8,
             ),
 
             background=DcRgbBg.Base(
