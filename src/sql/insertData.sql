@@ -39,6 +39,8 @@ SELECT * FROM t_exports;
 
 -- Select vues
 SELECT * FROM v_dlg;
+SELECT * FROM v_dlg_a_faire;
+SELECT * FROM v_dlg_fait;
 SELECT * FROM v_exports_en_cours;
 
 
@@ -87,5 +89,21 @@ END;
 -- INSERT INTO t_phase (ph_nom) VALUES  ('PRO');
 -- INSERT INTO t_phase (ph_nom) VALUES  ('DOE');
 -- INSERT INTO t_phase (ph_nom) VALUES  ('EXE');
+
+
+-- CREATE VIEW v_dlg_fait as
+-- select DISTINCT dl.dl_id,zo.zo_marche,zo.zo_nro,zo.zo_pm,zo.zo_refcode3,
+--        zo.zo_marche || '_NRO' || zo.zo_nro || '_PM' || zo.zo_pm  || '_' || zo.zo_refcode3 AS zo_ext_id,
+--        dl.dl_init_date,dl.dl_phase,dl.dl_td,dl.dl_no_livraison,dl.dl_no_version,
+--        SUBSTR(dl.dl_phase, 1, 3) || '-DLG-' || zo.zo_marche || '-' || zo.zo_refcode2  || '-' || zo.zo_refcode3 || '-' || PRINTF('%02d', dl.dl_no_livraison) || '-V' || dl.dl_no_version AS dlg,
+--                 ex.ex_et_id
+-- from t_zone_dlg zo
+-- INNER JOIN t_dlg dl
+--     ON dl.dl_zo_id = zo.zo_id
+-- INNER JOIN t_exports ex
+--     ON ex.ex_dl_id = dl.dl_id
+-- WHERE ex.ex_et_id IN(11, 12)
+-- ORDER BY dl.dl_init_date, dl_no_livraison, dl_no_version;
+
 
 
