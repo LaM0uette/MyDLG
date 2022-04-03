@@ -131,7 +131,7 @@ class CoSql:
         AND dl_no_livraison = {num_livraison}
         AND dl_no_version = {num_version}
         """)
-        rtn = self.cd.fetchall()
+        rtn = self.cd.fetchone()
 
         self.close()
         return rtn
