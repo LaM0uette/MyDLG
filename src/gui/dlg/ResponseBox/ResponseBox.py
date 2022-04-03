@@ -27,3 +27,4 @@ class ResponseBox:
     INFO = partial(__rtn, title="INFO", msg="", ico=PaImg.INFO, ico_rgb="th3", txt_ok="Ok", txt_cancel="Annuler", width=__WIDTH, height=__HEIGHT, opacity=__OPACITY)
     ALERTE = partial(__rtn, title="ALERTE", msg="", ico=PaImg.ALERTE, ico_rgb="th3", txt_ok="Valider", txt_cancel="Annuler", width=__WIDTH, height=__HEIGHT, opacity=__OPACITY)
     QUITTER = partial(__rtn, title="Quitter", msg="Voulez vous quitter cette application ?", ico=PaImg.QUITTER, ico_rgb="bn2", txt_ok="Quitter", txt_cancel="Annuler", width=__WIDTH, height=__HEIGHT, opacity=__OPACITY)
+    EDIT_DLG = partial(__rtn, title="Editer", msg="Etes vous sur de bien vouloir ajouter un état pour cette export ?", ico=PaImg.PLUS, ico_rgb="bn2", txt_ok="Confirmer", txt_cancel="Annuler", width=__WIDTH, height=__HEIGHT, opacity=__OPACITY)
