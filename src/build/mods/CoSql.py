@@ -20,7 +20,7 @@ class CoSql:
         """
         self.cd.execute(f"""
         INSERT INTO t_zone_dlg (zo_marche,zo_nro,zo_pm,zo_refcode3)
-        SELECT {marche}, {nro}, {pm}, '{refcode3}'
+        SELECT {marche}, {nro}, {pm}, (SELECT cz_refcode2 FROM t_code_zone WHERE cz_refcode3 = '{refcode3}'), '{refcode3}'
         WHERE NOT EXISTS(
             SELECT zo_refcode3
             FROM t_zone_dlg

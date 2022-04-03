@@ -1,6 +1,6 @@
 -- Insertion d'une nouvelle zone (100% nouveau)
 INSERT INTO t_zone_dlg (zo_marche,zo_nro,zo_pm,zo_refcode2,zo_refcode3)
-SELECT 24, 22, 8, 'XAMA', 'BIMI'
+SELECT 24, 22, 8, (SELECT cz_refcode2 FROM t_code_zone WHERE cz_refcode3 = 'BIMI'), 'BIMI'
 WHERE NOT EXISTS(
     SELECT zo_refcode3
     FROM t_zone_dlg
@@ -81,14 +81,4 @@ END;
 -- INSERT INTO t_phase (ph_nom) VALUES  ('PRO');
 -- INSERT INTO t_phase (ph_nom) VALUES  ('DOE');
 -- INSERT INTO t_phase (ph_nom) VALUES  ('EXE');
-
-select * from t_dlg;
-
-SELECT dl_id
-FROM t_dlg
-WHERE (SELECT zo_id FROM t_zone_dlg WHERE zo_refcode3 = 'BIMI') = dl_zo_id
-AND dl_phase = 'EXE'
-AND dl_td = 'TD'
-AND dl_no_livraison = 1
-AND dl_no_version = 1;
 
