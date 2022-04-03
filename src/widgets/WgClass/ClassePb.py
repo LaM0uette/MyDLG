@@ -1,6 +1,7 @@
 from PySide6 import QtCore
 
 from src.build.mods.Functions import Functions
+from src.lib.palettes import *
 
 
 class ClassePb:
@@ -80,6 +81,11 @@ class ClassePb:
     def LVE_ZOOM(self, event):
         if not self.widget.isChecked() and self.widget.isEnabled():
             self.widget.setIconSize(QtCore.QSize(self.dim_ico, self.dim_ico))
+
+    def ENT_SHADOW(self, event):
+        self.widget.setGraphicsEffect(PaShadow.GLOW(self.widget))
+    def LVE_SHADOW(self, event):
+        self.widget.setGraphicsEffect(None)
 
 """
 if self.wg.isEnabled():

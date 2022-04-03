@@ -120,7 +120,7 @@ class Style(MyQPushButton):
             img_check_hover_rgb=img.check_hover_rgb,
         )
 
-        if pb_type is not None:
+        if pb_type is not None and pb_type != "shadow":
             if pb_type == "check":
                 widget.setIcon(Functions().SET_ICON(ico=img.uncheck, rgb=img.uncheck_rgb))
             else:
@@ -142,3 +142,6 @@ class Style(MyQPushButton):
         elif pb_type == "ico_click":
             widget.enterEvent = cls.ENT_ICO
             widget.leaveEvent = cls.LVE_ICO
+        elif pb_type == "shadow":
+            widget.enterEvent = cls.ENT_SHADOW
+            widget.leaveEvent = cls.LVE_SHADOW

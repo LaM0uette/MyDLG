@@ -105,6 +105,8 @@ class Base:
         Style(
             widget=self.widget,
 
+            pb_type="shadow",
+
             dim=DcDim.Base(
                 fixed_width=PaDim.H5-10,
                 fixed_height=PaDim.H5-10,
