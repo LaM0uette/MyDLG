@@ -275,6 +275,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
         ### DLG ###
         self.pb_tools_add_dlg.clicked.connect(self.f_add_dlg)
+        self.cb_marche.currentTextChanged.connect(self.a_set_marche)
 
         ### marche ###
         self.pb_menu_rip24.clicked.connect(self.a_set_marche)
@@ -340,6 +341,8 @@ class main(Ui_main, QtWidgets.QWidget):
             case "RIP24": self.marche = 24
             case "RIP40": self.marche = 40
             case "RIP47": self.marche = 47
+
+        self.f_maj_dlg()
     #####################
     ##    /ACTIONS     ##
     #####################
