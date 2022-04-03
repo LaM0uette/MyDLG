@@ -135,6 +135,9 @@
           </layout>
          </item>
          <item>
+          <widget class="QComboBox" name="cb_td"/>
+         </item>
+         <item>
           <spacer name="verticalSpacer">
            <property name="orientation">
             <enum>Qt::Vertical</enum>
