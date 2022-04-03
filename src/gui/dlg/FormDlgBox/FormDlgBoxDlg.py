@@ -91,6 +91,13 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
         ### QSpinBox ###
         MySpinBox.PlusMinus(self.sb_phase).Petit()
         ### /QSpinBox ###
+
+
+        ### QLabel ###
+        for wg in [
+            self.lb_phase, self.lb_td, self.lb_nro, self.lb_pm, self.lb_refcode3
+        ]: MyLabel.Base(wg).Base()
+        ### /QLabel ###
     def IN_WG(self):
         # Base
         self.setCursor(Functions().SET_CURSOR(cur=PaCur.SOURIS))
