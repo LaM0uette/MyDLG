@@ -81,3 +81,4 @@ END;
 -- INSERT INTO t_phase (ph_nom) VALUES  ('PRO');
 -- INSERT INTO t_phase (ph_nom) VALUES  ('DOE');
 -- INSERT INTO t_phase (ph_nom) VALUES  ('EXE');
+SELECT DISTINCT cz_nro FROM t_code_zone WHERE cz_marche = 24 ORDER BY cz_nro;

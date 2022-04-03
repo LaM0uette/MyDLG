@@ -116,10 +116,13 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
         self.cb_nro.addItem("")
         self.cb_pm.addItem("")
         self.cb_refcode3.addItem("")
-        for phase in CoSql().GET_CODE_ZONE(self.marche):
-            self.cb_nro.addItem(str(phase[1]))
-            self.cb_pm.addItem(str(phase[2]))
-            self.cb_refcode3.addItem(str(phase[3]))
+
+        for nro in CoSql().GET_NRO(self.marche):
+            self.cb_nro.addItem(str(nro[0]))
+        for pm in CoSql().GET_PM(self.marche):
+            self.cb_pm.addItem(str(pm[0]))
+        for refcode3 in CoSql().GET_REFCODE3(self.marche):
+            self.cb_refcode3.addItem(str(refcode3[0]))
     def IN_CONNECTIONS(self):
         ## Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())

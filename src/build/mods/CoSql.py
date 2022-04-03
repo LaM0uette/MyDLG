@@ -81,16 +81,24 @@ class CoSql:
 
         self.close()
         return rtn
-    def GET_CODE_ZONE(self, marche):
-        self.cd.execute(f"""
-        SELECT * 
-        FROM t_code_zone
-        WHERE cz_marche = {marche}
-        """)
-        rtn = self.cd.fetchall()
+    def GET_NRO(self, marche):
+        self.cd.execute(f"SELECT DISTINCT cz_nro FROM t_code_zone WHERE cz_marche = {marche} ORDER BY cz_nro")
+        nro = self.cd.fetchall()
 
         self.close()
-        return rtn
+        return nro
+    def GET_PM(self, marche):
+        self.cd.execute(f"SELECT DISTINCT cz_pm FROM t_code_zone WHERE cz_marche = {marche} ORDER BY cz_pm")
+        pm = self.cd.fetchall()
+
+        self.close()
+        return pm
+    def GET_REFCODE3(self, marche):
+        self.cd.execute(f"SELECT DISTINCT cz_refcode3 FROM t_code_zone WHERE cz_marche = {marche} ORDER BY cz_refcode3")
+        refcode3 = self.cd.fetchall()
+
+        self.close()
+        return refcode3
 
 
     def TEST_CO(self):
