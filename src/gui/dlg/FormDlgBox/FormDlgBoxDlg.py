@@ -94,7 +94,7 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
 
         ### QSpinBox ###
         MySpinBox.PlusMinus(self.sb_phase).Petit()
-        for wg in [self.sb_livraison, self.sb_version]: MySpinBox.PlusMinus(wg).Base()
+        for wg in [self.sb_livraison, self.sb_version]: MySpinBox.PlusMinus(wg).NumPetit()
         ### /QSpinBox ###
 
 

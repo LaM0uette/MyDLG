@@ -45,6 +45,15 @@ class PlusMinus:
 
             suffix="%"
         )
+    def NumPetit(self):
+        Style(
+            widget=self.widget,
+
+            value=DcValue.Base(
+                min=1,
+                max=99,
+            )
+        )
 class UpDown:
     def __init__(self, widget):
         self.widget = widget
