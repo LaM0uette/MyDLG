@@ -229,7 +229,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
         ### Widget blanc pour centrer le nom de l'app ###
         dim = PaDim.H9 * 1.4
-        Functions().SET_DIM(self.wg_mt_blank, width=dim*3, height=dim)
+        Functions().SET_DIM(self.wg_mt_blank, width=dim*8, height=dim)
 
 
         ### Version de l'app ###
