@@ -25,8 +25,25 @@ class Base:
                 fixed_width=PaDim.H4,
             ),
 
+            background=DcRgbBg.Base(
+                gen=PaRgb.TH3,
+            ),
+            background_item=DcRgbBg.Base(
+                gen=PaRgb.TH3,
+            ),
+
+            foreground=DcRgbBg.Base(
+                gen=PaRgb.TH1
+            ),
+            foreground_item=DcRgbBg.Base(
+                gen=PaRgb.TH1
+            ),
+
+            border=DcBorder.Base(
+                radius=(3,) * 4),
+
             border_item=DcBorder.Base(
-                radius=(0,) * 4)
+                radius=(3,) * 4)
         )
     def Transparent(self):
         Style(
