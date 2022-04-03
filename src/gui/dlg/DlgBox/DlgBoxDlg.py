@@ -18,6 +18,7 @@ class DlgBoxDlg(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             width,
             height,
             opacity,
+            dlg_id,
     ):
         super(DlgBoxDlg, self).__init__()
 
@@ -28,8 +29,11 @@ class DlgBoxDlg(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.width = width
         self.height = height
         self.opacity = opacity
+        self.dlg_id = dlg_id
 
         self.INIT()
+
+        print(self.dlg_id)
 
         ### CREATION DES EVENT ###
         self.evt = Event(self)
