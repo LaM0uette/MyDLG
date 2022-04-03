@@ -351,11 +351,11 @@ class main(Ui_main, QtWidgets.QWidget):
         pb_dlg = {}
 
         for dlg in dlgs:
-            pb_dlg[idApp] = PB_APP("")
-            pb_dlg[idApp].setObjectName(idApp)
-            pb_dlg[idApp].setMinimumSize(QtCore.QSize(rsc.app, rsc.app))
-            pb_dlg[idApp].setMaximumSize(QtCore.QSize(rsc.app, rsc.app))
-            pb_dlg[idApp].clicked.connect(functools.partial(self.FUNC_App_Gen, nomApp, idApp))
+            pb_dlg[0] = PB_APP("")
+            pb_dlg[0].setObjectName(idApp)
+            pb_dlg[0].setMinimumSize(QtCore.QSize(rsc.app, rsc.app))
+            pb_dlg[0].setMaximumSize(QtCore.QSize(rsc.app, rsc.app))
+            pb_dlg[0].clicked.connect(functools.partial(self.FUNC_App_Gen, nomApp, idApp))
     #######################
     ##    /FONCTIONS     ##
     #######################
