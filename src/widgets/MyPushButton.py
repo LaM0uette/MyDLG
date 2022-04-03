@@ -178,7 +178,7 @@ class Base:
             border=DcBorder.Base(
                 gen=(3, )*4,
                 gen_rgb=rgb,
-                radius=(15, )*4
+                radius=(3, )*4
             )
         )
 
