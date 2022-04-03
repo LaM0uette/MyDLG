@@ -3,6 +3,7 @@ from PySide6 import QtCore, QtWidgets
 from src import *
 from src.gui.ui import form_dlg_ui
 from src.gui.events.Event import Event
+from src.gui.dlg.MsgBox.MsgBox import MsgBox
 
 
 class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
@@ -201,7 +202,9 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
     #####
 
     def f_ok(self):
-
+        if len(self.cb_nro.currentText()) < 1 or len(self.cb_pm.currentText()) < 1 or len(self.cb_refcode3.currentText()) < 1:
+            MsgBox.ALERTE(title="ERREUR", msg="Il manque des informations:\n NRO | PM | REFCODE3")
+            return
 
         self.close()
     #######################
