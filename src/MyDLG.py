@@ -140,6 +140,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
         # ### QScrollBoxArea ###
+        MyScrollArea.Base(self.sca_dlg).DLG()
         # ### /QScrollBoxArea ###
 
 

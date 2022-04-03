@@ -154,6 +154,26 @@ class Ui_main(object):
         self.gridLayout_2.setSpacing(10)
         self.gridLayout_2.setObjectName(u"gridLayout_2")
         self.gridLayout_2.setContentsMargins(10, 10, 10, 10)
+        self.fr_dlg_tools = QFrame(self.pg_dlg)
+        self.fr_dlg_tools.setObjectName(u"fr_dlg_tools")
+        self.fr_dlg_tools.setFrameShape(QFrame.StyledPanel)
+        self.fr_dlg_tools.setFrameShadow(QFrame.Raised)
+        self.verticalLayout = QVBoxLayout(self.fr_dlg_tools)
+        self.verticalLayout.setSpacing(5)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.verticalLayout.setContentsMargins(5, 5, 5, 0)
+        self.pb_tools_add_dlg = QPushButton(self.fr_dlg_tools)
+        self.pb_tools_add_dlg.setObjectName(u"pb_tools_add_dlg")
+
+        self.verticalLayout.addWidget(self.pb_tools_add_dlg)
+
+        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout.addItem(self.verticalSpacer_3)
+
+
+        self.gridLayout_2.addWidget(self.fr_dlg_tools, 1, 2, 1, 1)
+
         self.fr_dlg_top = QFrame(self.pg_dlg)
         self.fr_dlg_top.setObjectName(u"fr_dlg_top")
         self.horizontalLayout_2 = QHBoxLayout(self.fr_dlg_top)
@@ -215,52 +235,21 @@ class Ui_main(object):
         self.horizontalLayout_2.addLayout(self.horizontalLayout)
 
 
-        self.gridLayout_2.addWidget(self.fr_dlg_top, 0, 0, 1, 2)
+        self.gridLayout_2.addWidget(self.fr_dlg_top, 0, 1, 1, 2)
 
-        self.fr_dlg_body = QFrame(self.pg_dlg)
-        self.fr_dlg_body.setObjectName(u"fr_dlg_body")
-        self.fr_dlg_body.setFrameShape(QFrame.StyledPanel)
-        self.fr_dlg_body.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_2 = QVBoxLayout(self.fr_dlg_body)
-        self.verticalLayout_2.setSpacing(0)
-        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.sca_dlg = QScrollArea(self.fr_dlg_body)
+        self.sca_dlg = QScrollArea(self.pg_dlg)
         self.sca_dlg.setObjectName(u"sca_dlg")
         self.sca_dlg.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 971, 657))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 973, 659))
         self.glay_dlg = QGridLayout(self.scrollAreaWidgetContents)
         self.glay_dlg.setSpacing(20)
         self.glay_dlg.setObjectName(u"glay_dlg")
         self.glay_dlg.setContentsMargins(20, 20, 20, 20)
         self.sca_dlg.setWidget(self.scrollAreaWidgetContents)
 
-        self.verticalLayout_2.addWidget(self.sca_dlg)
-
-
-        self.gridLayout_2.addWidget(self.fr_dlg_body, 1, 0, 1, 1)
-
-        self.fr_dlg_tools = QFrame(self.pg_dlg)
-        self.fr_dlg_tools.setObjectName(u"fr_dlg_tools")
-        self.fr_dlg_tools.setFrameShape(QFrame.StyledPanel)
-        self.fr_dlg_tools.setFrameShadow(QFrame.Raised)
-        self.verticalLayout = QVBoxLayout(self.fr_dlg_tools)
-        self.verticalLayout.setSpacing(5)
-        self.verticalLayout.setObjectName(u"verticalLayout")
-        self.verticalLayout.setContentsMargins(5, 5, 5, 0)
-        self.pb_tools_add_dlg = QPushButton(self.fr_dlg_tools)
-        self.pb_tools_add_dlg.setObjectName(u"pb_tools_add_dlg")
-
-        self.verticalLayout.addWidget(self.pb_tools_add_dlg)
-
-        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.verticalLayout.addItem(self.verticalSpacer_3)
-
-
-        self.gridLayout_2.addWidget(self.fr_dlg_tools, 1, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.sca_dlg, 1, 1, 1, 1)
 
         self.stk_main.addWidget(self.pg_dlg)
 

@@ -26,3 +26,11 @@ class Base:
 
             background=DcRgbBg.Base(gen=PaRgb.TH1),
         )
+    def DLG(self):
+        Style(
+            widget=self.widget,
+
+            background=DcRgbBg.Base(gen=PaRgb.TH1),
+
+            border=DcBorder.Base(radius=(5, )*4)
+        )
