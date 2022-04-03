@@ -217,10 +217,17 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
             MsgBox.ALERTE(title="ERREUR", msg=err)
             return
 
+
+        match self.cb_td.currentText():
+            case "Tout": td = "TD"
+            case "Transport": td = "T"
+            case "Distribution": td = "D"
+            case _: td = "TD"
+
         dlg = CoSql().GET_DLG(
             refcode3=self.cb_refcode3.currentText(),
             phase=self.cb_phase.currentText(),
-            td=self.cb_td.currentText(),
+            td=td,
             num_livraison=self.sb_livraison.value(),
             num_version=self.sb_version.value()
         )
