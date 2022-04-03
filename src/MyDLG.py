@@ -384,7 +384,11 @@ class main(Ui_main, QtWidgets.QWidget):
             rgb_str = last_export.split(r"|")
             rgb = int(rgb_str[0]), int(rgb_str[1]), int(rgb_str[2]), int(rgb_str[3])
 
-            name_dlg = f"{dlg[7]}-{dlg[8]}\nNRO{dlg[2]}-PM{dlg[3]}\n{dlg[4]}\n{dlg[9]}-V{dlg[10]}\n{dlg[6]}"
+            _date_fr = dlg[6].split("-")
+            _date_fr.split("-")
+            date_fr = f"{_date_fr[2]}/{_date_fr[1]}/{_date_fr[0]}"
+
+            name_dlg = f"{dlg[7]}-{dlg[8]}\nNRO{dlg[2]}-PM{dlg[3]}\n{dlg[4]}\n{dlg[9]}-V{dlg[10]}\n{date_fr}"
 
             pb_dlg[dlg[0]] = QtWidgets.QPushButton(name_dlg)
             pb_dlg[dlg[0]].setObjectName(str(dlg[0]))
