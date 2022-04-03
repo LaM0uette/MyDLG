@@ -359,6 +359,11 @@ class main(Ui_main, QtWidgets.QWidget):
         self.stk_main.setCurrentWidget(self.pg_menu)
 
     def f_maj_dlg(self):
+        while self.glay_dlg.count():
+            child = self.glay_dlg.takeAt(0)
+            if child.widget():
+                child.widget().deleteLater()
+
         if self.pb_filtre_atraiter.isChecked():
             dlgs = CoSql().GET_V_DLG(table='v_dlg_a_faire')
         elif self.pb_filtre_tout.isChecked():
