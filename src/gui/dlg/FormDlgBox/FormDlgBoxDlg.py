@@ -106,6 +106,14 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
         self.cb_phase.setCurrentIndex(1)
 
         self.cb_td.addItems(["Tout", "Transport", "Distribution"])
+
+        self.cb_nro.addItem("")
+        self.cb_pm.addItem("")
+        self.cb_refcode3.addItem("")
+        for phase in CoSql().GET_CODE_ZONE():
+            self.cb_nro.addItem(phase[1])
+            self.cb_pm.addItem(phase[2])
+            self.cb_refcode3.addItem(phase[3])
     def IN_CONNECTIONS(self):
         ## Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
