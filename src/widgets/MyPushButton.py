@@ -159,6 +159,8 @@ class Base:
         Style(
             widget=self.widget,
 
+            checkable=True,
+
             size_policy=DcSizePolicy.Base(
                 horizontal=PaSizePolicy.EXPANDING
             ),
