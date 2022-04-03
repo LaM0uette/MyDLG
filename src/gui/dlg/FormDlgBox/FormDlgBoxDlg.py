@@ -1,3 +1,5 @@
+import datetime
+
 from PySide6 import QtCore, QtWidgets
 
 from src import *
@@ -209,7 +211,7 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
         refcode3 = self.cb_refcode3.currentText()
 
         date_b = self.de_date_prev.date()
-        date = f"{date_b.year()}-{date_b.month()}-{date_b.day()}"
+        date = datetime.date(date_b.year(), date_b.month(), date_b.day()).strftime("%Y-%m-%d")
 
         match self.cb_phase.currentText():
             case "EXE": phase = "EXE"
