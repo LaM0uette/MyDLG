@@ -9,7 +9,7 @@ class CoSql:
         self.co = sqlite3.connect(v_sql.BDD)
         self.cd = self.co.cursor()
 
-    # ADD
+    # EDIT
     def ADD_ZONE_DLG(self, marche, nro, pm, refcode3):
         """
         Insert une ligne dans la col t_zone_dlg s'il n'existe pas déjà avec les mêmes données.
