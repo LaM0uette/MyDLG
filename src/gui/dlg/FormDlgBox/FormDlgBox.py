@@ -23,4 +23,4 @@ class FormDlgBox:
 
     __WIDTH, __HEIGHT, __OPACITY = 650, 500, 1
 
-    ADD = partial(__rtn, title="Ajout d'un DLG", ico=PaImg.INFO, ico_rgb="th3", txt_ok="Ok", width=__WIDTH, height=__HEIGHT, opacity=__OPACITY)
+    ADD = partial(__rtn, title="Ajout d'un DLG", ico=PaImg.PLUS, ico_rgb="th3", txt_ok="Ajouter", width=__WIDTH, height=__HEIGHT, opacity=__OPACITY)
