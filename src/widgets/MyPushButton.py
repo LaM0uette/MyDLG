@@ -101,6 +101,17 @@ class Base:
             )
         )
 
+    def DLG(self, rgb):
+        print(rgb)
+        Style(
+            widget=self.widget,
+
+            dim=DcDim.Base(
+                fixed_width=PaDim.H5,
+                fixed_height=PaDim.H5,
+            )
+        )
+
 
 ######################
 ##     MENU TOP     ##

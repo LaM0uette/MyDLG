@@ -358,7 +358,7 @@ class main(Ui_main, QtWidgets.QWidget):
             pb_dlg[dlg[0]].setObjectName(str(dlg[0]))
             pb_dlg[dlg[0]].clicked.connect(functools.partial(self.f_dlg_click, dlg[0]))
 
-            MyPushButton.Base(pb_dlg[dlg[0]]).Base()
+            MyPushButton.Base(pb_dlg[dlg[0]]).DLG()
 
             if 4 < ligne_conc < 9:
                 ligne_conc -= 5
