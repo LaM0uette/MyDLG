@@ -40,8 +40,10 @@ class PlusMinus:
             ),
 
             value=DcValue.Base(
-                max=100
-            )
+                max=100,
+            ),
+
+            suffix="%"
         )
 class UpDown:
     def __init__(self, widget):
