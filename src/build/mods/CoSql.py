@@ -99,6 +99,14 @@ class CoSql:
 
         self.close()
         return refcode3
+    def GET_ALL_ETATS(self):
+        self.cd.execute("""
+        SELECT * FROM t_etats
+        """)
+        rtn = self.cd.fetchall()
+
+        self.close()
+        return rtn
 
     def GET_REFCODE3(self, nro, pm):
         self.cd.execute(f"""
