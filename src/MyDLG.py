@@ -272,7 +272,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
         ### DLG ###
-        self.pb_tools_add_dlg.clicked.connect(lambda: FormDlgBox.ADD(marche=self.cb_marche.currentText()))
+        self.pb_tools_add_dlg.clicked.connect(self.f_add_dlg)
     def IN_ACT(self):
         self.f_maj_dlg()
     def IN_WG_BASE(self):
@@ -327,6 +327,9 @@ class main(Ui_main, QtWidgets.QWidget):
     #######################
     ##     FONCTIONS     ##
     #######################
+    def f_add_dlg(self):
+        FormDlgBox.ADD(marche=self.cb_marche.currentText())
+        self.f_maj_dlg()
     def f_pbmenu_exportdlg(self):
         if self.pb_menu_rip24.isChecked(): idx = 0
         elif self.pb_menu_rip40.isChecked(): idx = 1
