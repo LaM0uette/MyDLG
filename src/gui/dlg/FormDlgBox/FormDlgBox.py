@@ -22,6 +22,6 @@ class FormDlgBox:
         form_dlg.exec()
 
 
-    __WIDTH, __HEIGHT, __OPACITY = 650, 800, 1
+    __WIDTH, __HEIGHT, __OPACITY = 650, 500, 1
 
     ADD = partial(__rtn, title="INFO", msg="", ico=PaImg.INFO, ico_rgb="th3", txt_ok="Ok", width=__WIDTH, height=__HEIGHT, opacity=__OPACITY)
