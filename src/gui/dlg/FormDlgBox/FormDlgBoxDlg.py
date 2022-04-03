@@ -11,7 +11,6 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
     def __init__(
             self,
             title,
-            msg,
             ico,
             ico_rgb,
             txt_ok,
@@ -23,7 +22,6 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
         super(FormDlgBoxDlg, self).__init__()
 
         self.title = title
-        self.msg = msg
         self.ico = ico
         self.ico_rgb = ico_rgb
         self.txt_ok = txt_ok

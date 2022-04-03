@@ -7,10 +7,9 @@ from src.gui.dlg.FormDlgBox.FormDlgBoxDlg import FormDlgBoxDlg
 class FormDlgBox:
 
     @staticmethod
-    def __rtn(title, msg, ico, ico_rgb, txt_ok, width, height, opacity, marche):
+    def __rtn(title, ico, ico_rgb, txt_ok, width, height, opacity, marche):
         form_dlg = FormDlgBoxDlg(
             title=title,
-            msg=msg,
             ico=ico,
             ico_rgb=ico_rgb,
             txt_ok=txt_ok,
@@ -24,4 +23,4 @@ class FormDlgBox:
 
     __WIDTH, __HEIGHT, __OPACITY = 650, 500, 1
 
-    ADD = partial(__rtn, title="INFO", msg="", ico=PaImg.INFO, ico_rgb="th3", txt_ok="Ok", width=__WIDTH, height=__HEIGHT, opacity=__OPACITY)
+    ADD = partial(__rtn, title="Ajout d'un DLG", ico=PaImg.INFO, ico_rgb="th3", txt_ok="Ok", width=__WIDTH, height=__HEIGHT, opacity=__OPACITY)
