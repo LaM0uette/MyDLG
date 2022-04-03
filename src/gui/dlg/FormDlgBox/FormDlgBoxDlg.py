@@ -98,9 +98,14 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
         ### /QSpinBox ###
 
 
+        ### QDateEdit ###
+        MyDateEdit.Base(self.de_date_prev).Base()
+        ### /QDateEdit ###
+
+
         ### QLabel ###
         for wg in [
-            self.lb_phase, self.lb_td, self.lb_nro, self.lb_pm, self.lb_refcode3, self.lb_livraison, self.lb_version
+            self.lb_phase, self.lb_td, self.lb_nro, self.lb_pm, self.lb_refcode3, self.lb_livraison, self.lb_version, self.lb_date_prev
         ]: MyLabel.Base(wg).Transparent()
         ### /QLabel ###
     def IN_WG(self):

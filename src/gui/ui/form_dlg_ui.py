@@ -15,9 +15,10 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
-    QHBoxLayout, QLabel, QPushButton, QSizePolicy,
-    QSpacerItem, QSpinBox, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QComboBox, QDateEdit, QFrame,
+    QGridLayout, QHBoxLayout, QLabel, QPushButton,
+    QSizePolicy, QSpacerItem, QSpinBox, QVBoxLayout,
+    QWidget)
 
 class Ui_FormDlg(object):
     def setupUi(self, FormDlg):
@@ -189,6 +190,20 @@ class Ui_FormDlg(object):
 
         self.vlay_msg_body.addLayout(self.gridLayout_2)
 
+        self.verticalSpacer_7 = QSpacerItem(20, 10, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.vlay_msg_body.addItem(self.verticalSpacer_7)
+
+        self.lb_date_prev = QLabel(self.fr_body)
+        self.lb_date_prev.setObjectName(u"lb_date_prev")
+
+        self.vlay_msg_body.addWidget(self.lb_date_prev)
+
+        self.de_date_prev = QDateEdit(self.fr_body)
+        self.de_date_prev.setObjectName(u"de_date_prev")
+
+        self.vlay_msg_body.addWidget(self.de_date_prev)
+
         self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.vlay_msg_body.addItem(self.verticalSpacer)
@@ -231,6 +246,7 @@ class Ui_FormDlg(object):
         self.lb_refcode3.setText(QCoreApplication.translate("FormDlg", u"REFCODE3 :", None))
         self.lb_livraison.setText(QCoreApplication.translate("FormDlg", u"N\u00b0 de livraison :", None))
         self.lb_version.setText(QCoreApplication.translate("FormDlg", u"N\u00b0 de version :", None))
+        self.lb_date_prev.setText(QCoreApplication.translate("FormDlg", u"Date pr\u00e9vue :", None))
         pass
     # retranslateUi
 
