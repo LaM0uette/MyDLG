@@ -166,7 +166,18 @@ class DlgBoxDlg(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             _code = str(exp[0])
             code = _code.split("_")
 
-            self.lw_dlg.addItem(f"{code[1]} - {exp[1]}")
+            _datetime = str(exp[1])
+
+            _date = str(_datetime.split(r" ")[0])
+            date = _date.split(r"-")
+
+            _heure = str(_datetime.split(r" ")[1])
+            heure = _heure.split(r":")
+
+            date_fr = f"{date[2]}/{date[1]}/{date[0]}"
+            heure_fr = f"{heure[0]}/{heure[1]}/{heure[1]}"
+
+            self.lw_dlg.addItem(f"{code[1]} - {date_fr} à {heure_fr}")
 
     #####
 
