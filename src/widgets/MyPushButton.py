@@ -113,7 +113,7 @@ class Base:
             font=PaFont.HH3,
 
             background=DcRgbBg.Base(
-                gen=PaRgb.TR
+                gen=PaRgb.TH1
             ),
 
             foreground=DcRgbBg.Base(

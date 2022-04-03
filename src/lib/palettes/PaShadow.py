@@ -16,5 +16,5 @@ class PaShadow:
     __R, __G, __B = 0, 0, 0
 
     GLOW = partial(__get_shadow, blur_radius=8, rgba=(__R, __G, __B, 255), offset=[0, 0])
-    PRESPECTIVE = partial(__get_shadow, blur_radius=6, rgba=(__R, __G, __B, 150), offset=[3, 3])
+    PERSPECTIVE = partial(__get_shadow, blur_radius=6, rgba=(__R, __G, __B, 150), offset=[3, 3])
     OMBRE_PORTEE = partial(__get_shadow, blur_radius=12, rgba=(__R, __G, __B, 150), offset=[0, 0])
