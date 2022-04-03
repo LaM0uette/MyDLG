@@ -68,11 +68,21 @@ class DlgBoxDlg(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
         MyPushButton.Base(self.pb_dlg).DLG_simple(self.rgb)
 
-        for wg in [
-            self.pb_edit_afa, self.pb_edit_gex, self.pb_edit_cma, self.pb_edit_cch, self.pb_edit_edl,
-            self.pb_edit_eok, self.pb_edit_dok, self.pb_edit_dno, self.pb_edit_pok, self.pb_edit_pno,
-            self.pb_edit_lcl, self.pb_edit_pau, self.pb_edit_ann
-        ]: MyPushButton.Base(wg).DLG_edit(self.rgb)
+        all_rgb = CoSql().GET_ALL_ETATS_RGB()
+
+        MyPushButton.Base(self.pb_edit_afa).DLG_edit(self.a_tuple_from_text_rgb(all_rgb[0][0]))
+        MyPushButton.Base(self.pb_edit_gex).DLG_edit(self.a_tuple_from_text_rgb(all_rgb[1][0]))
+        MyPushButton.Base(self.pb_edit_cma).DLG_edit(self.a_tuple_from_text_rgb(all_rgb[2][0]))
+        MyPushButton.Base(self.pb_edit_cch).DLG_edit(self.a_tuple_from_text_rgb(all_rgb[3][0]))
+        MyPushButton.Base(self.pb_edit_edl).DLG_edit(self.a_tuple_from_text_rgb(all_rgb[4][0]))
+        MyPushButton.Base(self.pb_edit_eok).DLG_edit(self.a_tuple_from_text_rgb(all_rgb[5][0]))
+        MyPushButton.Base(self.pb_edit_dok).DLG_edit(self.a_tuple_from_text_rgb(all_rgb[6][0]))
+        MyPushButton.Base(self.pb_edit_dno).DLG_edit(self.a_tuple_from_text_rgb(all_rgb[7][0]))
+        MyPushButton.Base(self.pb_edit_pok).DLG_edit(self.a_tuple_from_text_rgb(all_rgb[8][0]))
+        MyPushButton.Base(self.pb_edit_pno).DLG_edit(self.a_tuple_from_text_rgb(all_rgb[9][0]))
+        MyPushButton.Base(self.pb_edit_lcl).DLG_edit(self.a_tuple_from_text_rgb(all_rgb[10][0]))
+        MyPushButton.Base(self.pb_edit_pau).DLG_edit(self.a_tuple_from_text_rgb(all_rgb[11][0]))
+        MyPushButton.Base(self.pb_edit_ann).DLG_edit(self.a_tuple_from_text_rgb(all_rgb[12][0]))
         ### /QPushButton ###
 
 
@@ -137,6 +147,10 @@ class DlgBoxDlg(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
     #####################
     ##     ACTIONS     ##
     #####################
+    def a_tuple_from_text_rgb(self, rgb):
+        rgb_str = rgb.split(r"|")
+        _rgb = int(rgb_str[0]), int(rgb_str[1]), int(rgb_str[2]), int(rgb_str[3])
+        return _rgb
     #####################
     ##    /ACTIONS     ##
     #####################

@@ -107,6 +107,15 @@ class CoSql:
 
         self.close()
         return rtn
+    def GET_ALL_ETATS_RGB(self):
+        self.cd.execute(f"""
+        SELECT et_rgb
+        FROM t_etats 
+        """)
+        rtn = self.cd.fetchall()
+
+        self.close()
+        return rtn
 
     def GET_REFCODE3(self, nro, pm):
         self.cd.execute(f"""
