@@ -157,9 +157,9 @@ class CoSql:
 
 
     # SELECT VIEW
-    def GET_V_DLG(self, table='v_dlg'):
+    def GET_V_DLG(self, marche, table='v_dlg'):
         self.cd.execute(f"""
-        SELECT * FROM {table}
+        SELECT * FROM {table} WHERE zo_marche = {marche}
         """)
         rtn = self.cd.fetchall()
 

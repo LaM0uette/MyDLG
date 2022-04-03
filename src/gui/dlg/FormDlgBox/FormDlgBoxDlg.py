@@ -31,11 +31,7 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
         self.width = width
         self.height = height
         self.opacity = opacity
-
-        match marche:
-            case "RIP24": self.marche = 24
-            case "RIP40": self.marche = 40
-            case "RIP47": self.marche = 47
+        self.marche = marche
 
         self.INIT()
 

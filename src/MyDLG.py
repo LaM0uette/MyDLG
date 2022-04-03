@@ -30,6 +30,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
         ### VARIABLES DE BASES ###
         self.win_state = QtCore.Qt.WindowNoState
+        self.marche = 24
 
         ### FONCTIONS AU LANCEMENT ###
         self.INIT(
@@ -275,6 +276,11 @@ class main(Ui_main, QtWidgets.QWidget):
         ### DLG ###
         self.pb_tools_add_dlg.clicked.connect(self.f_add_dlg)
 
+        ### marche ###
+        self.pb_menu_rip24.clicked.connect(self.a_set_marche)
+        self.pb_menu_rip40.clicked.connect(self.a_set_marche)
+        self.pb_menu_rip47.clicked.connect(self.a_set_marche)
+
 
         # pb filtre vue
         self.pb_filtre_atraiter.clicked.connect(self.f_maj_dlg)
@@ -329,6 +335,11 @@ class main(Ui_main, QtWidgets.QWidget):
     #####################
     ##     ACTIONS     ##
     #####################
+    def a_set_marche(self):
+        match self.cb_marche.currentText():
+            case "RIP24": self.marche = 24
+            case "RIP40": self.marche = 40
+            case "RIP47": self.marche = 47
     #####################
     ##    /ACTIONS     ##
     #####################
@@ -338,7 +349,7 @@ class main(Ui_main, QtWidgets.QWidget):
     ##     FONCTIONS     ##
     #######################
     def f_add_dlg(self):
-        FormDlgBox.ADD(marche=self.cb_marche.currentText())
+        FormDlgBox.ADD(marche=self.marche)
         self.f_maj_dlg()
     def f_pbmenu_exportdlg(self):
         if self.pb_menu_rip24.isChecked(): idx = 0
@@ -365,11 +376,11 @@ class main(Ui_main, QtWidgets.QWidget):
                 child.widget().deleteLater()
 
         if self.pb_filtre_atraiter.isChecked():
-            dlgs = CoSql().GET_V_DLG(table='v_dlg_a_faire')
+            dlgs = CoSql().GET_V_DLG(marche=self.marche, table='v_dlg_a_faire')
         elif self.pb_filtre_tout.isChecked():
-            dlgs = CoSql().GET_V_DLG(table='v_dlg')
+            dlgs = CoSql().GET_V_DLG(marche=self.marche, table='v_dlg')
         elif self.pb_filtre_fait.isChecked():
-            dlgs = CoSql().GET_V_DLG(table='v_dlg_fait')
+            dlgs = CoSql().GET_V_DLG(marche=self.marche, table='v_dlg_fait')
         else:
             return
 
