@@ -252,6 +252,8 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
         if not dlg:
             CoSql().ADD_ZONE_DLG(self.marche, nro, pm, refcode3)
             CoSql().ADD_DLG(refcode3, date, phase, td, no_livraison, no_version)
+
+            MsgBox.INFO(title="DLG Ajouté", msg="Ce DLG viens d'être ajouté.")
         else:
             MsgBox.ALERTE(title="ERREUR", msg="Ce DLG existe déjà.")
             return

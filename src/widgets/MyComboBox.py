@@ -13,8 +13,6 @@ class Base:
     def Base(self):
         Style(
             widget=self.widget,
-
-            editable=False
         )
     def BaseEdit(self):
         Style(
