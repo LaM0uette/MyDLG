@@ -14,6 +14,14 @@ class Base:
         Style(
             widget=self.widget,
         )
+    def BaseEdit(self):
+        Style(
+            widget=self.widget,
+
+            focus_policy=PaFocusPolicy.STRONG,
+
+            editable=True
+        )
     def Transparent(self):
         Style(
             widget=self.widget,

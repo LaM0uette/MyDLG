@@ -83,8 +83,12 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
 
         ### QComboBox ###
         for wg in [
-            self.cb_phase, self.cb_td, self.cb_nro, self.cb_pm, self.cb_refcode3
+            self.cb_phase, self.cb_td
         ]: MyComboBox.Base(wg).Base()
+
+        for wg in [
+            self.cb_nro, self.cb_pm, self.cb_refcode3
+        ]: MyComboBox.Base(wg).BaseEdit()
         ### /QComboBox ###
 
 
@@ -120,9 +124,9 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
 
         self.cb_td.addItems(["Tout", "Transport", "Distribution"])
 
-        self.cb_nro.addItem("...")
-        self.cb_pm.addItem("...")
-        self.cb_refcode3.addItem("...")
+        self.cb_nro.addItem("")
+        self.cb_pm.addItem("")
+        self.cb_refcode3.addItem("")
 
         for nro in CoSql().GET_NRO(self.marche):
             self.cb_nro.addItem(str(nro[0]))
