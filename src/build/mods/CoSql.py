@@ -129,7 +129,7 @@ class CoSql:
         AND dl_phase = '{phase}'
         AND dl_td = '{td}'
         AND dl_no_livraison = {num_livraison}
-        AND dl_no_version = {num_version};
+        AND dl_no_version = {num_version}
         """)
         rtn = self.cd.fetchall()
 

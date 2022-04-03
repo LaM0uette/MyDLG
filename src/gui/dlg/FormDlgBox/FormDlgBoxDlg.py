@@ -221,8 +221,8 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
             refcode3=self.cb_refcode3.currentText(),
             phase=self.cb_phase.currentText(),
             td=self.cb_td.currentText(),
-            num_livraison=self.sb_livraison,
-            num_version=self.sb_version
+            num_livraison=self.sb_livraison.value(),
+            num_version=self.sb_version.value()
         )
         print(dlg)
 
