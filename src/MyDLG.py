@@ -365,7 +365,7 @@ class main(Ui_main, QtWidgets.QWidget):
             ligne_conc += 1
 
         spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.glay_dlg.addItem(spacerItem, i_init + 1, 0, 1, 4)
+        self.glay_dlg.addItem(spacerItem, i_init + 1, 0, 1, 1)
     def f_dlg_click(self, dlg_id):
         print(dlg_id)
     #######################
