@@ -120,7 +120,8 @@ class Base:
 
             border=DcBorder.Base(
                 gen=(3, )*4,
-                gen_rgb=rgb
+                gen_rgb=rgb,
+                radius=(15, )*4
             )
         )
 
