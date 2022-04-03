@@ -9,7 +9,7 @@ class CoSql:
         self.co = sqlite3.connect(v_sql.BDD)
         self.cd = self.co.cursor()
 
-
+    # ADD
     def ADD_ZONE_DLG(self, marche, nro, pm, refcode3):
         """
         Insert une ligne dans la table t_zone_dlg s'il n'existe pas déjà avec les mêmes données.
@@ -30,7 +30,6 @@ class CoSql:
         self.co.commit()
 
         self.close()
-
     def ADD_DLG(self, refcode3, date, phase, type_td, no_livraison, no_version):
         """
         Ajoute un dlg dans la table t_dlg s'il n'existe pas déjà avec les mêmes données.
@@ -57,7 +56,6 @@ class CoSql:
         self.co.commit()
 
         self.close()
-
     def ADD_EXPORT(self, dl_id, no_export, no_etat):
         """
         Ajoute un export dans la table t_exports s'il n'existe pas déjà avec les mêmes données.
@@ -72,6 +70,17 @@ class CoSql:
         self.co.commit()
 
         self.close()
+
+
+    # SELECT
+    def GET_PHASE(self):
+        self.cd.execute("""
+        SELECT * FROM t_phase
+        """)
+        rtn = self.cd.fetchall()
+
+        self.close()
+        return rtn
 
 
     def TEST_CO(self):

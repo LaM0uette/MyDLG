@@ -96,6 +96,11 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
         # pb dlg
         self.pb_ok.setText(self.txt_ok)
         self.pb_ok.setDefault(True)
+
+
+        # FORM DLG
+        for phase in CoSql().GET_PHASE():
+            self.cb_phase.addItem(phase[1])
     def IN_CONNECTIONS(self):
         ## Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
