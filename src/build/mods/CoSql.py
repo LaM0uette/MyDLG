@@ -19,7 +19,7 @@ class CoSql:
         :param refcode3: refcode3 de la zone
         """
         self.cd.execute(f"""
-        INSERT INTO t_zone_dlg (zo_marche,zo_nro,zo_pm,zo_refcode3)
+        INSERT INTO t_zone_dlg (zo_marche,zo_nro,zo_pm,zo_refcode2,zo_refcode3)
         SELECT {marche}, {nro}, {pm}, (SELECT cz_refcode2 FROM t_code_zone WHERE cz_refcode3 = '{refcode3}'), '{refcode3}'
         WHERE NOT EXISTS(
             SELECT zo_refcode3
