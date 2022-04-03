@@ -14,6 +14,7 @@ class PaImg:
     RESIZE = __svg("ui", "resize")
     COPIER = __svg("ui", "copier")
     LOUPE = __svg("ui", "loupe")
+    EDIT = __svg("ui", "edit")
     CHECK0 = __svg("ui", "check0")
     CHECK1 = __svg("ui", "check1")
     CHECK2 = __svg("ui", "check2")

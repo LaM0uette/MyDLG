@@ -18,7 +18,6 @@ class DlgBoxDlg(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             width,
             height,
             opacity,
-            marche,
     ):
         super(DlgBoxDlg, self).__init__()
 
@@ -29,7 +28,6 @@ class DlgBoxDlg(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.width = width
         self.height = height
         self.opacity = opacity
-        self.marche = marche
 
         self.INIT()
 
