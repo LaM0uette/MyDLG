@@ -180,8 +180,10 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
     ##     FONCTIONS     ##
     #######################
     def f_get_refcode3(self):
-        refcode3 = CoSql().GET_REFCODE3(int(self.cb_nro.currentText()), int(self.cb_pm.currentText()))
-        self.cb_refcode3.setCurrentText(refcode3[0])
+        try:
+            refcode3 = CoSql().GET_REFCODE3(int(self.cb_nro.currentText()), int(self.cb_pm.currentText()))
+            self.cb_refcode3.setCurrentText(refcode3[0])
+        except: pass
     def f_get_nro_pm(self):
         req = CoSql().GET_NRO_PM(self.cb_refcode3.currentText())
         nro = str(req[0])
