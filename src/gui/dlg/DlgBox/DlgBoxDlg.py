@@ -58,39 +58,24 @@ class DlgBoxDlg(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.setupUi(self)
         self.glay_main.setContentsMargins(v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP)
     def IN_CLASSE(self):
-        ### QFrame ###
-        MyFrame.Menu(self.fr_menu_top).top()
-        MyFrame.Cadre(self.fr_main).th2_fin()
-        MyFrame.Dlg(self.fr_body).th(rgb=PaRgb.TH1)
-        MyFrame.Menu(self.fr_dlg_bottom).bottom_dlg()
-        ### /QFrame ###
-
-
-        ### QLabel ###
-        MyLabel.Base(self.lb_mt_ico).ico_custom(img=self.ico, img_rgb=self.ico_rgb)
-        MyLabel.Base(self.lb_mt_nom).Transparent(font=PaFont.HH3)
-        ### /QLabel ###
-
-
         ### QPushButton ###
         MyPushButton.Dlg(self.pb_ok).ok()
         MyPushButton.MenuTop(self.pb_mt_quitter).quitter()
         ### /QPushButton ###
 
 
-        ### QComboBox ###
-        ### /QComboBox ###
-
-
-        ### QSpinBox ###
-        ### /QSpinBox ###
-
-
-        ### QDateEdit ###
-        ### /QDateEdit ###
+        ### QFrame ###
+        MyFrame.Menu(self.fr_menu_top).top()
+        MyFrame.Cadre(self.fr_main).th2_fin()
+        MyFrame.Dlg(self.fr_body).th(rgb=PaRgb.TH1)
+        MyFrame.Menu(self.fr_dlg_bottom).bottom_dlg()
+        MyFrame.Cadre(self.fr_dlg_body).th3()
+        ### /QFrame ###
 
 
         ### QLabel ###
+        MyLabel.Base(self.lb_mt_ico).ico_custom(img=self.ico, img_rgb=self.ico_rgb)
+        MyLabel.Base(self.lb_mt_nom).Transparent(font=PaFont.HH3)
         ### /QLabel ###
     def IN_WG(self):
         # Base

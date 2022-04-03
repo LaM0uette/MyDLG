@@ -74,9 +74,20 @@ class Ui_Dlg(object):
         self.vlay_msg_body.setSpacing(0)
         self.vlay_msg_body.setObjectName(u"vlay_msg_body")
         self.vlay_msg_body.setContentsMargins(10, 10, 10, 10)
-        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.fr_dlg_body = QFrame(self.fr_body)
+        self.fr_dlg_body.setObjectName(u"fr_dlg_body")
+        self.fr_dlg_body.setFrameShape(QFrame.StyledPanel)
+        self.fr_dlg_body.setFrameShadow(QFrame.Raised)
+        self.gridLayout = QGridLayout(self.fr_dlg_body)
+        self.gridLayout.setSpacing(0)
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.gridLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalSpacer = QSpacerItem(20, 579, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
-        self.vlay_msg_body.addItem(self.verticalSpacer)
+        self.gridLayout.addItem(self.verticalSpacer, 0, 0, 1, 1)
+
+
+        self.vlay_msg_body.addWidget(self.fr_dlg_body)
 
 
         self.vlay_fr_main.addWidget(self.fr_body)
