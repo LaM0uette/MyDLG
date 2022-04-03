@@ -128,7 +128,7 @@ class DlgBoxDlg(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         # pb dlg
         self.pb_ok.clicked.connect(self.f_ok)
     def IN_ACT(self):
-        pass
+        self.f_maj_all_exports()
     def IN_WG_BASE(self):
         pass
     def INIT(self):
@@ -159,6 +159,14 @@ class DlgBoxDlg(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
     #######################
     ##     FONCTIONS     ##
     #######################
+    def f_maj_all_exports(self):
+        exps = CoSql().GET_ALL_EXPORTS_ONE_DLG(self.dlg_id)
+
+        for exp in exps:
+            _code = str(exp[0])
+            code = _code.split("_")
+
+            self.lw_dlg.addItem(f"{code[1]}  -  {exp[1]}")
 
     #####
 

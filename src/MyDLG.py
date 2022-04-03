@@ -387,8 +387,6 @@ class main(Ui_main, QtWidgets.QWidget):
         else:
             return
 
-        exps = CoSql().GET_V_EXPORTS_EN_COURS()
-
         pb_dlg = {}
         ligne_conc = 0
         i_init = 0

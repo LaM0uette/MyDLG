@@ -116,6 +116,16 @@ class CoSql:
 
         self.close()
         return rtn
+    def GET_ALL_EXPORTS_ONE_DLG(self, dl_id):
+        self.cd.execute(f"""
+        SELECT ex_et_ref, ex_date
+        FROM v_exports_en_cours
+        WHERE ex_dl_id = {dl_id};
+        """)
+        rtn = self.cd.fetchall()
+
+        self.close()
+        return rtn
 
     def GET_REFCODE3(self, nro, pm):
         self.cd.execute(f"""
