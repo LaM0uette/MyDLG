@@ -12,6 +12,15 @@ class Base:
     def Base(self):
         Style(
             widget=self.widget,
+
+            focus_policy=PaFocusPolicy.STRONG,
+
+            img=DcImg.Base(
+                base=PaImg.CALENDRIER,
+                base_hover=PaImg.CALENDRIER,
+                base_rgb="",
+                base_hover_rgb="",
+            )
         )
     def Transparent(self):
         Style(
