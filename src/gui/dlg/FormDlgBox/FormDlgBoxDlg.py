@@ -77,6 +77,7 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
 
         ### QComboBox ###
         MyComboBox.Base(self.cb_phase).Base()
+        MyComboBox.Base(self.cb_td).Base()
         ### /QComboBox ###
 
 
@@ -102,6 +103,8 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
         for phase in CoSql().GET_PHASE():
             self.cb_phase.addItem(phase[1])
         self.cb_phase.setCurrentIndex(1)
+
+        self.cb_td.addItems(["Transport", "Distri", "TOUT"])
     def IN_CONNECTIONS(self):
         ## Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())

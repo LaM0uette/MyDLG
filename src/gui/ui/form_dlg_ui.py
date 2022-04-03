@@ -89,6 +89,11 @@ class Ui_FormDlg(object):
 
         self.vlay_msg_body.addLayout(self.horizontalLayout)
 
+        self.cb_td = QComboBox(self.fr_body)
+        self.cb_td.setObjectName(u"cb_td")
+
+        self.vlay_msg_body.addWidget(self.cb_td)
+
         self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.vlay_msg_body.addItem(self.verticalSpacer)
