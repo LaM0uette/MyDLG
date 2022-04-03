@@ -42,7 +42,7 @@ class CoSql:
         """
         self.cd.execute(f"""
         INSERT INTO t_dlg (dl_zo_id,dl_init_date,dl_phase,dl_td,dl_no_livraison,dl_no_version)
-        SELECT (SELECT dlg.zo_id FROM t_zone_dlg dlg WHERE dlg.zo_refcode3 = '{refcode3}') AS zo, '{date}', '{phase}', '{type_td}', {no_livraison}, {no_version}
+        SELECT (SELECT dlg.zo_id FROM t_zone_dlg dlg WHERE dlg.zo_refcode3 = '{refcode3}') AS zo, date('2022-4-3'), '{phase}', '{type_td}', {no_livraison}, {no_version}
         WHERE NOT EXISTS(
             SELECT dl_phase,dl_td,dl_no_livraison,dl_no_version
             FROM t_dlg
