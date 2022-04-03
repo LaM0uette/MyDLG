@@ -301,8 +301,6 @@ class main(Ui_main, QtWidgets.QWidget):
         if not CoSql().TEST_CO():
             MsgBox.ALERTE(title="Erreur SQL", msg="Une erreur est survenue lors de la connexion à la base de données.")
             quit()
-
-        # CoSql().ADD_EXPORT(dl_id, no_export, no_etat)
     def INIT(self, *args):
         for fct in args:
             splash_screen.lb_chargement.setText(fct[1])
