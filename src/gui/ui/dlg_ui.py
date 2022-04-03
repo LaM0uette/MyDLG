@@ -81,8 +81,8 @@ class Ui_Dlg(object):
         self.gridLayout = QGridLayout(self.fr_dlg_body)
         self.gridLayout.setSpacing(0)
         self.gridLayout.setObjectName(u"gridLayout")
-        self.gridLayout.setContentsMargins(0, 0, 0, 0)
-        self.verticalSpacer = QSpacerItem(20, 253, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.gridLayout.setContentsMargins(10, 10, 10, 10)
+        self.verticalSpacer = QSpacerItem(20, 233, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.gridLayout.addItem(self.verticalSpacer, 1, 1, 1, 1)
 
@@ -164,10 +164,10 @@ class Ui_Dlg(object):
 
         self.verticalLayout.addWidget(self.pb_dlg)
 
-        self.listWidget = QListWidget(self.fr_dlg_body)
-        self.listWidget.setObjectName(u"listWidget")
+        self.lw_dlg = QListWidget(self.fr_dlg_body)
+        self.lw_dlg.setObjectName(u"lw_dlg")
 
-        self.verticalLayout.addWidget(self.listWidget)
+        self.verticalLayout.addWidget(self.lw_dlg)
 
 
         self.gridLayout.addLayout(self.verticalLayout, 0, 0, 2, 1)
