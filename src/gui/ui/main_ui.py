@@ -17,8 +17,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
     QHBoxLayout, QLabel, QLineEdit, QPushButton,
-    QSizePolicy, QSpacerItem, QStackedWidget, QVBoxLayout,
-    QWidget)
+    QScrollArea, QSizePolicy, QSpacerItem, QStackedWidget,
+    QVBoxLayout, QWidget)
 
 class Ui_main(object):
     def setupUi(self, main):
@@ -221,10 +221,24 @@ class Ui_main(object):
         self.fr_dlg_body.setObjectName(u"fr_dlg_body")
         self.fr_dlg_body.setFrameShape(QFrame.StyledPanel)
         self.fr_dlg_body.setFrameShadow(QFrame.Raised)
-        self.glay_dlg = QGridLayout(self.fr_dlg_body)
+        self.verticalLayout_2 = QVBoxLayout(self.fr_dlg_body)
+        self.verticalLayout_2.setSpacing(0)
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.sca_dlg = QScrollArea(self.fr_dlg_body)
+        self.sca_dlg.setObjectName(u"sca_dlg")
+        self.sca_dlg.setWidgetResizable(True)
+        self.scrollAreaWidgetContents = QWidget()
+        self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 971, 657))
+        self.glay_dlg = QGridLayout(self.scrollAreaWidgetContents)
         self.glay_dlg.setSpacing(20)
         self.glay_dlg.setObjectName(u"glay_dlg")
         self.glay_dlg.setContentsMargins(20, 20, 20, 20)
+        self.sca_dlg.setWidget(self.scrollAreaWidgetContents)
+
+        self.verticalLayout_2.addWidget(self.sca_dlg)
+
 
         self.gridLayout_2.addWidget(self.fr_dlg_body, 1, 0, 1, 1)
 
