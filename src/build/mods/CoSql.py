@@ -81,6 +81,14 @@ class CoSql:
 
         self.close()
         return rtn
+    def GET_CODE_ZONE(self):
+        self.cd.execute("""
+        SELECT * FROM t_code_zone
+        """)
+        rtn = self.cd.fetchall()
+
+        self.close()
+        return rtn
 
 
     def TEST_CO(self):
