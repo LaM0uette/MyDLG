@@ -82,5 +82,14 @@ END;
 -- INSERT INTO t_phase (ph_nom) VALUES  ('DOE');
 -- INSERT INTO t_phase (ph_nom) VALUES  ('EXE');
 
+select * from t_dlg;
+
+SELECT dl_id
+FROM t_dlg
+WHERE (SELECT zo_id FROM t_zone_dlg WHERE zo_refcode3 = 'BIMI') = dl_zo_id
+AND dl_phase = 'EXE'
+AND dl_td = 'TD'
+AND dl_no_livraison = 1
+AND dl_no_version = 1;
 
 

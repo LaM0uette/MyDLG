@@ -217,6 +217,8 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
             MsgBox.ALERTE(title="ERREUR", msg=err)
             return
 
+
+
         self.close()
     #######################
     ##    /FONCTIONS     ##

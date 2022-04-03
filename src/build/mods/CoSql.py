@@ -121,6 +121,20 @@ class CoSql:
 
         self.close()
         return rtn
+    def GET_DLG(self, refcode3, phase, td, num_livraison, num_version):
+        self.cd.execute(f"""
+        SELECT dl_id
+        FROM t_dlg
+        WHERE (SELECT zo_id FROM t_zone_dlg WHERE zo_refcode3 = '{refcode3}') = dl_zo_id
+        AND dl_phase = '{phase}'
+        AND dl_td = '{td}'
+        AND dl_no_livraison = {num_livraison}
+        AND dl_no_version = {num_version};
+        """)
+        rtn = self.cd.fetchone()
+
+        self.close()
+        return rtn
 
 
     def TEST_CO(self):
