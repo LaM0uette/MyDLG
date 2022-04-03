@@ -359,11 +359,13 @@ class main(Ui_main, QtWidgets.QWidget):
 
             if 4 < ligne_conc < 9:
                 ligne_conc -= 5
-                i_init += 3
+                i_init += 1
 
-            self.glay_dlg.addWidget(pb_dlg[dlg[0]], i_init + 3, ligne_conc, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
-
+            self.glay_dlg.addWidget(pb_dlg[dlg[0]], i_init, ligne_conc, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
             ligne_conc += 1
+
+        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.glay_dlg.addItem(spacerItem, i_init + 1, 0, 1, 5)
     def f_dlg_click(self, dlg_id):
         print(dlg_id)
     #######################
