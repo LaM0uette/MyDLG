@@ -176,8 +176,10 @@ class Base:
             background=DcRgbBg.Base(
                 base=PaRgb.TH1,
                 hover=PaRgb.TH1,
+                pressed=PaRgb.TH1,
                 checked=rgb,
                 checked_hover=rgb,
+                checked_pressed=rgb,
             ),
 
             foreground=DcRgbBg.Base(
