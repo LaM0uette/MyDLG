@@ -49,6 +49,8 @@ class PlusMinus:
         Style(
             widget=self.widget,
 
+            focus_policy=PaFocusPolicy.STRONG,
+
             value=DcValue.Base(
                 min=1,
                 max=99,
