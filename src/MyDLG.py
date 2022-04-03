@@ -354,11 +354,15 @@ class main(Ui_main, QtWidgets.QWidget):
         i_init = 0
 
         for dlg in dlgs:
+            last_export = str(CoSql().GET_LAST_EXPORT_FROM_DLG(dl_id=dlg[0], table='et_rgb')[0])
+            rgb_str = last_export.split(r"|")
+            rgb = int(rgb_str[0]), int(rgb_str[1]), int(rgb_str[2]), int(rgb_str[3])
+
             pb_dlg[dlg[0]] = QtWidgets.QPushButton("")
             pb_dlg[dlg[0]].setObjectName(str(dlg[0]))
             pb_dlg[dlg[0]].clicked.connect(functools.partial(self.f_dlg_click, dlg[0]))
 
-            MyPushButton.Base(pb_dlg[dlg[0]]).DLG((0, 0, 0, 255))
+            MyPushButton.Base(pb_dlg[dlg[0]]).DLG(rgb)
 
             if 4 < ligne_conc < 9:
                 ligne_conc -= 5

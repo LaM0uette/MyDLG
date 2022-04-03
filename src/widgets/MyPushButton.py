@@ -102,13 +102,25 @@ class Base:
         )
 
     def DLG(self, rgb):
-        print(rgb)
         Style(
             widget=self.widget,
 
             dim=DcDim.Base(
                 fixed_width=PaDim.H5,
                 fixed_height=PaDim.H5,
+            ),
+
+            background=DcRgbBg.Base(
+                gen=PaRgb.TR
+            ),
+
+            foreground=DcRgbBg.Base(
+                gen=PaRgb.TH3
+            ),
+
+            border=DcBorder.Base(
+                gen=(3, )*4,
+                gen_rgb=rgb
             )
         )
 

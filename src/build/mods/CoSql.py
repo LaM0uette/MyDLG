@@ -143,6 +143,17 @@ class CoSql:
 
         self.close()
         return rtn
+    def GET_LAST_EXPORT_FROM_DLG(self, dl_id, table='*'):
+        self.cd.execute(f"""
+        SELECT {table}
+        FROM v_exports_en_cours
+        WHERE ex_dl_id = {dl_id}
+        AND ex_date = (SELECT MAX(ex_date) FROM v_exports_en_cours WHERE ex_dl_id = {dl_id});
+        """)
+        rtn = self.cd.fetchone()
+
+        self.close()
+        return rtn
 
 
     # SELECT VIEW

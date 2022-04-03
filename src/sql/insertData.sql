@@ -25,6 +25,12 @@ INSERT INTO t_exports (ex_dl_id,ex_no_export,ex_date,ex_et_id)
 SELECT 1, 1, datetime('now', 'localtime'), 1;
 
 
+-- Select le dernier export d'un dlg
+SELECT *
+FROM v_exports_en_cours
+WHERE ex_dl_id = 2
+AND ex_date = (SELECT MAX(ex_date) FROM v_exports_en_cours WHERE ex_dl_id = 2);
+
 
 -- Select tables
 SELECT * FROM t_zone_dlg;
@@ -81,4 +87,5 @@ END;
 -- INSERT INTO t_phase (ph_nom) VALUES  ('PRO');
 -- INSERT INTO t_phase (ph_nom) VALUES  ('DOE');
 -- INSERT INTO t_phase (ph_nom) VALUES  ('EXE');
+
 
