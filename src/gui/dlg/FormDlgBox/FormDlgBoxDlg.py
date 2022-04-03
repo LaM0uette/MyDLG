@@ -30,7 +30,11 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
         self.width = width
         self.height = height
         self.opacity = opacity
-        self.marche = marche
+
+        match marche:
+            case "RIP24": self.marche = 24
+            case "RIP40": self.marche = 40
+            case "RIP47": self.marche = 47
 
         self.INIT()
 
@@ -112,7 +116,7 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
         self.cb_nro.addItem("")
         self.cb_pm.addItem("")
         self.cb_refcode3.addItem("")
-        for phase in CoSql().GET_CODE_ZONE():
+        for phase in CoSql().GET_CODE_ZONE(self.marche):
             self.cb_nro.addItem(str(phase[1]))
             self.cb_pm.addItem(str(phase[2]))
             self.cb_refcode3.addItem(str(phase[3]))

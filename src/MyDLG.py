@@ -271,7 +271,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
         ### DLG ###
-        self.pb_tools_add_dlg.clicked.connect(lambda: FormDlgBox.ADD(marche=int(self.cb_marche.currentText())))
+        self.pb_tools_add_dlg.clicked.connect(lambda: FormDlgBox.ADD(marche=self.cb_marche.currentText()))
     def IN_ACT(self):
         pass
     def IN_WG_BASE(self):
