@@ -231,7 +231,11 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
             num_livraison=self.sb_livraison.value(),
             num_version=self.sb_version.value()
         )
-        print(dlg)
+
+        if dlg: print("Insert")
+        else:
+            MsgBox.ALERTE(title="ERREUR", msg="Ce DLG existe déjà.")
+            return
 
         self.close()
     #######################
