@@ -79,79 +79,81 @@ class Ui_Dlg(object):
         self.fr_dlg_body.setFrameShape(QFrame.StyledPanel)
         self.fr_dlg_body.setFrameShadow(QFrame.Raised)
         self.gridLayout = QGridLayout(self.fr_dlg_body)
-        self.gridLayout.setSpacing(0)
         self.gridLayout.setObjectName(u"gridLayout")
+        self.gridLayout.setHorizontalSpacing(10)
+        self.gridLayout.setVerticalSpacing(0)
         self.gridLayout.setContentsMargins(10, 10, 10, 10)
-        self.verticalSpacer = QSpacerItem(20, 233, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer = QSpacerItem(20, 193, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.gridLayout.addItem(self.verticalSpacer, 1, 1, 1, 1)
 
         self.gridLayout_2 = QGridLayout()
+        self.gridLayout_2.setSpacing(10)
         self.gridLayout_2.setObjectName(u"gridLayout_2")
-        self.pushButton_12 = QPushButton(self.fr_dlg_body)
-        self.pushButton_12.setObjectName(u"pushButton_12")
+        self.pb_edit_pno = QPushButton(self.fr_dlg_body)
+        self.pb_edit_pno.setObjectName(u"pb_edit_pno")
 
-        self.gridLayout_2.addWidget(self.pushButton_12, 7, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.pb_edit_pno, 7, 1, 1, 1)
 
-        self.pushButton_5 = QPushButton(self.fr_dlg_body)
-        self.pushButton_5.setObjectName(u"pushButton_5")
+        self.pb_edit_cma = QPushButton(self.fr_dlg_body)
+        self.pb_edit_cma.setObjectName(u"pb_edit_cma")
 
-        self.gridLayout_2.addWidget(self.pushButton_5, 2, 0, 1, 2)
+        self.gridLayout_2.addWidget(self.pb_edit_cma, 2, 0, 1, 2)
 
-        self.pushButton_11 = QPushButton(self.fr_dlg_body)
-        self.pushButton_11.setObjectName(u"pushButton_11")
+        self.pb_edit_pok = QPushButton(self.fr_dlg_body)
+        self.pb_edit_pok.setObjectName(u"pb_edit_pok")
 
-        self.gridLayout_2.addWidget(self.pushButton_11, 7, 0, 1, 1)
+        self.gridLayout_2.addWidget(self.pb_edit_pok, 7, 0, 1, 1)
 
-        self.pushButton_3 = QPushButton(self.fr_dlg_body)
-        self.pushButton_3.setObjectName(u"pushButton_3")
+        self.pb_edit_gex = QPushButton(self.fr_dlg_body)
+        self.pb_edit_gex.setObjectName(u"pb_edit_gex")
 
-        self.gridLayout_2.addWidget(self.pushButton_3, 1, 0, 1, 2)
+        self.gridLayout_2.addWidget(self.pb_edit_gex, 1, 0, 1, 2)
 
-        self.pushButton_6 = QPushButton(self.fr_dlg_body)
-        self.pushButton_6.setObjectName(u"pushButton_6")
+        self.pb_edit_edl = QPushButton(self.fr_dlg_body)
+        self.pb_edit_edl.setObjectName(u"pb_edit_edl")
 
-        self.gridLayout_2.addWidget(self.pushButton_6, 4, 0, 1, 2)
+        self.gridLayout_2.addWidget(self.pb_edit_edl, 4, 0, 1, 2)
 
-        self.pushButton_10 = QPushButton(self.fr_dlg_body)
-        self.pushButton_10.setObjectName(u"pushButton_10")
+        self.pb_edit_lcl = QPushButton(self.fr_dlg_body)
+        self.pb_edit_lcl.setObjectName(u"pb_edit_lcl")
 
-        self.gridLayout_2.addWidget(self.pushButton_10, 8, 0, 1, 2)
+        self.gridLayout_2.addWidget(self.pb_edit_lcl, 8, 0, 1, 2)
 
-        self.pushButton_8 = QPushButton(self.fr_dlg_body)
-        self.pushButton_8.setObjectName(u"pushButton_8")
+        self.pb_edit_dok = QPushButton(self.fr_dlg_body)
+        self.pb_edit_dok.setObjectName(u"pb_edit_dok")
 
-        self.gridLayout_2.addWidget(self.pushButton_8, 6, 0, 1, 1)
+        self.gridLayout_2.addWidget(self.pb_edit_dok, 6, 0, 1, 1)
 
-        self.pushButton_9 = QPushButton(self.fr_dlg_body)
-        self.pushButton_9.setObjectName(u"pushButton_9")
+        self.pb_edit_dno = QPushButton(self.fr_dlg_body)
+        self.pb_edit_dno.setObjectName(u"pb_edit_dno")
 
-        self.gridLayout_2.addWidget(self.pushButton_9, 6, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.pb_edit_dno, 6, 1, 1, 1)
 
-        self.pushButton_2 = QPushButton(self.fr_dlg_body)
-        self.pushButton_2.setObjectName(u"pushButton_2")
+        self.pb_edit_afa = QPushButton(self.fr_dlg_body)
+        self.pb_edit_afa.setObjectName(u"pb_edit_afa")
 
-        self.gridLayout_2.addWidget(self.pushButton_2, 0, 0, 1, 2)
+        self.gridLayout_2.addWidget(self.pb_edit_afa, 0, 0, 1, 2)
 
-        self.pushButton_4 = QPushButton(self.fr_dlg_body)
-        self.pushButton_4.setObjectName(u"pushButton_4")
+        self.pb_edit_cch = QPushButton(self.fr_dlg_body)
+        self.pb_edit_cch.setObjectName(u"pb_edit_cch")
 
-        self.gridLayout_2.addWidget(self.pushButton_4, 3, 0, 1, 2)
+        self.gridLayout_2.addWidget(self.pb_edit_cch, 3, 0, 1, 2)
 
-        self.pushButton_7 = QPushButton(self.fr_dlg_body)
-        self.pushButton_7.setObjectName(u"pushButton_7")
+        self.pb_edit_eok = QPushButton(self.fr_dlg_body)
+        self.pb_edit_eok.setObjectName(u"pb_edit_eok")
 
-        self.gridLayout_2.addWidget(self.pushButton_7, 5, 0, 1, 2)
+        self.gridLayout_2.addWidget(self.pb_edit_eok, 5, 0, 1, 2)
 
-        self.pushButton_13 = QPushButton(self.fr_dlg_body)
-        self.pushButton_13.setObjectName(u"pushButton_13")
+        self.pb_edit_pau = QPushButton(self.fr_dlg_body)
+        self.pb_edit_pau.setObjectName(u"pb_edit_pau")
 
-        self.gridLayout_2.addWidget(self.pushButton_13, 9, 0, 1, 2)
+        self.gridLayout_2.addWidget(self.pb_edit_pau, 9, 0, 1, 2)
 
-        self.pushButton_14 = QPushButton(self.fr_dlg_body)
-        self.pushButton_14.setObjectName(u"pushButton_14")
+        self.pb_edit_ann = QPushButton(self.fr_dlg_body)
+        self.pb_edit_ann.setObjectName(u"pb_edit_ann")
 
-        self.gridLayout_2.addWidget(self.pushButton_14, 10, 0, 1, 2)
+        self.gridLayout_2.addWidget(self.pb_edit_ann, 10, 0, 1, 2)
 
 
         self.gridLayout.addLayout(self.gridLayout_2, 0, 1, 1, 1)
@@ -206,19 +208,19 @@ class Ui_Dlg(object):
     # setupUi
 
     def retranslateUi(self, Dlg):
-        self.pushButton_12.setText(QCoreApplication.translate("Dlg", u"PushButton", None))
-        self.pushButton_5.setText(QCoreApplication.translate("Dlg", u"PushButton", None))
-        self.pushButton_11.setText(QCoreApplication.translate("Dlg", u"PushButton", None))
-        self.pushButton_3.setText(QCoreApplication.translate("Dlg", u"PushButton", None))
-        self.pushButton_6.setText(QCoreApplication.translate("Dlg", u"PushButton", None))
-        self.pushButton_10.setText(QCoreApplication.translate("Dlg", u"PushButton", None))
-        self.pushButton_8.setText(QCoreApplication.translate("Dlg", u"PushButton", None))
-        self.pushButton_9.setText(QCoreApplication.translate("Dlg", u"PushButton", None))
-        self.pushButton_2.setText(QCoreApplication.translate("Dlg", u"PushButton", None))
-        self.pushButton_4.setText(QCoreApplication.translate("Dlg", u"PushButton", None))
-        self.pushButton_7.setText(QCoreApplication.translate("Dlg", u"PushButton", None))
-        self.pushButton_13.setText(QCoreApplication.translate("Dlg", u"PushButton", None))
-        self.pushButton_14.setText(QCoreApplication.translate("Dlg", u"PushButton", None))
+        self.pb_edit_pno.setText(QCoreApplication.translate("Dlg", u"PDB NOK", None))
+        self.pb_edit_cma.setText(QCoreApplication.translate("Dlg", u"CRASH MAJEURE", None))
+        self.pb_edit_pok.setText(QCoreApplication.translate("Dlg", u"PDB OK", None))
+        self.pb_edit_gex.setText(QCoreApplication.translate("Dlg", u"GO EXPORT", None))
+        self.pb_edit_edl.setText(QCoreApplication.translate("Dlg", u"ERREURS DLG", None))
+        self.pb_edit_lcl.setText(QCoreApplication.translate("Dlg", u"LIVRAISON CLIENT", None))
+        self.pb_edit_dok.setText(QCoreApplication.translate("Dlg", u"DJANGO OK", None))
+        self.pb_edit_dno.setText(QCoreApplication.translate("Dlg", u"DJANGO NOK", None))
+        self.pb_edit_afa.setText(QCoreApplication.translate("Dlg", u"A FAIRE", None))
+        self.pb_edit_cch.setText(QCoreApplication.translate("Dlg", u"CRASH CHECK", None))
+        self.pb_edit_eok.setText(QCoreApplication.translate("Dlg", u"EXPORT OK", None))
+        self.pb_edit_pau.setText(QCoreApplication.translate("Dlg", u"PAUSE", None))
+        self.pb_edit_ann.setText(QCoreApplication.translate("Dlg", u"ANNULE", None))
         self.pb_dlg.setText(QCoreApplication.translate("Dlg", u"PushButton", None))
         pass
     # retranslateUi

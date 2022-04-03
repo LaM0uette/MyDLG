@@ -67,6 +67,12 @@ class DlgBoxDlg(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         MyPushButton.MenuTop(self.pb_mt_quitter).quitter()
 
         MyPushButton.Base(self.pb_dlg).DLG_simple(self.rgb)
+
+        for wg in [
+            self.pb_edit_afa, self.pb_edit_gex, self.pb_edit_cma, self.pb_edit_cch, self.pb_edit_edl,
+            self.pb_edit_eok, self.pb_edit_dok, self.pb_edit_dno, self.pb_edit_pok, self.pb_edit_pno,
+            self.pb_edit_lcl, self.pb_edit_pau, self.pb_edit_ann
+        ]: MyPushButton.Base(wg).DLG_edit()
         ### /QPushButton ###
 
 

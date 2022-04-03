@@ -155,6 +155,33 @@ class Base:
                 radius=(15, )*4
             )
         )
+    def DLG_edit(self, rgb):
+        Style(
+            widget=self.widget,
+
+            dim=DcDim.Base(
+                maximum_width=PaDim.H3,
+                fixed_height=PaDim.H9,
+            ),
+
+            cursor=PaCur.SOURIS,
+
+            font=PaFont.HH3,
+
+            background=DcRgbBg.Base(
+                gen=PaRgb.TH1
+            ),
+
+            foreground=DcRgbBg.Base(
+                gen=PaRgb.TH3
+            ),
+
+            border=DcBorder.Base(
+                gen=(3, )*4,
+                gen_rgb=rgb,
+                radius=(15, )*4
+            )
+        )
 
 
 ######################

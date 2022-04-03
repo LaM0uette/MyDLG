@@ -145,7 +145,10 @@
             <property name="bottomMargin">
              <number>10</number>
             </property>
-            <property name="spacing">
+            <property name="horizontalSpacing">
+             <number>10</number>
+            </property>
+            <property name="verticalSpacing">
              <number>0</number>
             </property>
             <item row="1" column="1">
@@ -156,101 +159,104 @@
               <property name="sizeHint" stdset="0">
                <size>
                 <width>20</width>
-                <height>233</height>
+                <height>193</height>
                </size>
               </property>
              </spacer>
             </item>
             <item row="0" column="1">
              <layout class="QGridLayout" name="gridLayout_2">
+              <property name="spacing">
+               <number>10</number>
+              </property>
               <item row="7" column="1">
-               <widget class="QPushButton" name="pushButton_12">
+               <widget class="QPushButton" name="pb_edit_pno">
                 <property name="text">
-                 <string>PushButton</string>
+                 <string>PDB NOK</string>
                 </property>
                </widget>
               </item>
               <item row="2" column="0" colspan="2">
-               <widget class="QPushButton" name="pushButton_5">
+               <widget class="QPushButton" name="pb_edit_cma">
                 <property name="text">
-                 <string>PushButton</string>
+                 <string>CRASH MAJEURE</string>
                 </property>
                </widget>
               </item>
               <item row="7" column="0">
-               <widget class="QPushButton" name="pushButton_11">
+               <widget class="QPushButton" name="pb_edit_pok">
                 <property name="text">
-                 <string>PushButton</string>
+                 <string>PDB OK</string>
                 </property>
                </widget>
               </item>
               <item row="1" column="0" colspan="2">
-               <widget class="QPushButton" name="pushButton_3">
+               <widget class="QPushButton" name="pb_edit_gex">
                 <property name="text">
-                 <string>PushButton</string>
+                 <string>GO EXPORT</string>
                 </property>
                </widget>
               </item>
               <item row="4" column="0" colspan="2">
-               <widget class="QPushButton" name="pushButton_6">
+               <widget class="QPushButton" name="pb_edit_edl">
                 <property name="text">
-                 <string>PushButton</string>
+                 <string>ERREURS DLG</string>
                 </property>
                </widget>
               </item>
               <item row="8" column="0" colspan="2">
-               <widget class="QPushButton" name="pushButton_10">
+               <widget class="QPushButton" name="pb_edit_lcl">
                 <property name="text">
-                 <string>PushButton</string>
+                 <string>LIVRAISON CLIENT</string>
                 </property>
                </widget>
               </item>
               <item row="6" column="0">
-               <widget class="QPushButton" name="pushButton_8">
+               <widget class="QPushButton" name="pb_edit_dok">
                 <property name="text">
-                 <string>PushButton</string>
+                 <string>DJANGO OK</string>
                 </property>
                </widget>
               </item>
               <item row="6" column="1">
-               <widget class="QPushButton" name="pushButton_9">
+               <widget class="QPushButton" name="pb_edit_dno">
                 <property name="text">
-                 <string>PushButton</string>
+                 <string>DJANGO NOK</string>
                 </property>
                </widget>
               </item>
               <item row="0" column="0" colspan="2">
-               <widget class="QPushButton" name="pushButton_2">
+               <widget class="QPushButton" name="pb_edit_afa">
                 <property name="text">
-                 <string>PushButton</string>
+                 <string>A FAIRE</string>
                 </property>
                </widget>
               </item>
               <item row="3" column="0" colspan="2">
-               <widget class="QPushButton" name="pushButton_4">
+               <widget class="QPushButton" name="pb_edit_cch">
                 <property name="text">
-                 <string>PushButton</string>
+                 <string>CRASH CHECK</string>
                 </property>
                </widget>
               </item>
               <item row="5" column="0" colspan="2">
-               <widget class="QPushButton" name="pushButton_7">
+               <widget class="QPushButton" name="pb_edit_eok">
                 <property name="text">
-                 <string>PushButton</string>
+                 <string>EXPORT OK</string>
                 </property>
                </widget>
               </item>
               <item row="9" column="0" colspan="2">
-               <widget class="QPushButton" name="pushButton_13">
+               <widget class="QPushButton" name="pb_edit_pau">
                 <property name="text">
-                 <string>PushButton</string>
+                 <string>PAUSE</string>
                 </property>
                </widget>
               </item>
               <item row="10" column="0" colspan="2">
-               <widget class="QPushButton" name="pushButton_14">
+               <widget class="QPushButton" name="pb_edit_ann">
                 <property name="text">
-                 <string>PushButton</string>
+                 <string>ANNULE</string>
                 </property>
                </widget>
               </item>
