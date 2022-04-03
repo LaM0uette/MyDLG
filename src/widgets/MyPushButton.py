@@ -106,9 +106,11 @@ class Base:
             widget=self.widget,
 
             dim=DcDim.Base(
-                fixed_width=PaDim.H5,
-                fixed_height=PaDim.H5,
+                fixed_width=PaDim.H5-10,
+                fixed_height=PaDim.H5-10,
             ),
+
+            font=PaFont.HH3,
 
             background=DcRgbBg.Base(
                 gen=PaRgb.TR
