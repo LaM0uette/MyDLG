@@ -161,6 +161,10 @@ class Base:
 
             checkable=True,
 
+            auto_actions=DcAutoActions.Base(
+                auto_exclusive=True
+            ),
+
             size_policy=DcSizePolicy.Base(
                 horizontal=PaSizePolicy.EXPANDING
             ),
@@ -170,7 +174,10 @@ class Base:
             ),
 
             background=DcRgbBg.Base(
-                gen=PaRgb.TH1
+                base=PaRgb.TH1,
+                hover=PaRgb.TH1,
+                checked=rgb,
+                checked_hover=rgb,
             ),
 
             foreground=DcRgbBg.Base(
