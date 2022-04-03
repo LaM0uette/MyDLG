@@ -204,10 +204,32 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
     def f_ok(self):
         err = "Il manque des informations :\n"
 
+        nro = self.cb_nro.currentText()
+        pm = self.cb_pm.currentText()
+        refcode3 = self.cb_refcode3.currentText()
 
-        if len(self.cb_nro.currentText()) < 1:
+        date_b = self.de_date_prev.date()
+        date = f"{date_b.year()}-{date_b.month()}-{date_b.day()}"
+
+        match self.cb_phase.currentText():
+            case "EXE": phase = "EXE"
+            case "PRO": phase = "PRO"
+            case "DOE": phase = f"DOE_{self.sb_phase.value()}%"
+            case _: phase = "NA"
+
+        match self.cb_td.currentText():
+            case "Tout": td = "TD"
+            case "Transport": td = "T"
+            case "Distribution": td = "D"
+            case _: td = "TD"
+
+        no_livraison = self.sb_livraison.value()
+        no_version = self.sb_version.value()
+
+
+        if len(nro) < 1:
             err += " | NRO | "
-        if len(self.cb_pm.currentText()) < 1:
+        if len(pm) < 1:
             err += " | PM | "
         if len(self.cb_refcode3.currentText()) < 1:
             err += " | REFCODE3 | "
@@ -217,23 +239,17 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
             MsgBox.ALERTE(title="ERREUR", msg=err)
             return
 
-
-        match self.cb_td.currentText():
-            case "Tout": td = "TD"
-            case "Transport": td = "T"
-            case "Distribution": td = "D"
-            case _: td = "TD"
-
         dlg = CoSql().GET_DLG(
-            refcode3=self.cb_refcode3.currentText(),
-            phase=self.cb_phase.currentText(),
+            refcode3=refcode3,
+            phase=phase,
             td=td,
-            num_livraison=self.sb_livraison.value(),
-            num_version=self.sb_version.value()
+            num_livraison=no_livraison,
+            num_version=no_version
         )
 
         if not dlg:
-            print("Insert")
+            CoSql().ADD_ZONE_DLG(self.marche, nro, pm, refcode3)
+            CoSql().ADD_DLG(refcode3, date, phase, td, no_livraison, no_version)
         else:
             MsgBox.ALERTE(title="ERREUR", msg="Ce DLG existe déjà.")
             return

@@ -92,4 +92,3 @@ AND dl_td = 'TD'
 AND dl_no_livraison = 1
 AND dl_no_version = 1;
 
-
