@@ -129,6 +129,7 @@ class DlgBoxDlg(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.pb_ok.clicked.connect(self.f_ok)
     def IN_ACT(self):
         self.f_maj_all_exports()
+        self.f_last_export()
     def IN_WG_BASE(self):
         pass
     def INIT(self):
@@ -178,6 +179,26 @@ class DlgBoxDlg(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             heure_fr = f"{heure[0]}:{heure[1]}"
 
             self.lw_dlg.addItem(f"{code[1]} - Le {date_fr} à {heure_fr}")
+    def f_last_export(self):
+        last_export = CoSql().GET_LAST_EXPORT_FROM_DLG(dl_id=self.dlg_id)
+
+        _etat = str(last_export[3])
+        etat = int(_etat.split("_")[0])
+
+        match etat:
+            case 1: self.pb_edit_afa.setChecked(True)
+            case 2: self.pb_edit_gex.setChecked(True)
+            case 3: self.pb_edit_cma.setChecked(True)
+            case 4: self.pb_edit_cch.setChecked(True)
+            case 5: self.pb_edit_edl.setChecked(True)
+            case 6: self.pb_edit_eok.setChecked(True)
+            case 7: self.pb_edit_dok.setChecked(True)
+            case 8: self.pb_edit_dno.setChecked(True)
+            case 9: self.pb_edit_pok.setChecked(True)
+            case 10: self.pb_edit_pno.setChecked(True)
+            case 11: self.pb_edit_lcl.setChecked(True)
+            case 12: self.pb_edit_pau.setChecked(True)
+            case 13: self.pb_edit_ann.setChecked(True)
 
     #####
 
