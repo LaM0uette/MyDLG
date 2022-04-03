@@ -154,6 +154,14 @@ class CoSql:
 
         self.close()
         return rtn
+    def GET_V_EXPORTS_EN_COURS(self):
+        self.cd.execute("""
+        SELECT * FROM v_exports_en_cours
+        """)
+        rtn = self.cd.fetchall()
+
+        self.close()
+        return rtn
 
 
     def TEST_CO(self):
