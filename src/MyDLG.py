@@ -358,7 +358,9 @@ class main(Ui_main, QtWidgets.QWidget):
             rgb_str = last_export.split(r"|")
             rgb = int(rgb_str[0]), int(rgb_str[1]), int(rgb_str[2]), int(rgb_str[3])
 
-            pb_dlg[dlg[0]] = QtWidgets.QPushButton("f")
+            name_dlg = f"{dlgs[7]}-{dlgs[8]}\nNRO{dlgs[2]}-PM{dlgs[3]}\n{dlgs[4]}\n{dlgs[9]}-V{dlgs[10]}\n{dlgs[6]}"
+
+            pb_dlg[dlg[0]] = QtWidgets.QPushButton(name_dlg)
             pb_dlg[dlg[0]].setObjectName(str(dlg[0]))
             pb_dlg[dlg[0]].clicked.connect(functools.partial(self.f_dlg_click, dlg[0]))
 
