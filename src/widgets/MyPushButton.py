@@ -108,8 +108,8 @@ class Base:
             pb_type="shadow",
 
             dim=DcDim.Base(
-                fixed_width=PaDim.H5-10,
-                fixed_height=PaDim.H5-10,
+                fixed_width=PaDim.H5,
+                fixed_height=PaDim.H5,
             ),
 
             font=PaFont.HH3,

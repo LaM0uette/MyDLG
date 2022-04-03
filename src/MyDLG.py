@@ -419,7 +419,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
         spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.glay_dlg.addItem(spacerItem, i_init + 1, 0, 1, 1)
-    def f_dlg_click(self, dlg_id, rgb):
+    def f_dlg_click(self, dlg_id, rgb, name_dlg):
         DlgBox.EDIT(dlg_id=dlg_id, rgb=rgb, name_dlg=name_dlg)
     #######################
     ##    /FONCTIONS     ##
