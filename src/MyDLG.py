@@ -349,13 +349,12 @@ class main(Ui_main, QtWidgets.QWidget):
         dlgs = CoSql().GET_V_DLG()
 
         pb_dlg = {}
-
         for dlg in dlgs:
-            pb_dlg[0] = PB_APP("")
-            pb_dlg[0].setObjectName(idApp)
-            pb_dlg[0].setMinimumSize(QtCore.QSize(rsc.app, rsc.app))
-            pb_dlg[0].setMaximumSize(QtCore.QSize(rsc.app, rsc.app))
-            pb_dlg[0].clicked.connect(functools.partial(self.FUNC_App_Gen, nomApp, idApp))
+            pb_dlg[dlg[0]] = QtWidgets.QPushButton("")
+            pb_dlg[dlg[0]].setObjectName(dlg[0])
+            pb_dlg[dlg[0]].clicked.connect(functools.partial(self.f_dlg_click, dlg[0]))
+    def f_dlg_click(self, dlg_id):
+        print(dlg_id)
     #######################
     ##    /FONCTIONS     ##
     #######################
