@@ -101,12 +101,16 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
         # FORM DLG
         for phase in CoSql().GET_PHASE():
             self.cb_phase.addItem(phase[1])
+        self.cb_phase.setCurrentIndex(1)
     def IN_CONNECTIONS(self):
         ## Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
 
         # pb dlg
         self.pb_ok.clicked.connect(lambda: self.close())
+
+        # Form dlg
+        self.cb_phase.currentTextChanged.connect(self.a_phase_changed)
     def IN_ACT(self):
         pass
     def IN_WG_BASE(self):
@@ -122,3 +126,13 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
     ############################
     ##    /INITIALISATION     ##
     ############################
+
+
+    #####################
+    ##     ACTIONS     ##
+    #####################
+    def a_phase_changed(self):
+
+    #####################
+    ##    /ACTIONS     ##
+    #####################
