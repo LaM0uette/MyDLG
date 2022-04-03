@@ -164,6 +164,8 @@ class Ui_FormDlg(object):
 
         self.gridLayout_2 = QGridLayout()
         self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.gridLayout_2.setHorizontalSpacing(10)
+        self.gridLayout_2.setVerticalSpacing(0)
         self.sb_version = QSpinBox(self.fr_body)
         self.sb_version.setObjectName(u"sb_version")
 
