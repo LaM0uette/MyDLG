@@ -27,6 +27,22 @@ class PlusMinus:
                 base=PaRgb.TH3
             ),
         )
+
+    def Petit(self):
+        Style(
+            widget=self.widget,
+
+            focus_policy=PaFocusPolicy.STRONG,
+
+            dim=DcDim.Base(
+                fixed_width=PaDim.H7,
+                fixed_height=PaDim.H9,
+            ),
+
+            value=DcValue.Base(
+                max=100
+            )
+        )
 class UpDown:
     def __init__(self, widget):
         self.widget = widget

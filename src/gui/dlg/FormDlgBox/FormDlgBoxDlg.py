@@ -73,6 +73,16 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
         MyPushButton.Dlg(self.pb_ok).ok()
         MyPushButton.MenuTop(self.pb_mt_quitter).quitter()
         ### /QPushButton ###
+
+
+        ### QComboBox ###
+        MyComboBox.Base(self.cb_phase).Base()
+        ### /QComboBox ###
+
+
+        ### QSpinBox ###
+        MySpinBox.PlusMinus(self.sb_phase).Petit()
+        ### /QSpinBox ###
     def IN_WG(self):
         # Base
         self.setCursor(Functions().SET_CURSOR(cur=PaCur.SOURIS))
