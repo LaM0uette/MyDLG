@@ -46,7 +46,7 @@ SELECT * FROM v_exports_en_cours;
 
 
 
--- Delete table
+-- Delete col
 DELETE FROM t_zone_dlg;
 UPDATE sqlite_sequence SET seq = 0 WHERE name = 't_zone_dlg';
 

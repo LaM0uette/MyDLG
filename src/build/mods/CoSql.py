@@ -12,7 +12,7 @@ class CoSql:
     # ADD
     def ADD_ZONE_DLG(self, marche, nro, pm, refcode3):
         """
-        Insert une ligne dans la table t_zone_dlg s'il n'existe pas déjà avec les mêmes données.
+        Insert une ligne dans la col t_zone_dlg s'il n'existe pas déjà avec les mêmes données.
         :param marche: marché de la zone
         :param nro: code NRO de la zone
         :param pm: code PM de la zone
@@ -32,7 +32,7 @@ class CoSql:
         self.close()
     def ADD_DLG(self, refcode3, date, phase, type_td, no_livraison, no_version):
         """
-        Ajoute un dlg dans la table t_dlg s'il n'existe pas déjà avec les mêmes données.
+        Ajoute un dlg dans la col t_dlg s'il n'existe pas déjà avec les mêmes données.
         :param refcode3: refcode3 de la zone
         :param date: date de demande de traitement de l'export
         :param phase: phase de l'export
@@ -58,10 +58,10 @@ class CoSql:
         self.close()
     def ADD_EXPORT(self, dl_id, no_export, no_etat):
         """
-        Ajoute un export dans la table t_exports s'il n'existe pas déjà avec les mêmes données.
+        Ajoute un export dans la col t_exports s'il n'existe pas déjà avec les mêmes données.
         :param dl_id: identifiant du dlg
         :param no_export: numéro de l'export (nombre de fois qu'il a fallut le refaire)
-        :param no_etat: numéro qui correspond à l'état dans la table t_etats
+        :param no_etat: numéro qui correspond à l'état dans la col t_etats
         """
         self.cd.execute(f"""
         INSERT INTO t_exports (ex_dl_id,ex_no_export,ex_date,ex_et_id)
@@ -143,9 +143,9 @@ class CoSql:
 
         self.close()
         return rtn
-    def GET_LAST_EXPORT_FROM_DLG(self, dl_id, table='*'):
+    def GET_LAST_EXPORT_FROM_DLG(self, dl_id, col='*'):
         self.cd.execute(f"""
-        SELECT {table}
+        SELECT {col}
         FROM v_exports_en_cours
         WHERE ex_dl_id = {dl_id}
         AND ex_date = (SELECT MAX(ex_date) FROM v_exports_en_cours WHERE ex_dl_id = {dl_id});
@@ -157,9 +157,9 @@ class CoSql:
 
 
     # SELECT VIEW
-    def GET_V_DLG(self):
-        self.cd.execute("""
-        SELECT * FROM v_dlg
+    def GET_V_DLG(self, table='v_dlg'):
+        self.cd.execute(f"""
+        SELECT * FROM {table}
         """)
         rtn = self.cd.fetchall()
 

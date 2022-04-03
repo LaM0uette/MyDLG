@@ -274,12 +274,21 @@ class main(Ui_main, QtWidgets.QWidget):
 
         ### DLG ###
         self.pb_tools_add_dlg.clicked.connect(self.f_add_dlg)
+
+
+        # pb filtre vue
+        self.pb_filtre_atraiter.clicked.connect(self.f_maj_dlg)
+        self.pb_filtre_tout.clicked.connect(self.f_maj_dlg)
+        self.pb_filtre_fait.clicked.connect(self.f_maj_dlg)
     def IN_ACT(self):
-        self.f_maj_dlg()
+        pass
     def IN_WG_BASE(self):
         self.stk_main.setCurrentWidget(self.pg_menu)
         self.pb_menu_rip24.setChecked(True)
         self.pb_filtre_atraiter.setChecked(True)
+
+        # Tempo
+        self.f_maj_dlg()
     def IN_TRAY(self):
         ### Actions ###
         Functions.ADD_QACTION(
@@ -350,7 +359,15 @@ class main(Ui_main, QtWidgets.QWidget):
         self.stk_main.setCurrentWidget(self.pg_menu)
 
     def f_maj_dlg(self):
-        dlgs = CoSql().GET_V_DLG()
+        if self.pb_filtre_atraiter.isChecked():
+            dlgs = CoSql().GET_V_DLG(table='v_dlg_a_faire')
+        elif self.pb_filtre_tout.isChecked():
+            dlgs = CoSql().GET_V_DLG(table='v_dlg')
+        elif self.pb_filtre_fait.isChecked():
+            dlgs = CoSql().GET_V_DLG(table='v_dlg_fait')
+        else:
+            return
+
         exps = CoSql().GET_V_EXPORTS_EN_COURS()
 
         pb_dlg = {}
@@ -358,7 +375,7 @@ class main(Ui_main, QtWidgets.QWidget):
         i_init = 0
 
         for dlg in dlgs:
-            last_export = str(CoSql().GET_LAST_EXPORT_FROM_DLG(dl_id=dlg[0], table='et_rgb')[0])
+            last_export = str(CoSql().GET_LAST_EXPORT_FROM_DLG(dl_id=dlg[0], col='et_rgb')[0])
             rgb_str = last_export.split(r"|")
             rgb = int(rgb_str[0]), int(rgb_str[1]), int(rgb_str[2]), int(rgb_str[3])
 
