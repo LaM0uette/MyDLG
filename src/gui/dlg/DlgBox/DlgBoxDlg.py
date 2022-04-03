@@ -166,7 +166,7 @@ class DlgBoxDlg(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             _code = str(exp[0])
             code = _code.split("_")
 
-            self.lw_dlg.addItem(f"{code[1]}  -  {exp[1]}")
+            self.lw_dlg.addItem(f"{code[1]} - {exp[1]}")
 
     #####
 
