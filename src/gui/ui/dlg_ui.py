@@ -83,9 +83,21 @@ class Ui_Dlg(object):
         self.gridLayout.setHorizontalSpacing(10)
         self.gridLayout.setVerticalSpacing(0)
         self.gridLayout.setContentsMargins(10, 10, 10, 10)
-        self.verticalSpacer = QSpacerItem(20, 193, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalLayout = QVBoxLayout()
+        self.verticalLayout.setSpacing(10)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.pb_dlg = QPushButton(self.fr_dlg_body)
+        self.pb_dlg.setObjectName(u"pb_dlg")
 
-        self.gridLayout.addItem(self.verticalSpacer, 1, 1, 1, 1)
+        self.verticalLayout.addWidget(self.pb_dlg)
+
+        self.lw_dlg = QListWidget(self.fr_dlg_body)
+        self.lw_dlg.setObjectName(u"lw_dlg")
+
+        self.verticalLayout.addWidget(self.lw_dlg)
+
+
+        self.gridLayout.addLayout(self.verticalLayout, 0, 0, 2, 1)
 
         self.gridLayout_2 = QGridLayout()
         self.gridLayout_2.setSpacing(10)
@@ -99,6 +111,11 @@ class Ui_Dlg(object):
         self.pb_edit_cma.setObjectName(u"pb_edit_cma")
 
         self.gridLayout_2.addWidget(self.pb_edit_cma, 2, 0, 1, 2)
+
+        self.pb_edit_pau = QPushButton(self.fr_dlg_body)
+        self.pb_edit_pau.setObjectName(u"pb_edit_pau")
+
+        self.gridLayout_2.addWidget(self.pb_edit_pau, 9, 0, 1, 2)
 
         self.pb_edit_pok = QPushButton(self.fr_dlg_body)
         self.pb_edit_pok.setObjectName(u"pb_edit_pok")
@@ -140,39 +157,22 @@ class Ui_Dlg(object):
 
         self.gridLayout_2.addWidget(self.pb_edit_cch, 3, 0, 1, 2)
 
-        self.pb_edit_eok = QPushButton(self.fr_dlg_body)
-        self.pb_edit_eok.setObjectName(u"pb_edit_eok")
-
-        self.gridLayout_2.addWidget(self.pb_edit_eok, 5, 0, 1, 2)
-
-        self.pb_edit_pau = QPushButton(self.fr_dlg_body)
-        self.pb_edit_pau.setObjectName(u"pb_edit_pau")
-
-        self.gridLayout_2.addWidget(self.pb_edit_pau, 9, 0, 1, 2)
-
         self.pb_edit_ann = QPushButton(self.fr_dlg_body)
         self.pb_edit_ann.setObjectName(u"pb_edit_ann")
 
         self.gridLayout_2.addWidget(self.pb_edit_ann, 10, 0, 1, 2)
 
+        self.pb_edit_eok = QPushButton(self.fr_dlg_body)
+        self.pb_edit_eok.setObjectName(u"pb_edit_eok")
+
+        self.gridLayout_2.addWidget(self.pb_edit_eok, 5, 0, 1, 2)
+
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.gridLayout_2.addItem(self.verticalSpacer, 11, 0, 1, 2)
+
 
         self.gridLayout.addLayout(self.gridLayout_2, 0, 1, 1, 1)
-
-        self.verticalLayout = QVBoxLayout()
-        self.verticalLayout.setSpacing(10)
-        self.verticalLayout.setObjectName(u"verticalLayout")
-        self.pb_dlg = QPushButton(self.fr_dlg_body)
-        self.pb_dlg.setObjectName(u"pb_dlg")
-
-        self.verticalLayout.addWidget(self.pb_dlg)
-
-        self.lw_dlg = QListWidget(self.fr_dlg_body)
-        self.lw_dlg.setObjectName(u"lw_dlg")
-
-        self.verticalLayout.addWidget(self.lw_dlg)
-
-
-        self.gridLayout.addLayout(self.verticalLayout, 0, 0, 2, 1)
 
 
         self.vlay_msg_body.addWidget(self.fr_dlg_body)
@@ -208,8 +208,10 @@ class Ui_Dlg(object):
     # setupUi
 
     def retranslateUi(self, Dlg):
+        self.pb_dlg.setText(QCoreApplication.translate("Dlg", u"PushButton", None))
         self.pb_edit_pno.setText(QCoreApplication.translate("Dlg", u"PDB NOK", None))
         self.pb_edit_cma.setText(QCoreApplication.translate("Dlg", u"CRASH MAJEURE", None))
+        self.pb_edit_pau.setText(QCoreApplication.translate("Dlg", u"PAUSE", None))
         self.pb_edit_pok.setText(QCoreApplication.translate("Dlg", u"PDB OK", None))
         self.pb_edit_gex.setText(QCoreApplication.translate("Dlg", u"GO EXPORT", None))
         self.pb_edit_edl.setText(QCoreApplication.translate("Dlg", u"ERREURS DLG", None))
@@ -218,10 +220,8 @@ class Ui_Dlg(object):
         self.pb_edit_dno.setText(QCoreApplication.translate("Dlg", u"DJANGO NOK", None))
         self.pb_edit_afa.setText(QCoreApplication.translate("Dlg", u"A FAIRE", None))
         self.pb_edit_cch.setText(QCoreApplication.translate("Dlg", u"CRASH CHECK", None))
-        self.pb_edit_eok.setText(QCoreApplication.translate("Dlg", u"EXPORT OK", None))
-        self.pb_edit_pau.setText(QCoreApplication.translate("Dlg", u"PAUSE", None))
         self.pb_edit_ann.setText(QCoreApplication.translate("Dlg", u"ANNULE", None))
-        self.pb_dlg.setText(QCoreApplication.translate("Dlg", u"PushButton", None))
+        self.pb_edit_eok.setText(QCoreApplication.translate("Dlg", u"EXPORT OK", None))
         pass
     # retranslateUi
 

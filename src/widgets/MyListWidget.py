@@ -19,6 +19,8 @@ class Base:
         Style(
             widget=self.widget,
 
+            cursor=PaCur.SOURIS,
+
             dim=DcDim.Base(
                 fixed_width=PaDim.H5,
             ),

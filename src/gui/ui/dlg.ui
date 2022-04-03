@@ -151,18 +151,22 @@
             <property name="verticalSpacing">
              <number>0</number>
             </property>
-            <item row="1" column="1">
-             <spacer name="verticalSpacer">
-              <property name="orientation">
-               <enum>Qt::Vertical</enum>
+            <item row="0" column="0" rowspan="2">
+             <layout class="QVBoxLayout" name="verticalLayout">
+              <property name="spacing">
+               <number>10</number>
               </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>20</width>
-                <height>193</height>
-               </size>
-              </property>
-             </spacer>
+              <item>
+               <widget class="QPushButton" name="pb_dlg">
+                <property name="text">
+                 <string>PushButton</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QListWidget" name="lw_dlg"/>
+              </item>
+             </layout>
             </item>
             <item row="0" column="1">
              <layout class="QGridLayout" name="gridLayout_2">
@@ -180,6 +184,13 @@
                <widget class="QPushButton" name="pb_edit_cma">
                 <property name="text">
                  <string>CRASH MAJEURE</string>
+                </property>
+               </widget>
+              </item>
+              <item row="9" column="0" colspan="2">
+               <widget class="QPushButton" name="pb_edit_pau">
+                <property name="text">
+                 <string>PAUSE</string>
                 </property>
                </widget>
               </item>
@@ -239,20 +250,6 @@
                 </property>
                </widget>
               </item>
-              <item row="5" column="0" colspan="2">
-               <widget class="QPushButton" name="pb_edit_eok">
-                <property name="text">
-                 <string>EXPORT OK</string>
-                </property>
-               </widget>
-              </item>
-              <item row="9" column="0" colspan="2">
-               <widget class="QPushButton" name="pb_edit_pau">
-                <property name="text">
-                 <string>PAUSE</string>
-                </property>
-               </widget>
-              </item>
               <item row="10" column="0" colspan="2">
                <widget class="QPushButton" name="pb_edit_ann">
                 <property name="text">
@@ -260,22 +257,25 @@
                 </property>
                </widget>
               </item>
-             </layout>
-            </item>
-            <item row="0" column="0" rowspan="2">
-             <layout class="QVBoxLayout" name="verticalLayout">
-              <property name="spacing">
-               <number>10</number>
-              </property>
-              <item>
-               <widget class="QPushButton" name="pb_dlg">
+              <item row="5" column="0" colspan="2">
+               <widget class="QPushButton" name="pb_edit_eok">
                 <property name="text">
-                 <string>PushButton</string>
+                 <string>EXPORT OK</string>
                 </property>
                </widget>
               </item>
-              <item>
-               <widget class="QListWidget" name="lw_dlg"/>
+              <item row="11" column="0" colspan="2">
+               <spacer name="verticalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
               </item>
              </layout>
             </item>

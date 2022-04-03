@@ -164,7 +164,7 @@ class Base:
             ),
 
             dim=DcDim.Base(
-                fixed_height=PaDim.H8,
+                fixed_height=PaDim.H9+5,
             ),
 
             background=DcRgbBg.Base(

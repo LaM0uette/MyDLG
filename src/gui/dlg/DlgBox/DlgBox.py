@@ -23,6 +23,6 @@ class DlgBox:
         dlg.exec()
 
 
-    __WIDTH, __HEIGHT, __OPACITY = 1000, 800, 1
+    __WIDTH, __HEIGHT, __OPACITY = 650, 800, 1
 
-    EDIT = partial(__rtn, title="Modification d'un DLG", ico=PaImg.EDIT, ico_rgb="th3", txt_ok="Modifier", width=__WIDTH, height=__HEIGHT, opacity=__OPACITY)
+    EDIT = partial(__rtn, title="Modification DLG", ico=PaImg.EDIT, ico_rgb="th3", txt_ok="Modifier", width=__WIDTH, height=__HEIGHT, opacity=__OPACITY)
