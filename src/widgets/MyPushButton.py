@@ -164,10 +164,6 @@ class Base:
                 fixed_height=PaDim.H9,
             ),
 
-            cursor=PaCur.SOURIS,
-
-            font=PaFont.HH3,
-
             background=DcRgbBg.Base(
                 gen=PaRgb.TH1
             ),
