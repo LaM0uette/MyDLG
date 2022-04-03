@@ -362,6 +362,8 @@ class main(Ui_main, QtWidgets.QWidget):
                 iInit += 3
 
             self.glay_dlg.addWidget(pb_dlg[dlg[0]], iInit + 3, ligneConc, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
+
+            ligneConc += 1
     def f_dlg_click(self, dlg_id):
         print(dlg_id)
     #######################
