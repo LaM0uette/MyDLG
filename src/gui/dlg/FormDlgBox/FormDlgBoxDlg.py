@@ -143,7 +143,7 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
 
         # pb dlg
-        self.pb_ok.clicked.connect(lambda: self.close())
+        self.pb_ok.clicked.connect(self.f_ok)
 
         # Form dlg
         self.cb_phase.currentTextChanged.connect(self.a_phase_changed)
@@ -197,6 +197,13 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
             self.cb_nro.setCurrentText(nro)
             self.cb_pm.setCurrentText(pm)
         except: pass
+
+    #####
+
+    def f_ok(self):
+
+
+        self.close()
     #######################
     ##    /FONCTIONS     ##
     #######################
