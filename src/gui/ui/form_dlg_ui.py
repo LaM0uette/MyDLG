@@ -118,8 +118,9 @@ class Ui_FormDlg(object):
         self.vlay_msg_body.addItem(self.verticalSpacer_4)
 
         self.gridLayout = QGridLayout()
-        self.gridLayout.setSpacing(10)
         self.gridLayout.setObjectName(u"gridLayout")
+        self.gridLayout.setHorizontalSpacing(10)
+        self.gridLayout.setVerticalSpacing(0)
         self.lb_nro = QLabel(self.fr_body)
         self.lb_nro.setObjectName(u"lb_nro")
 

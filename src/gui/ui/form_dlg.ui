@@ -204,8 +204,11 @@
          </item>
          <item>
           <layout class="QGridLayout" name="gridLayout">
-           <property name="spacing">
+           <property name="horizontalSpacing">
             <number>10</number>
+           </property>
+           <property name="verticalSpacing">
+            <number>0</number>
            </property>
            <item row="1" column="0">
             <widget class="QLabel" name="lb_nro">

@@ -96,7 +96,7 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
         ### QLabel ###
         for wg in [
             self.lb_phase, self.lb_td, self.lb_nro, self.lb_pm, self.lb_refcode3
-        ]: MyLabel.Base(wg).Base()
+        ]: MyLabel.Base(wg).Transparent()
         ### /QLabel ###
     def IN_WG(self):
         # Base
