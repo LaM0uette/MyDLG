@@ -104,7 +104,7 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
             self.cb_phase.addItem(phase[1])
         self.cb_phase.setCurrentIndex(1)
 
-        self.cb_td.addItems(["Transport", "Distri", "TOUT"])
+        self.cb_td.addItems(["Tout", "Transport", "Distribution"])
     def IN_CONNECTIONS(self):
         ## Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
