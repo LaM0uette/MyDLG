@@ -247,8 +247,7 @@ class DlgBoxDlg(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
         if ResponseBox.EDIT_DLG():
             CoSql().ADD_EXPORT(dl_id=self.dlg_id, no_export=no_export, no_etat=no_etat)
-
-        self.close()
+            self.close()
     #######################
     ##    /FONCTIONS     ##
     #######################
