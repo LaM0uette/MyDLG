@@ -178,7 +178,12 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
     ##     FONCTIONS     ##
     #######################
     def f_get_nro_pm(self):
-        print(CoSql().GET_NRO_PM(self.cb_refcode3.currentText()))
+        req = CoSql().GET_NRO_PM(self.cb_refcode3.currentText())
+        nro = str(req[0])
+        pm = str(req[1])
+
+        self.cb_nro.setCurrentText(nro)
+        self.cb_pm.setCurrentText(pm)
     #######################
     ##    /FONCTIONS     ##
     #######################
