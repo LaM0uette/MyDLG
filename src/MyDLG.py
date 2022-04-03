@@ -268,6 +268,10 @@ class main(Ui_main, QtWidgets.QWidget):
         ### Menu ###
         self.pb_menu_exportdlg.clicked.connect(self.f_pbmenu_exportdlg)
         self.pb_retour_menu.clicked.connect(self.f_pbdlg_menu)
+
+
+        ### DLG ###
+        self.pb_tools_add_dlg.clicked.connect(lambda: FormDlgBox.ADD())
     def IN_ACT(self):
         pass
     def IN_WG_BASE(self):

@@ -1,3 +1,4 @@
+from src.gui.dlg.FormDlgBox.FormDlgBox import FormDlgBox
 from src.gui.dlg.InputBox.InputBox import InputBox
 from src.gui.dlg.MsgBox.MsgBox import MsgBox
 from src.gui.dlg.OptionBox.OptionBox import OptionBox

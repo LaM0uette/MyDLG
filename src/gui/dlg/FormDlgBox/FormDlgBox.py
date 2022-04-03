@@ -1,14 +1,14 @@
 from functools import partial
 
 from src import *
-from src.gui.dlg.MsgBox.MsgDlg import MsgDlg
+from src.gui.dlg.FormDlgBox.FormDlgBoxDlg import FormDlgBoxDlg
 
 
 class FormDlgBox:
 
     @staticmethod
     def __rtn(title, msg, ico, ico_rgb, txt_ok, width, height, opacity):
-        msg_dlg = MsgDlg(
+        form_dlg = FormDlgBoxDlg(
             title=title,
             msg=msg,
             ico=ico,
@@ -18,7 +18,7 @@ class FormDlgBox:
             height=height,
             opacity=opacity
         )
-        msg_dlg.exec()
+        form_dlg.exec()
 
 
     __WIDTH, __HEIGHT, __OPACITY = 650, 250, 1

@@ -1,11 +1,11 @@
 from PySide6 import QtCore, QtWidgets
 
 from src import *
-from src.gui.ui import msg_ui
+from src.gui.ui import form_dlg_ui
 from src.gui.events.Event import Event
 
 
-class FormDlgBoxDlg(msg_ui.Ui_Msg, QtWidgets.QDialog):
+class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
 
     def __init__(
@@ -66,12 +66,11 @@ class FormDlgBoxDlg(msg_ui.Ui_Msg, QtWidgets.QDialog):
         ### QLabel ###
         MyLabel.Base(self.lb_mt_ico).ico_custom(img=self.ico, img_rgb=self.ico_rgb)
         MyLabel.Base(self.lb_mt_nom).Transparent(font=PaFont.HH3)
-        MyLabel.Base(self.lb_msg_text).Transparent()
         ### /QLabel ###
 
 
         ### QPushButton ###
-        MyPushButton.Dlg(self.pb_msg_ok).ok()
+        MyPushButton.Dlg(self.pb_ok).ok()
         MyPushButton.MenuTop(self.pb_mt_quitter).quitter()
         ### /QPushButton ###
     def IN_WG(self):
@@ -84,18 +83,15 @@ class FormDlgBoxDlg(msg_ui.Ui_Msg, QtWidgets.QDialog):
         # Menu_top
         self.lb_mt_nom.setText(self.title)
 
-        # Message
-        self.lb_msg_text.setText(self.msg)
-
         # pb dlg
-        self.pb_msg_ok.setText(self.txt_ok)
-        self.pb_msg_ok.setDefault(True)
+        self.pb_ok.setText(self.txt_ok)
+        self.pb_ok.setDefault(True)
     def IN_CONNECTIONS(self):
         ## Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
 
         # pb dlg
-        self.pb_msg_ok.clicked.connect(lambda: self.close())
+        self.pb_ok.clicked.connect(lambda: self.close())
     def IN_ACT(self):
         pass
     def IN_WG_BASE(self):
