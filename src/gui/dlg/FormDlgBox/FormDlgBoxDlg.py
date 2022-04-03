@@ -202,8 +202,19 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
     #####
 
     def f_ok(self):
-        if len(self.cb_nro.currentText()) < 1 or len(self.cb_pm.currentText()) < 1 or len(self.cb_refcode3.currentText()) < 1:
-            MsgBox.ALERTE(title="ERREUR", msg="Il manque des informations:\n NRO | PM | REFCODE3")
+        err = "Il manque des informations :\n"
+
+        if len(self.cb_nro.currentText()) < 1:
+            err += " | NRO | "
+
+        if len(self.cb_pm.currentText()) < 1:
+            err += " | PM | "
+
+        if len(self.cb_refcode3.currentText()) < 1:
+            err += " | REFCODE3 | "
+
+        if err != "Il manque des informations :\n":
+            MsgBox.ALERTE(title="ERREUR", msg=err)
             return
 
         self.close()
