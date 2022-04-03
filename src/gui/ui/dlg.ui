@@ -259,7 +259,7 @@
             <item row="0" column="0" rowspan="2">
              <layout class="QVBoxLayout" name="verticalLayout">
               <property name="spacing">
-               <number>20</number>
+               <number>10</number>
               </property>
               <item>
                <widget class="QPushButton" name="pb_dlg">

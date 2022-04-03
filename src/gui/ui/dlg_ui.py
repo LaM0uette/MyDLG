@@ -157,7 +157,7 @@ class Ui_Dlg(object):
         self.gridLayout.addLayout(self.gridLayout_2, 0, 1, 1, 1)
 
         self.verticalLayout = QVBoxLayout()
-        self.verticalLayout.setSpacing(20)
+        self.verticalLayout.setSpacing(10)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.pb_dlg = QPushButton(self.fr_dlg_body)
         self.pb_dlg.setObjectName(u"pb_dlg")
