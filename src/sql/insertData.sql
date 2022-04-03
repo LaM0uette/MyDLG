@@ -77,3 +77,7 @@ END;
 -- INSERT INTO t_etats (et_code,et_nom) VALUES ('LCL', 'LIVRAISON CLIENT');
 -- INSERT INTO t_etats (et_code,et_nom) VALUES ('PAU', 'PAUSE');
 -- INSERT INTO t_etats (et_code,et_nom) VALUES ('ANN', 'ANNULE');
+
+-- INSERT INTO t_phase (ph_nom) VALUES  ('PRO');
+-- INSERT INTO t_phase (ph_nom) VALUES  ('DOE');
+-- INSERT INTO t_phase (ph_nom) VALUES  ('EXE');
