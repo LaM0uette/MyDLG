@@ -22,7 +22,7 @@ class Base:
             cursor=PaCur.SOURIS,
 
             dim=DcDim.Base(
-                fixed_width=PaDim.H5,
+                fixed_width=PaDim.H4,
             ),
 
             border_item=DcBorder.Base(
