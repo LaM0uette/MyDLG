@@ -143,6 +143,7 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
 
         # Form dlg
         self.cb_phase.currentTextChanged.connect(self.a_phase_changed)
+        self.cb_refcode3.editTextChanged.connect(self.f_get_nro_pm)
     def IN_ACT(self):
         pass
     def IN_WG_BASE(self):
@@ -171,3 +172,13 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
     #####################
     ##    /ACTIONS     ##
     #####################
+
+
+    #######################
+    ##     FONCTIONS     ##
+    #######################
+    def f_get_nro_pm(self):
+        print(CoSql().GET_NRO_PM(self.cb_refcode3.currentText()))
+    #######################
+    ##    /FONCTIONS     ##
+    #######################

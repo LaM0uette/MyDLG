@@ -100,6 +100,17 @@ class CoSql:
         self.close()
         return refcode3
 
+    def GET_NRO_PM(self, refcode3):
+        self.cd.execute(f"""
+        SELECT cz_nro, cz_pm 
+        FROM t_code_zone 
+        WHERE cz_refcode3 = '{refcode3}'
+        """)
+        rtn = self.cd.fetchone()
+
+        self.close()
+        return rtn
+
 
     def TEST_CO(self):
         try:
