@@ -155,6 +155,7 @@ class main(Ui_main, QtWidgets.QWidget):
         MyFrame.Cadre(self.fr_main).th2_fin()
 
         MyFrame.Base(self.fr_dlg_top).Base()
+        MyFrame.Cadre(self.fr_dlg_body).th3()
         MyFrame.Base(self.fr_dlg_tools).Tools()
         ### /QFrame  ###
 
