@@ -153,7 +153,7 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
     def IN_ACT(self):
         pass
     def IN_WG_BASE(self):
-        pass
+        self.sb_phase.setValue(100)
     def INIT(self):
         self.IN_BASE()
         self.IN_SETUP_UI()
@@ -173,7 +173,6 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
     def a_phase_changed(self):
         if self.cb_phase.currentText() == "DOE":
             self.sb_phase.setVisible(True)
-            self.sb_phase.setValue(100)
         else:
             self.sb_phase.setVisible(False)
     #####################
