@@ -158,6 +158,35 @@ class Ui_FormDlg(object):
 
         self.vlay_msg_body.addWidget(self.cb_refcode3)
 
+        self.verticalSpacer_6 = QSpacerItem(20, 10, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.vlay_msg_body.addItem(self.verticalSpacer_6)
+
+        self.gridLayout_2 = QGridLayout()
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.sb_version = QSpinBox(self.fr_body)
+        self.sb_version.setObjectName(u"sb_version")
+
+        self.gridLayout_2.addWidget(self.sb_version, 1, 1, 1, 1)
+
+        self.lb_livraison = QLabel(self.fr_body)
+        self.lb_livraison.setObjectName(u"lb_livraison")
+
+        self.gridLayout_2.addWidget(self.lb_livraison, 0, 0, 1, 1)
+
+        self.lb_version = QLabel(self.fr_body)
+        self.lb_version.setObjectName(u"lb_version")
+
+        self.gridLayout_2.addWidget(self.lb_version, 0, 1, 1, 1)
+
+        self.sb_livraison = QSpinBox(self.fr_body)
+        self.sb_livraison.setObjectName(u"sb_livraison")
+
+        self.gridLayout_2.addWidget(self.sb_livraison, 1, 0, 1, 1)
+
+
+        self.vlay_msg_body.addLayout(self.gridLayout_2)
+
         self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.vlay_msg_body.addItem(self.verticalSpacer)
@@ -198,6 +227,8 @@ class Ui_FormDlg(object):
         self.lb_nro.setText(QCoreApplication.translate("FormDlg", u"NRO :", None))
         self.lb_pm.setText(QCoreApplication.translate("FormDlg", u"PM :", None))
         self.lb_refcode3.setText(QCoreApplication.translate("FormDlg", u"REFCODE3 :", None))
+        self.lb_livraison.setText(QCoreApplication.translate("FormDlg", u"N\u00b0 de livraison :", None))
+        self.lb_version.setText(QCoreApplication.translate("FormDlg", u"N\u00b0 de version :", None))
         pass
     # retranslateUi
 
