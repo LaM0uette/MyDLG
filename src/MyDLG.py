@@ -349,10 +349,19 @@ class main(Ui_main, QtWidgets.QWidget):
         dlgs = CoSql().GET_V_DLG()
 
         pb_dlg = {}
+        ligneConc = 0
+        iInit = 0
+
         for dlg in dlgs:
             pb_dlg[dlg[0]] = QtWidgets.QPushButton("")
-            pb_dlg[dlg[0]].setObjectName(dlg[0])
+            pb_dlg[dlg[0]].setObjectName(str(dlg[0]))
             pb_dlg[dlg[0]].clicked.connect(functools.partial(self.f_dlg_click, dlg[0]))
+
+            if 4 < ligneConc < 9:
+                ligneConc -= 5
+                iInit += 3
+
+            self.glay_dlg.addWidget(pb_dlg[dlg[0]], iInit + 3, ligneConc, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
     def f_dlg_click(self, dlg_id):
         print(dlg_id)
     #######################

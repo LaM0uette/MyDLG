@@ -24,7 +24,7 @@ class Ui_FormDlg(object):
     def setupUi(self, FormDlg):
         if not FormDlg.objectName():
             FormDlg.setObjectName(u"FormDlg")
-        FormDlg.resize(648, 783)
+        FormDlg.resize(608, 408)
         self.glay_main = QGridLayout(FormDlg)
         self.glay_main.setSpacing(0)
         self.glay_main.setObjectName(u"glay_main")

@@ -221,6 +221,10 @@ class Ui_main(object):
         self.fr_dlg_body.setObjectName(u"fr_dlg_body")
         self.fr_dlg_body.setFrameShape(QFrame.StyledPanel)
         self.fr_dlg_body.setFrameShadow(QFrame.Raised)
+        self.glay_dlg = QGridLayout(self.fr_dlg_body)
+        self.glay_dlg.setSpacing(10)
+        self.glay_dlg.setObjectName(u"glay_dlg")
+        self.glay_dlg.setContentsMargins(10, 10, 10, 10)
 
         self.gridLayout_2.addWidget(self.fr_dlg_body, 1, 0, 1, 1)
 
