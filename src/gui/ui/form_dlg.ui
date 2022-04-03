@@ -110,7 +110,7 @@
        <widget class="QFrame" name="fr_body">
         <layout class="QVBoxLayout" name="vlay_msg_body">
          <property name="spacing">
-          <number>10</number>
+          <number>0</number>
          </property>
          <property name="leftMargin">
           <number>10</number>
@@ -125,7 +125,33 @@
           <number>10</number>
          </property>
          <item>
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>10</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="lb_phase">
+           <property name="text">
+            <string>Phase :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
           <layout class="QHBoxLayout" name="horizontalLayout">
+           <property name="spacing">
+            <number>10</number>
+           </property>
            <item>
             <widget class="QComboBox" name="cb_phase"/>
            </item>
@@ -135,24 +161,99 @@
           </layout>
          </item>
          <item>
+          <spacer name="verticalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>10</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="lb_td">
+           <property name="text">
+            <string>Transport / Distribution :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QComboBox" name="cb_td"/>
          </item>
          <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_2">
-           <item>
+          <spacer name="verticalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>10</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <layout class="QGridLayout" name="gridLayout">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <item row="1" column="0">
+            <widget class="QLabel" name="lb_nro">
+             <property name="text">
+              <string>NRO :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
             <widget class="QComboBox" name="cb_nro"/>
            </item>
-           <item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="lb_pm">
+             <property name="text">
+              <string>PM :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
             <widget class="QComboBox" name="cb_pm"/>
            </item>
           </layout>
          </item>
          <item>
-          <widget class="QComboBox" name="cb_refcode3">
-           <property name="placeholderText">
-            <string>rrr</string>
+          <spacer name="verticalSpacer_5">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>10</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="lb_refcode3">
+           <property name="text">
+            <string>REFCODE3 :</string>
            </property>
           </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="cb_refcode3"/>
          </item>
          <item>
           <spacer name="verticalSpacer">

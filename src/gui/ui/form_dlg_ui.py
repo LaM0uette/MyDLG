@@ -71,10 +71,20 @@ class Ui_FormDlg(object):
         self.fr_body = QFrame(self.fr_main)
         self.fr_body.setObjectName(u"fr_body")
         self.vlay_msg_body = QVBoxLayout(self.fr_body)
-        self.vlay_msg_body.setSpacing(10)
+        self.vlay_msg_body.setSpacing(0)
         self.vlay_msg_body.setObjectName(u"vlay_msg_body")
         self.vlay_msg_body.setContentsMargins(10, 10, 10, 10)
+        self.verticalSpacer_2 = QSpacerItem(20, 10, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.vlay_msg_body.addItem(self.verticalSpacer_2)
+
+        self.lb_phase = QLabel(self.fr_body)
+        self.lb_phase.setObjectName(u"lb_phase")
+
+        self.vlay_msg_body.addWidget(self.lb_phase)
+
         self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setSpacing(10)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.cb_phase = QComboBox(self.fr_body)
         self.cb_phase.setObjectName(u"cb_phase")
@@ -89,25 +99,58 @@ class Ui_FormDlg(object):
 
         self.vlay_msg_body.addLayout(self.horizontalLayout)
 
+        self.verticalSpacer_3 = QSpacerItem(20, 10, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.vlay_msg_body.addItem(self.verticalSpacer_3)
+
+        self.lb_td = QLabel(self.fr_body)
+        self.lb_td.setObjectName(u"lb_td")
+
+        self.vlay_msg_body.addWidget(self.lb_td)
+
         self.cb_td = QComboBox(self.fr_body)
         self.cb_td.setObjectName(u"cb_td")
 
         self.vlay_msg_body.addWidget(self.cb_td)
 
-        self.horizontalLayout_2 = QHBoxLayout()
-        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.verticalSpacer_4 = QSpacerItem(20, 10, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.vlay_msg_body.addItem(self.verticalSpacer_4)
+
+        self.gridLayout = QGridLayout()
+        self.gridLayout.setSpacing(10)
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.lb_nro = QLabel(self.fr_body)
+        self.lb_nro.setObjectName(u"lb_nro")
+
+        self.gridLayout.addWidget(self.lb_nro, 1, 0, 1, 1)
+
         self.cb_nro = QComboBox(self.fr_body)
         self.cb_nro.setObjectName(u"cb_nro")
 
-        self.horizontalLayout_2.addWidget(self.cb_nro)
+        self.gridLayout.addWidget(self.cb_nro, 2, 0, 1, 1)
+
+        self.lb_pm = QLabel(self.fr_body)
+        self.lb_pm.setObjectName(u"lb_pm")
+
+        self.gridLayout.addWidget(self.lb_pm, 1, 1, 1, 1)
 
         self.cb_pm = QComboBox(self.fr_body)
         self.cb_pm.setObjectName(u"cb_pm")
 
-        self.horizontalLayout_2.addWidget(self.cb_pm)
+        self.gridLayout.addWidget(self.cb_pm, 2, 1, 1, 1)
 
 
-        self.vlay_msg_body.addLayout(self.horizontalLayout_2)
+        self.vlay_msg_body.addLayout(self.gridLayout)
+
+        self.verticalSpacer_5 = QSpacerItem(20, 10, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.vlay_msg_body.addItem(self.verticalSpacer_5)
+
+        self.lb_refcode3 = QLabel(self.fr_body)
+        self.lb_refcode3.setObjectName(u"lb_refcode3")
+
+        self.vlay_msg_body.addWidget(self.lb_refcode3)
 
         self.cb_refcode3 = QComboBox(self.fr_body)
         self.cb_refcode3.setObjectName(u"cb_refcode3")
@@ -149,6 +192,11 @@ class Ui_FormDlg(object):
     # setupUi
 
     def retranslateUi(self, FormDlg):
+        self.lb_phase.setText(QCoreApplication.translate("FormDlg", u"Phase :", None))
+        self.lb_td.setText(QCoreApplication.translate("FormDlg", u"Transport / Distribution :", None))
+        self.lb_nro.setText(QCoreApplication.translate("FormDlg", u"NRO :", None))
+        self.lb_pm.setText(QCoreApplication.translate("FormDlg", u"PM :", None))
+        self.lb_refcode3.setText(QCoreApplication.translate("FormDlg", u"REFCODE3 :", None))
         pass
     # retranslateUi
 
