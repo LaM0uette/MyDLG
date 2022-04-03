@@ -347,6 +347,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
     def f_maj_dlg(self):
         dlgs = CoSql().GET_V_DLG()
+        exps = CoSql().GET_V_EXPORTS_EN_COURS()
 
         pb_dlg = {}
         ligne_conc = 0
