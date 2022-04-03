@@ -15,6 +15,17 @@ class Base:
             border_item=DcBorder.Base(
                 radius=(0,) * 4)
         )
+    def DLG(self):
+        Style(
+            widget=self.widget,
+
+            dim=DcDim.Base(
+                fixed_width=PaDim.H5,
+            ),
+
+            border_item=DcBorder.Base(
+                radius=(0,) * 4)
+        )
     def Transparent(self):
         Style(
             widget=self.widget,

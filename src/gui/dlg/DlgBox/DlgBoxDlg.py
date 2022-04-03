@@ -70,6 +70,11 @@ class DlgBoxDlg(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         ### /QPushButton ###
 
 
+        ### QListWidget ###
+        MyListWidget.Base(self.lw_dlg).DLG()
+        ### /QListWidget ###
+
+
         ### QFrame ###
         MyFrame.Menu(self.fr_menu_top).top()
         MyFrame.Cadre(self.fr_main).th2_fin()
