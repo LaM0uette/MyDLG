@@ -1,3 +1,4 @@
+import functools
 import sys
 import time
 
@@ -273,7 +274,7 @@ class main(Ui_main, QtWidgets.QWidget):
         ### DLG ###
         self.pb_tools_add_dlg.clicked.connect(lambda: FormDlgBox.ADD(marche=self.cb_marche.currentText()))
     def IN_ACT(self):
-        pass
+        self.f_maj_dlg()
     def IN_WG_BASE(self):
         self.stk_main.setCurrentWidget(self.pg_menu)
         self.pb_menu_rip24.setChecked(True)
@@ -345,7 +346,16 @@ class main(Ui_main, QtWidgets.QWidget):
         self.stk_main.setCurrentWidget(self.pg_menu)
 
     def f_maj_dlg(self):
+        dlgs = CoSql().GET_V_DLG()
 
+        pb_dlg = {}
+
+        for dlg in dlgs:
+            pb_dlg[idApp] = PB_APP("")
+            pb_dlg[idApp].setObjectName(idApp)
+            pb_dlg[idApp].setMinimumSize(QtCore.QSize(rsc.app, rsc.app))
+            pb_dlg[idApp].setMaximumSize(QtCore.QSize(rsc.app, rsc.app))
+            pb_dlg[idApp].clicked.connect(functools.partial(self.FUNC_App_Gen, nomApp, idApp))
     #######################
     ##    /FONCTIONS     ##
     #######################
