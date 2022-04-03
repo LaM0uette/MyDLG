@@ -334,7 +334,6 @@ class main(Ui_main, QtWidgets.QWidget):
 
         self.cb_marche.setCurrentIndex(idx)
         self.stk_main.setCurrentWidget(self.pg_dlg)
-
     def f_pbdlg_menu(self):
         idx = self.cb_marche.currentIndex()
 
@@ -344,6 +343,9 @@ class main(Ui_main, QtWidgets.QWidget):
             case 2: self.pb_menu_rip47.setChecked(True)
 
         self.stk_main.setCurrentWidget(self.pg_menu)
+
+    def f_maj_dlg(self):
+
     #######################
     ##    /FONCTIONS     ##
     #######################

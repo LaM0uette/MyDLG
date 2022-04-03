@@ -137,6 +137,17 @@ class CoSql:
         return rtn
 
 
+    # SELECT VIEW
+    def GET_V_DLG(self):
+        self.cd.execute("""
+        SELECT * FROM v_dlg
+        """)
+        rtn = self.cd.fetchall()
+
+        self.close()
+        return rtn
+
+
     def TEST_CO(self):
         try:
             self.cd.execute("SELECT * FROM t_dlg")
@@ -145,7 +156,6 @@ class CoSql:
             return False
         finally:
             self.close()
-
     def close(self):
         self.cd.close()
         self.co.close()
