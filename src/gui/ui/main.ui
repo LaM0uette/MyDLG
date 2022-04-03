@@ -369,22 +369,56 @@ DLG</string>
                <property name="frameShadow">
                 <enum>QFrame::Raised</enum>
                </property>
-               <layout class="QGridLayout" name="glay_dlg">
+               <layout class="QVBoxLayout" name="verticalLayout_2">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
                 <property name="leftMargin">
-                 <number>20</number>
+                 <number>0</number>
                 </property>
                 <property name="topMargin">
-                 <number>20</number>
+                 <number>0</number>
                 </property>
                 <property name="rightMargin">
-                 <number>20</number>
+                 <number>0</number>
                 </property>
                 <property name="bottomMargin">
-                 <number>20</number>
+                 <number>0</number>
                 </property>
-                <property name="spacing">
-                 <number>20</number>
-                </property>
+                <item>
+                 <widget class="QScrollArea" name="sca_dlg">
+                  <property name="widgetResizable">
+                   <bool>true</bool>
+                  </property>
+                  <widget class="QWidget" name="scrollAreaWidgetContents">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>971</width>
+                     <height>657</height>
+                    </rect>
+                   </property>
+                   <layout class="QGridLayout" name="glay_dlg">
+                    <property name="leftMargin">
+                     <number>20</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>20</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>20</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>20</number>
+                    </property>
+                    <property name="spacing">
+                     <number>20</number>
+                    </property>
+                   </layout>
+                  </widget>
+                 </widget>
+                </item>
                </layout>
               </widget>
              </item>
