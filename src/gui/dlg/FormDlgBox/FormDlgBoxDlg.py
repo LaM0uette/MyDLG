@@ -173,6 +173,7 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
     def a_phase_changed(self):
         if self.cb_phase.currentText() == "DOE":
             self.sb_phase.setVisible(True)
+            self.sb_phase.setValue(100)
         else:
             self.sb_phase.setVisible(False)
     #####################
