@@ -185,12 +185,14 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
             self.cb_refcode3.setCurrentText(refcode3[0])
         except: pass
     def f_get_nro_pm(self):
-        req = CoSql().GET_NRO_PM(self.cb_refcode3.currentText())
-        nro = str(req[0])
-        pm = str(req[1])
+        try:
+            req = CoSql().GET_NRO_PM(self.cb_refcode3.currentText())
+            nro = str(req[0])
+            pm = str(req[1])
 
-        self.cb_nro.setCurrentText(nro)
-        self.cb_pm.setCurrentText(pm)
+            self.cb_nro.setCurrentText(nro)
+            self.cb_pm.setCurrentText(pm)
+        except: pass
     #######################
     ##    /FONCTIONS     ##
     #######################
