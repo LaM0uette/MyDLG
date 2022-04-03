@@ -18,6 +18,7 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
             width,
             height,
             opacity,
+            marche,
     ):
         super(FormDlgBoxDlg, self).__init__()
 
@@ -29,6 +30,7 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
         self.width = width
         self.height = height
         self.opacity = opacity
+        self.marche = marche
 
         self.INIT()
 
@@ -111,9 +113,9 @@ class FormDlgBoxDlg(form_dlg_ui.Ui_FormDlg, QtWidgets.QDialog):
         self.cb_pm.addItem("")
         self.cb_refcode3.addItem("")
         for phase in CoSql().GET_CODE_ZONE():
-            self.cb_nro.addItem(phase[1])
-            self.cb_pm.addItem(phase[2])
-            self.cb_refcode3.addItem(phase[3])
+            self.cb_nro.addItem(str(phase[1]))
+            self.cb_pm.addItem(str(phase[2]))
+            self.cb_refcode3.addItem(str(phase[3]))
     def IN_CONNECTIONS(self):
         ## Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())

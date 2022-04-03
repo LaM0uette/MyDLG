@@ -7,7 +7,7 @@ from src.gui.dlg.FormDlgBox.FormDlgBoxDlg import FormDlgBoxDlg
 class FormDlgBox:
 
     @staticmethod
-    def __rtn(title, msg, ico, ico_rgb, txt_ok, width, height, opacity):
+    def __rtn(title, msg, ico, ico_rgb, txt_ok, width, height, opacity, marche):
         form_dlg = FormDlgBoxDlg(
             title=title,
             msg=msg,
@@ -16,7 +16,8 @@ class FormDlgBox:
             txt_ok=txt_ok,
             width=width,
             height=height,
-            opacity=opacity
+            opacity=opacity,
+            marche=marche,
         )
         form_dlg.exec()
 

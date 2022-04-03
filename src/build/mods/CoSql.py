@@ -81,9 +81,11 @@ class CoSql:
 
         self.close()
         return rtn
-    def GET_CODE_ZONE(self):
-        self.cd.execute("""
-        SELECT * FROM t_code_zone
+    def GET_CODE_ZONE(self, marche):
+        self.cd.execute(f"""
+        SELECT * 
+        FROM t_code_zone
+        WHERE cz_marche = {marche}
         """)
         rtn = self.cd.fetchall()
 
