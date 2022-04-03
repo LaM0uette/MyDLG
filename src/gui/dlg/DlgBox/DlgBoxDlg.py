@@ -4,6 +4,7 @@ from src import *
 from src.gui.ui import dlg_ui
 from src.gui.events.Event import Event
 from src.gui.dlg.MsgBox.MsgBox import MsgBox
+from src.gui.dlg.ResponseBox.ResponseBox import ResponseBox
 
 
 class DlgBoxDlg(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
@@ -203,6 +204,49 @@ class DlgBoxDlg(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
     #####
 
     def f_ok(self):
+        last_export = CoSql().GET_LAST_EXPORT_FROM_DLG(dl_id=self.dlg_id)
+        no_export = last_export[1]
+
+        _etat = str(last_export[3])
+        etat = int(_etat.split("_")[0])
+
+        if self.pb_edit_afa.isChecked():
+            no_etat = 1
+        elif self.pb_edit_gex.isChecked():
+            no_etat = 2
+        elif self.pb_edit_cma.isChecked():
+            no_etat = 3
+        elif self.pb_edit_cch.isChecked():
+            no_etat = 4
+        elif self.pb_edit_edl.isChecked():
+            no_etat = 5
+        elif self.pb_edit_eok.isChecked():
+            no_etat = 6
+        elif self.pb_edit_dok.isChecked():
+            no_etat = 7
+        elif self.pb_edit_dno.isChecked():
+            no_etat = 8
+        elif self.pb_edit_pok.isChecked():
+            no_etat = 9
+        elif self.pb_edit_pno.isChecked():
+            no_etat = 10
+        elif self.pb_edit_lcl.isChecked():
+            no_etat = 11
+        elif self.pb_edit_pau.isChecked():
+            no_etat = 12
+        elif self.pb_edit_ann.isChecked():
+            no_etat = 13
+        else:
+            self.close()
+            return
+
+        if no_etat == etat:
+            self.close()
+            return
+
+
+        if ResponseBox.EDIT_DLG():
+            CoSql().ADD_EXPORT(dl_id=self.dlg_id, no_export=no_export, no_etat=no_etat)
 
         self.close()
     #######################
