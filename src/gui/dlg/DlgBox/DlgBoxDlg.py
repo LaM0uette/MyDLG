@@ -20,6 +20,7 @@ class DlgBoxDlg(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             opacity,
             dlg_id,
             rgb,
+            name_dlg,
     ):
         super(DlgBoxDlg, self).__init__()
 
@@ -32,6 +33,7 @@ class DlgBoxDlg(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.opacity = opacity
         self.dlg_id = dlg_id
         self.rgb = rgb
+        self.name_dlg = name_dlg
 
         self.INIT()
 
@@ -75,6 +77,7 @@ class DlgBoxDlg(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         MyFrame.Menu(self.fr_dlg_bottom).bottom_dlg()
         MyFrame.Cadre(self.fr_dlg_body).th3()
         ### /QFrame ###
+        #lw_dlg
 
 
         ### QLabel ###
@@ -94,6 +97,9 @@ class DlgBoxDlg(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         # pb dlg
         self.pb_ok.setText(self.txt_ok)
         self.pb_ok.setDefault(True)
+
+        # DLG
+        self.pb_dlg.setText(self.name_dlg)
     def IN_CONNECTIONS(self):
         ## Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())

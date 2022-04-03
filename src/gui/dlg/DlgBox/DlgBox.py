@@ -7,7 +7,7 @@ from src.gui.dlg.DlgBox.DlgBoxDlg import DlgBoxDlg
 class DlgBox:
 
     @staticmethod
-    def __rtn(title, ico, ico_rgb, txt_ok, width, height, opacity, dlg_id, rgb):
+    def __rtn(title, ico, ico_rgb, txt_ok, width, height, opacity, dlg_id, rgb, name_dlg):
         dlg = DlgBoxDlg(
             title=title,
             ico=ico,
@@ -18,6 +18,7 @@ class DlgBox:
             opacity=opacity,
             dlg_id=dlg_id,
             rgb=rgb,
+            name_dlg=name_dlg,
         )
         dlg.exec()
 
