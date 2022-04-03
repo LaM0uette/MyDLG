@@ -84,6 +84,8 @@ class Base:
         Style(
             widget=self.widget,
 
+            size_policy=DcSizePolicy.Base(horizontal=PaSizePolicy.EXPANDING),
+
             background=DcRgbBg.Base(
                 base=PaRgb.TR,
                 hover=PaRgb.TR,
