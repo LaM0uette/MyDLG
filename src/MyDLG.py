@@ -406,7 +406,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
             pb_dlg[dlg[0]] = QtWidgets.QPushButton(name_dlg)
             pb_dlg[dlg[0]].setObjectName(str(dlg[0]))
-            pb_dlg[dlg[0]].clicked.connect(functools.partial(self.f_dlg_click, dlg[0]))
+            pb_dlg[dlg[0]].clicked.connect(functools.partial(self.f_dlg_click, dlg[0], rgb))
 
             MyPushButton.Base(pb_dlg[dlg[0]]).DLG(rgb)
 
@@ -419,8 +419,8 @@ class main(Ui_main, QtWidgets.QWidget):
 
         spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.glay_dlg.addItem(spacerItem, i_init + 1, 0, 1, 1)
-    def f_dlg_click(self, dlg_id):
-        DlgBox.EDIT(dlg_id=dlg_id)
+    def f_dlg_click(self, dlg_id, rgb):
+        DlgBox.EDIT(dlg_id=dlg_id, rgb=rgb)
     #######################
     ##    /FONCTIONS     ##
     #######################

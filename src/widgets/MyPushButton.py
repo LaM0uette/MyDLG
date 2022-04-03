@@ -128,6 +128,33 @@ class Base:
                 radius=(15, )*4
             )
         )
+    def DLG_simple(self, rgb):
+        Style(
+            widget=self.widget,
+
+            dim=DcDim.Base(
+                fixed_width=PaDim.H5-10,
+                fixed_height=PaDim.H5-10,
+            ),
+
+            cursor=PaCur.SOURIS,
+
+            font=PaFont.HH3,
+
+            background=DcRgbBg.Base(
+                gen=PaRgb.TH1
+            ),
+
+            foreground=DcRgbBg.Base(
+                gen=PaRgb.TH3
+            ),
+
+            border=DcBorder.Base(
+                gen=(3, )*4,
+                gen_rgb=rgb,
+                radius=(15, )*4
+            )
+        )
 
 
 ######################

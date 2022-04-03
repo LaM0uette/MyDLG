@@ -19,6 +19,7 @@ class DlgBoxDlg(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             height,
             opacity,
             dlg_id,
+            rgb,
     ):
         super(DlgBoxDlg, self).__init__()
 
@@ -30,6 +31,7 @@ class DlgBoxDlg(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.height = height
         self.opacity = opacity
         self.dlg_id = dlg_id
+        self.rgb = rgb
 
         self.INIT()
 
@@ -61,6 +63,8 @@ class DlgBoxDlg(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         ### QPushButton ###
         MyPushButton.Dlg(self.pb_ok).ok()
         MyPushButton.MenuTop(self.pb_mt_quitter).quitter()
+
+        MyPushButton.Base(self.pb_dlg).DLG_simple(self.rgb)
         ### /QPushButton ###
 
 

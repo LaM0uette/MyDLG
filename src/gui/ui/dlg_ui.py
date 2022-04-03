@@ -16,8 +16,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
-    QLabel, QPushButton, QSizePolicy, QSpacerItem,
-    QVBoxLayout, QWidget)
+    QLabel, QListWidget, QListWidgetItem, QPushButton,
+    QSizePolicy, QSpacerItem, QVBoxLayout, QWidget)
 
 class Ui_Dlg(object):
     def setupUi(self, Dlg):
@@ -82,9 +82,95 @@ class Ui_Dlg(object):
         self.gridLayout.setSpacing(0)
         self.gridLayout.setObjectName(u"gridLayout")
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
-        self.verticalSpacer = QSpacerItem(20, 579, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer = QSpacerItem(20, 253, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
-        self.gridLayout.addItem(self.verticalSpacer, 0, 0, 1, 1)
+        self.gridLayout.addItem(self.verticalSpacer, 1, 1, 1, 1)
+
+        self.gridLayout_2 = QGridLayout()
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.pushButton_12 = QPushButton(self.fr_dlg_body)
+        self.pushButton_12.setObjectName(u"pushButton_12")
+
+        self.gridLayout_2.addWidget(self.pushButton_12, 7, 1, 1, 1)
+
+        self.pushButton_5 = QPushButton(self.fr_dlg_body)
+        self.pushButton_5.setObjectName(u"pushButton_5")
+
+        self.gridLayout_2.addWidget(self.pushButton_5, 2, 0, 1, 2)
+
+        self.pushButton_11 = QPushButton(self.fr_dlg_body)
+        self.pushButton_11.setObjectName(u"pushButton_11")
+
+        self.gridLayout_2.addWidget(self.pushButton_11, 7, 0, 1, 1)
+
+        self.pushButton_3 = QPushButton(self.fr_dlg_body)
+        self.pushButton_3.setObjectName(u"pushButton_3")
+
+        self.gridLayout_2.addWidget(self.pushButton_3, 1, 0, 1, 2)
+
+        self.pushButton_6 = QPushButton(self.fr_dlg_body)
+        self.pushButton_6.setObjectName(u"pushButton_6")
+
+        self.gridLayout_2.addWidget(self.pushButton_6, 4, 0, 1, 2)
+
+        self.pushButton_10 = QPushButton(self.fr_dlg_body)
+        self.pushButton_10.setObjectName(u"pushButton_10")
+
+        self.gridLayout_2.addWidget(self.pushButton_10, 8, 0, 1, 2)
+
+        self.pushButton_8 = QPushButton(self.fr_dlg_body)
+        self.pushButton_8.setObjectName(u"pushButton_8")
+
+        self.gridLayout_2.addWidget(self.pushButton_8, 6, 0, 1, 1)
+
+        self.pushButton_9 = QPushButton(self.fr_dlg_body)
+        self.pushButton_9.setObjectName(u"pushButton_9")
+
+        self.gridLayout_2.addWidget(self.pushButton_9, 6, 1, 1, 1)
+
+        self.pushButton_2 = QPushButton(self.fr_dlg_body)
+        self.pushButton_2.setObjectName(u"pushButton_2")
+
+        self.gridLayout_2.addWidget(self.pushButton_2, 0, 0, 1, 2)
+
+        self.pushButton_4 = QPushButton(self.fr_dlg_body)
+        self.pushButton_4.setObjectName(u"pushButton_4")
+
+        self.gridLayout_2.addWidget(self.pushButton_4, 3, 0, 1, 2)
+
+        self.pushButton_7 = QPushButton(self.fr_dlg_body)
+        self.pushButton_7.setObjectName(u"pushButton_7")
+
+        self.gridLayout_2.addWidget(self.pushButton_7, 5, 0, 1, 2)
+
+        self.pushButton_13 = QPushButton(self.fr_dlg_body)
+        self.pushButton_13.setObjectName(u"pushButton_13")
+
+        self.gridLayout_2.addWidget(self.pushButton_13, 9, 0, 1, 2)
+
+        self.pushButton_14 = QPushButton(self.fr_dlg_body)
+        self.pushButton_14.setObjectName(u"pushButton_14")
+
+        self.gridLayout_2.addWidget(self.pushButton_14, 10, 0, 1, 2)
+
+
+        self.gridLayout.addLayout(self.gridLayout_2, 0, 1, 1, 1)
+
+        self.verticalLayout = QVBoxLayout()
+        self.verticalLayout.setSpacing(20)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.pb_dlg = QPushButton(self.fr_dlg_body)
+        self.pb_dlg.setObjectName(u"pb_dlg")
+
+        self.verticalLayout.addWidget(self.pb_dlg)
+
+        self.listWidget = QListWidget(self.fr_dlg_body)
+        self.listWidget.setObjectName(u"listWidget")
+
+        self.verticalLayout.addWidget(self.listWidget)
+
+
+        self.gridLayout.addLayout(self.verticalLayout, 0, 0, 2, 1)
 
 
         self.vlay_msg_body.addWidget(self.fr_dlg_body)
@@ -120,6 +206,20 @@ class Ui_Dlg(object):
     # setupUi
 
     def retranslateUi(self, Dlg):
+        self.pushButton_12.setText(QCoreApplication.translate("Dlg", u"PushButton", None))
+        self.pushButton_5.setText(QCoreApplication.translate("Dlg", u"PushButton", None))
+        self.pushButton_11.setText(QCoreApplication.translate("Dlg", u"PushButton", None))
+        self.pushButton_3.setText(QCoreApplication.translate("Dlg", u"PushButton", None))
+        self.pushButton_6.setText(QCoreApplication.translate("Dlg", u"PushButton", None))
+        self.pushButton_10.setText(QCoreApplication.translate("Dlg", u"PushButton", None))
+        self.pushButton_8.setText(QCoreApplication.translate("Dlg", u"PushButton", None))
+        self.pushButton_9.setText(QCoreApplication.translate("Dlg", u"PushButton", None))
+        self.pushButton_2.setText(QCoreApplication.translate("Dlg", u"PushButton", None))
+        self.pushButton_4.setText(QCoreApplication.translate("Dlg", u"PushButton", None))
+        self.pushButton_7.setText(QCoreApplication.translate("Dlg", u"PushButton", None))
+        self.pushButton_13.setText(QCoreApplication.translate("Dlg", u"PushButton", None))
+        self.pushButton_14.setText(QCoreApplication.translate("Dlg", u"PushButton", None))
+        self.pb_dlg.setText(QCoreApplication.translate("Dlg", u"PushButton", None))
         pass
     # retranslateUi
 
