@@ -1,6 +1,7 @@
 .idea /
 __pycache__/
 
+/tests
 /src/logs
 /src/assets/img/*/rgb
 /src/config/versionfile.txt
