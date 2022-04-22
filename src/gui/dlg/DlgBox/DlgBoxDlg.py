@@ -38,8 +38,6 @@ class DlgBoxDlg(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
         self.INIT()
 
-        print(self.dlg_id)
-
         ### CREATION DES EVENT ###
         self.evt = Event(self)
         self.mousePressEvent = self.evt.mousePressEvent

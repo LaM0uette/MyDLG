@@ -327,6 +327,7 @@ class main(Ui_main, QtWidgets.QWidget):
         for fct in args:
             splash_screen.lb_chargement.setText(fct[1])
             splash_screen.pg_chargement.setValue(splash_screen.pg_chargement.value() + 100 / len(args))
+            time.sleep(0.2)
             fct[0]()
 
         splash_screen.lb_chargement.setText("Lancement de l'application")
