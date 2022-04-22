@@ -296,6 +296,10 @@ class main(Ui_main, QtWidgets.QWidget):
 
         # Tempo
         self.f_maj_dlg()
+
+        self.cb_filtre_search.setVisible(False)
+        self.le_search_dlg.setVisible(False)
+        self.pb_search_dlg.setVisible(False)
     def IN_TRAY(self):
         ### Actions ###
         Functions.ADD_QACTION(
@@ -327,7 +331,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
         splash_screen.lb_chargement.setText("Lancement de l'application")
         splash_screen.pg_chargement.setValue(100)
-        time.sleep(0)
+        time.sleep(1)
     ############################
     ##    /INITIALISATION     ##
     ############################
