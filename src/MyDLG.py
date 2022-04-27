@@ -47,6 +47,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
         splash_screen.close()
 
+
         ### CREATION DES EVENT ###
         self.evt = Event(self)
         self.mousePressEvent = self.evt.mousePressEvent
